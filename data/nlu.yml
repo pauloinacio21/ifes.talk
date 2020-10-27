@@ -10,6 +10,9 @@ nlu:
     - Oi
     - Ola
     - ola
+    - bom tarde
+    - bom dia
+    - boa noite
 - intent: informar_nome
   examples: |
     - [Diego](nome_usuario)
@@ -144,30 +147,8 @@ nlu:
     - tenho que sair
     - vou embora agora
     - tenho que ir embora
-- intent: esta_feliz
-  examples: |
-    - Estou bem
-    - Estou ótima
-    - Me sinto feliz
-    - Estou feliz demais!
-    - Tudo bem
-    - Tudo ótimo
-    - Tudo ok
-    - Estou feliz!
-    - Estou muito bem também!
-    - estou bem tambem!
-- intent: esta_triste
-  examples: |
-    - To meio triste
-    - Me sinto triste
-    - To mal
-    - Me sinto mal
-    - Estou para baixo
-    - Não muito bem
-    - To pra baixo no momento
-    - mal
-    - tudo está ruim
-    - Estou triste
+    - tiau
+    - xau
 - intent: afirmar
   examples: |
     - ok
@@ -204,7 +185,7 @@ nlu:
     - não, obg
     - n, obg
     - nao obrigado
-- intent: tudo_bem_?
+- intent: como_esta
   examples: |
     - Tudo bem?
     - Como você está?
@@ -222,7 +203,7 @@ nlu:
     - Tudo bem contigo?
     - como c ta?
     - Como vc ta?
-    - como vc ta?
+    - como vai?
 - intent: agradecer
   examples: |
     - Obrigada
@@ -302,6 +283,643 @@ nlu:
     - É um prazer
     - Prazer ifes.talk
     - é um prazer!
+- intent: minha_license
+  examples: |
+    - Qual sua license?
+    - Qual license vc usa?
+    - Qual é a license q tu usa?
+    - Me fala qual license vc usa
+    - Voce tem alguma license?
+    - Que licensa voce usa bot?
+    - Fala sobre licenses por favor
+    - vc tem alguma licença?
+- intent: fallback
+  examples: |
+    - Qualquer coisa
+    - Algo desconhecido
+    - 2 + 3 é o que?
+    - cuidando da vida
+
+# intents do ROD
+- intent: transferencia_de_outra_escola #001
+  examples: |
+    - Para o IFES
+    - Já comecei o Ensino Médio em outra instituição, mas queria me transferir para o Ifes. Como faço?
+    - Como faço para me transferir para o ifes?
+    - quero me transferir para o ifes
+    - quero pedir transferencia da minha escola para o ifes
+    - quero pedir transferencia para o ifes
+    - Transferência para o ifes
+    - Como mudo minha escola para o IFES?
+    - Quero transferir pro Ifes
+- intent: transferencia_para_outra_escola #002
+  examples: |
+    - Para outra escola
+    - O que preciso para me transferir do Ifes para outra escola?
+    - quero me transferir para outra escola
+    - quero estudar em outra escola
+    - como faço para me transferir do ifes
+    - quero sair do ifes
+    - como faço para estudar em outra escola
+    - transferência para outra escola
+    - mudar de escola
+    - me mudar para outra escola
+    - ir para outra escola
+- intent: representantes_reunioes #003
+  examples: |
+    - Reuniões representantes
+    - O líder de turma deve participar de quais reuniões?
+    - de quais reunioes o líder de turma participa
+    - o líder da turma deve participar de alguma reuniao?
+    - sou líder da minha turma, devo ir a alguma reunião
+    - em quais reuniões o líder de turma tem que ir
+    - líder de turma tem que ir em que reuniões?
+    - se sou líder, de quais reuniões devo participar?
+- intent: representantes_da_turma #004
+  examples: |
+    - Repre. da turma
+    - Representante de turma
+    - Cada turma deve ter um líder?
+    - Quantos líderes têm cada turma?
+    - líder da turma
+    - quem é o líder da turma?
+    - quem deve ser o líder de turma
+    - como o líder é eleito
+    - minha turma tem que ter um líder?
+- intent: mudanca_modalidade_presencial_distancia #005
+  examples: |
+    - Presencial/distancia
+    - presencial e a distancia
+    - Posso mudar de um curso presencial para um à distância ou vice-versa?
+    - posso mudar de modalidade?
+    - como faço para mudar de um curso presencial para um curso a distância
+    - como faço para mudar de um curso a distância para um curso presencial
+    - quero mudar a modalidade do meu curso
+    - quero passar a estudar a distância
+    - mudança de modalidade
+    - mudança de modalidade
+    - mudança para presencial
+    - mudança para distância
+    - mudança para modalidade presencial
+    - mudança para modalidade a distancia
+    - como faço para estudar em casa
+    - quero estudar em casa em vez de na escola
+    - posso estudar a distância de algum jeito?
+- intent: mudanca_campus_geral #006
+  examples: |
+    - Mudança de campus
+    - Posso mudar de campus?
+    - mudar de campus
+    - quero estudar em outro campus
+    - quero mudar de campus
+    - quero ir para outro campus
+    - como troco de campus?
+    - fale sobre a mudança de campus
+- intent: mudanca_turno #007
+  examples: |
+    - Mudança de turno
+    - Posso mudar de turno?
+    - mudar de turno
+    - trocar de turno
+    - quando posso mudar de turno
+    - quero mudar de turno
+    - quero trocar o turno em que eu estudo
+    - quero estudar em outro turno
+    - quero ir para outro turno
+    - como faço para trocar de turno
+    - como estudar a tarde
+    - como estudo de manha
+    - se estudo de tarde, como mudo para a manhã?
+    - se estudo de manha, é possível mudar para a manhã?
+    - como estudar de noite
+    - como estudar no vespertino
+    - posso estudar no matutino?
+    - tem como eu trocar para o período noturno?
+- intent: mudanca_campus_quando #008
+  examples: |
+    - Qnd mudar de campus
+    - Quando muder de campus?
+    - Quando posso mudar de campus?
+    - quando posso pedir a mudança de campus?
+    - fale quando posso trocar meu campus
+    - quando poderei trocar de campus?
+- intent: mudanca_turma #009
+  examples: |
+    - Mudança de turma
+    - Posso mudar de turma?
+    - mudar de turma
+    - trocar de turma
+    - quando posso mudar de turma
+    - quero mudar de turma
+    - quero trocar de turma
+- intent: mudanca_curso #010
+  examples: |
+    - Mudar de curso
+    - Posso mudar de curso?
+    - mudança de curso
+    - trocar de curso
+    - quando posso mar de curso
+    - quero mudar de curso
+    - quero trocar de curso
+    - quero estudar em outro curso
+    - quero ir para outro curso
+    - como faço para trocar de curso
+    - gostaria de fazer outro curso
+    - como faço algum outro curso?
+    - como faço um curso difernte do meu?
+- intent: prazos_entregas_avaliacoes #011
+  examples: |
+    - Entrega de avalição
+    - Qual o prazo máximo para um professor corrigir e entregar as provas?
+    - Qual o prazo para o professor postar as notas?
+    - qual o prazo máximo para o professor postar as notas
+    - qual o prazo que o professor tem para corrigir as provas?
+    - quanto tempo o professor poder demorar para entregar as provas
+    - em quanto tempo o professor deve postar as notas das provas
+    - prazos entregas de prova
+    - prazos das entregas de avaliações
+    - prazos postagem das notas de prova
+    - postagem das notas de prova
+    - quando tempo o professor tem para a correção das provas?
+- intent: conteudos_avaliacoes #012
+  examples: |
+    - Avalição escolar
+    - O que é considerado na avaliação escolar?
+    - o que é cobrado na avaliação
+    - o que deve ser cobrado nas avaliações?
+    - o que é cobrado nas provas?
+    - o que é considerado nos trabalhos
+    - que critérios são avaliados nas provas?
+    - quais os critérios de avaliação das avaliações?
+    - o que é levado em conta para aprender nas avaliações?
+- intent: conteudos_avaliacoes_necessidadades_especificas #013
+  examples: |
+    - Avaliação escolar NE
+    - O que é considerado na avaliação dos alunos com necessidades específicas?
+    - avaliação escolar necessidades específicas
+    - avaliação escolar de alunos com necessidades específicas
+    - o que deve ser cobrado na avaliação de alunos com necessidades específicas
+    - o que é cobrado nas provas de alunos com necessidades especiais
+    - o que é considerado nas provas de alunos com necessidades específicas
+    - o que é considerado nos trabalhos de alunos com necessidades específicas
+    - como funcionam avaliações para aqueles com necessidades específicas?
+- intent: quantidade_avaliacoes #014
+  examples: |
+    - Quantidade máxima provas
+    - Quantidade mínima provas
+    - Qual o máximo de provas que podem ser marcadas pelos professores?
+    - quantidade máxima de avaliações
+    - quantidade máxima de avaliações por semestre
+    - quantidade máxima de avaliações que o professor pode dar
+    - limite de provas que podem ser marcadas
+    - limite de provas que podem ser aplicadas
+    - quantidade máxima de provas por semestre
+    - quantas provas o professor pode aplicar
+    - quantas avaliações o professor deve aplicar?
+    - quantas provas deve ter
+    - o certo é ter quantas provas?
+    - quantas avaliações podem ocorrer?
+    - tem um mínimo de provas que precisam ser aplicadas?
+- intent: pontuacao_avaliacoes #015
+  examples: |
+    - Valor máximo provas
+    - valor máximo avaliações
+    - valores mínimo das provas
+    - valores possíveis de trabalhos
+    - quantos pontos os trabalhos podem valer?
+    - quantos pontos as provas podem valer?
+    - mínimo de pontos das avaliações
+    - qual o valor máximo que uma prova pode ter
+    - qual o valor máximo que um trabalho pode ter
+    - valor máximo atividade
+    - valor máximo permitido para uma prova
+    - qual o valor máximo que uma avaliação pode valer?
+    - qual o máximo de pontos que as avaliações podem ter?
+- intent: recuperacao #016
+  examples: |
+    - recuperação
+    - Sobre recuperação
+    - Quando são aplicados os estudos de recuperação ?
+    - Como são aplicados os estudos de recuperação ?
+    - Como é avaliado os estudos de recuperação ?
+    - Qual o conteúdo dos estudos de recuperação ?
+    - o que é recuperação
+    - me explique sobre recuperação
+    - quando deve ser aplicada a recuperação
+    - quando é aplicada a recuperação
+    - como é aplicada a recuperação
+    - qual o conteúdo cobrado na recuperação
+    - o que deve ser cobrado na recuperação
+    - como deve ser avaliada a recuperação
+    - o que é cobrado na recuperação
+    - como é avaliada a recuperação
+    - o que cai na recuperação
+    - como funciona a recuperação
+    - me dá informações sobre a recuperação
+    - eu posso fazer recuperação?
+    - qual o mínimo de pontos do boletim que preciso para fazer recuperação?
+- intent: pontuacao_semestral #017
+  examples: |
+    - Sobre pontuação semestral
+    - Qual a pontuação de cada semestre ?
+    - qual a pontuação semestral
+    - qual a pontuação do semestre
+    - quanto cada semestre vale
+    - pontuação do semestre
+    - pontuação semestral
+    - quanto vale o semestre
+    - quanto vale cada semestre
+    - quanto cada semestre deve valer
+    - o semestre vale quantos pontos?
+    - quantos pontos totais um semestre pode ter?
+    - total de pontos de um semestre
+- intent: periodo_maximo_conclusao #018
+  examples: |
+    - Período p/ conclusão
+    - Qual o período que tenho para concluir o curso?
+    - período para conclusão
+    - período para concluir o curso
+    - quanto tempo tenho para concluir o curso
+    - em quanto tempo devo concluir meu curso
+    - qual o tempo máximo que tenho para concluir o curso
+    - tempo para conclusão do curso
+    - tempo para concluir o curso
+    - prazo máximo para eu concluir o curso
+    - tenho algum tempo para concluir o curso
+    - existe limite de tempo para eu concluir o curso
+    - período para terminar o curso
+    - quanto tempo tenho para terminar o curso
+    - tempo para terminar o curso
+    - qual o tempo que tenho para concluir o curso
+    - devo concluir meu curso em quantos anos no máximo?
+- intent: ficar_retido #019
+  examples: |
+    - Quando fico retido
+    - em que ocasião eu fico retido
+    - o que é preciso acontecer para eu ficar retido
+    - quando eu fico retido
+    - o que deve acontecer para eu ficar retido
+    - quando eu não passo de ano?
+    - como repito o mesmo ano?
+    - como repetir um ano
+    - o que deve acontecer para eu repetir o ano
+    - reprovar
+    - reprovacao
+    - quando que reprova
+    - quando eu fico reprovado
+    - quantos pontos para reprovar
+    - reprovação de ano
+- intent: promocao_parcial #020
+  examples: |
+    - Promoção parcial
+    - Como funciona a promoção parcial?
+    - o que é a promoção parcial
+    - sobre a promoção parcial
+    - o que acontece se eu ficar reprovado em uma disciplina
+    - o que acontece se eu ficar reprovado em duas disciplinas
+    - quando tenho direito a promoção parcial
+    - me explique o que é a promoção parcial
+    - quando acontece a promoção parcial
+    - o que acontece se eu ficar reprovado em uma disciplina
+    - o que acontece se eu ficar reprovado em duas matérias
+- intent: dependencia #021
+  examples: |
+    - Quando fico de dep.
+    - como fico de dp
+    - Quando fico de dependência
+    - quando eu tenho direito a dependência
+    - o que acontece se eu tirar nota abaixo da média no final do ano
+    - o que acontece se eu tirar nota abaixo de 60 total
+    - tirei menos que 60 pontos no semestre
+    - quando eu fico de dependência
+    - fala sobre a dependencia
+- intent: maximo_materias_dependencia #022
+  examples: |
+    - Máximo de disciplinas dp.
+    - Qual a quantidade máxima de disciplinas em que posso reprovar ?
+    - O que acontece se eu ficar reprovado em 3 ou mais disciplinas ?
+    - qual o máximo de disciplinas em que posso reprovar
+    - qual a quantidade máxima de disciplinas em que posso reprovar
+    - fiquei reprovado em duas disciplinas
+    - fiquei reprovado em três disciplinas
+    - fiquei reprovado em 2 disciplinas
+    - fiquei reprovado em 3 disciplinas
+    - máximo de disciplinas em que posso reprovar
+    - o que acontece se eu reprovar em duas disciplinas
+    - o que acontece se eu reprovar em três disciplinas
+    - o que acontece se eu reprovar em quatro disciplinas
+    - qual o máximo de matérias em que posso reprovar
+    - qual a quantidade máxima de matérias em que posso reprovar
+    - máximo de matérias em que posso reprovar
+    - o que acontece se eu reprovar em duas matérias
+    - o que acontece se eu reprovar em três matérias
+    - quantas matérias posso fazer na dependência?
+- intent: revisao_notas_parciais #023
+  examples: |
+    - Não concordo com minha nota, o que faço?
+    - quero pedir revisão da nota da minha prova
+    - posso pedir revisão das minhas provas
+    - posso pedir revisão da minha prova
+    - posso pedir revisão da nota da minha prova
+    - não concordo com a nota da avaliação
+    - não concordo com a nota da prova
+    - não concordo com a nota da minha prova
+    - não concordo com a nota da minha avaliação
+    - posso pedir revisão da nota da avaliação
+    - posso pedir revisão da minha avaliação
+    - eu posso pedir a revisão da nota da minha prova
+    - eu posso pedir a revisão da nota da minha avaliação
+    - quero pedir revisão da nota da minha avaliação
+    - quero a revisão da nota de uma avaliação que eu fiz
+    - quero a revisão da nota de uma prova que eu fiz
+    - posso pedir a revisão da nota de uma prova que eu fiz
+    - posso pedir a revisão de uma avaliação que eu fiz
+    - posso pedir a revisão da nota de uma avaliação que eu fiz
+    - posso pedir a revisão de uma prova que eu fiz
+    - posso pedir para o professor revisar a correção da minha prova?
+- intent: revisao_notas_finais #024
+  examples: |
+    - Resultado final revisão
+    - Quando posso pedir revisão do meu resultado final ?
+    - revisão do resultado final
+    - revisão da nota final
+    - posso pedir a revisão da minha nota
+    - posso pedir revisão da nota do semestre
+    - posso pedir revisão do meu resultado final
+    - tenho direito de pedir revisão da minha nota final
+    - tenho direito a pedir a revisão do resultado final
+    - quero pedir revisão da minha nota final
+    - quero pedir revisão do meu resultado final
+    - não concordo com o resultado final
+    - posso pedir revisão do resultado da disciplina de Português
+    - posso pedir revisão da nota da disciplina de Português
+    - posso pedir revisão do resultado da matéria de Português
+    - quando posso pedir revisão da minha nota final
+    - quando posso pedir revisão do resultado final do semestre
+    - quando posso pedir revisão da nota final do semestre
+    - não concordo com a minha nota final
+    - como posso pedir revisão da minha nota final
+    - eu posso pedir a revisão da minha nota final
+    - revisão da minha nota final
+    - revisão do meu resultado final
+    - é possível revisar minhas notas finais?
+- intent: frequencia_minima #025
+  examples: |
+    - Frequência mínima
+    - Qual a frequência mínima obrigatória ?
+    - quantidade mínima de faltas
+    - quantidade máxima de faltas
+    - qual a quantidade máxima de faltas que eu posso ter
+    - qual a frequência mínima que eu tenho que ter nas aulas
+    - quantas faltas eu posso ter
+    - em quantas aulas eu posso faltar
+    - o quanto eu posso faltar às aulas?
+    - qual a quantidade máxima de aulas em que eu posso faltar
+    - quantidade máxima de faltas que eu posso ter
+    - qual a quantidade máxima de faltas permitidas
+    - qual o percentual de presença obrigatória
+    - qual o percentual mínimo de presença obrigatório
+    - frequência mínima obrigatória
+- intent: condicoes_aprovacao #026
+  examples: |
+    - Qnd serei aprovado
+    - Quando serei aprovado
+    - quando estou aprovado?
+    - quando serei aprovado em uma matéria
+    - quando serei aprovado em uma disciplina
+    - o que é preciso para eu ser aprovado
+    - quais os requisitos necessários para eu ser aprovado
+    - o que é preciso para eu passar em uma matéria?
+    - quando estarei aprovado
+    - oq eu faço para ser aprovado?
+- intent: dependencia_geral #027
+  examples: |
+    - O que é dependência
+    - gostaria de saber o que é dependência
+    - me explique o que é dependência
+    - me explique sobre dependência
+    - como funciona a dependência
+    - o que é o regime de dependência
+    - regime de dependência
+    - como o dp funciona?
+- intent: aproveitamento_disciplinas #028
+  examples: |
+    - Sobre aproveitamento
+    - Posso aproveitar as disciplinas que cursei em outra instituição?
+    - posso aproveitar matérias que já estudei em outra escola?
+    - aproveitamento de disciplinas
+    - aproveitamento de matérias
+    - posso aproveitar as disciplinas que cursei em outra escola
+    - tem como eu aproveitar as disciplinas que eu já cursei?
+    - utilizar as disciplinas que já cursei
+    - utilizar as matérias que já cursei
+    - utilizar as matérias que eu cursei em outra escola
+    - reaproveitar as matérias que eu já cursei
+    - sobre aproveitamento de disciplinas
+    - sobre aproveitamento de matérias
+    - como funciona o aproveitamento de disciplinas?
+    - como funciona o aproveitamento de matérias?
+- intent: numero_dias_letivos #029
+  examples: |
+    - Num. de dias letivos
+    - Qual o número mínimo de dias letivos no ano?
+    - número de dias letivos
+    - qual a quantidade de dias letivos
+    - quantidade de dias letivos no ano
+    - quantos dias letivos tem um ano
+    - o ano tem quantos dias letivo
+    - número mínimo de dias letivos
+    - qual a quantidade mínima de dias letivos
+    - em um ano devem ter quantos dias letivos?
+- intent: disciplinas_optativas #030
+  examples: |
+    - Sobre disciplina opt
+    - Como funciona o componente curricular optativo?
+    - sobre disciplina optativa
+    - posso cursar disciplina optativa
+    - disciplina optativa
+    - o que é disciplina optativa
+    - o que são as disciplinas optativas
+    - como funciona as disciplinas optativas
+    - quero me matricular em uma disciplina optativa
+    - como me matriculo em uma disciplina optativa
+    - como me matriculo em uma matéria optativa
+    - como faço para me matricular em uma disciplina optativa
+    - como faço para me matricular em uma matéria optativa
+    - quero saber sobre disciplinas optativas
+    - matéria optativa
+    - matéria extra
+    - tem alguma matéria extra que posso fazer?
+    - existe algum tipo de matéria extra?
+- intent: trancamento_matricula #031
+  examples: |
+    - Sobre trancamento
+    - Como funciona o trancamento de matrícula?
+    - trancamento de matrícula
+    - como tranco a minha matrícula
+    - como faço o trancamento da minha matrícula
+    - posso trancar a minha matrícula
+    - como realizo o trancamento da minha matrícula
+    - trancamento da minha matrícula
+    - procedimento de trancamento de matrícula
+    - quero trancar a minha matrícula
+    - como faço para trancar a minha matricula
+    - o que é o trancamento de matrícula
+    - como é o procedimento de trancamento de matrícula
+    - gostaria de trancar minha matrícula
+    - como mantenho minha vaga na escola mas paro de estudar?
+    - como trancar o curso
+    - quero trancar o curso
+    - trancar o curso
+- intent: quando_proibido_trancamento_matricula #032
+  examples: |
+    - Quando não posso
+    - quando não posso trancar a minha matrícula
+    - em que circunstâncias não posso trancar a minha matrícula
+    - quando não posso trancar a matrícula
+    - quando o trancamento de matrícula não é possível
+    - casos especiais para trancamento de matrícula
+    - porque não posso trancar a minha matrícula
+    - em que casos eu não posso trancar a minha matrícula
+    - condições para trancar matrícula
+- intent: cancelamento_matricula #033
+  examples: |
+    - Motivos cancelamento matrícula
+    - Posso ter minha matrícula cancelada?
+    - quais motivos causam o cancelamento da minha matrícula
+    - quais motivos causam o cancelamento de matrícula
+    - cancelamento de matrícula
+    - o que causa o cancelamento da minha matrícula
+    - o que pode causar o cancelamento da minha matrícula
+    - o que é preciso para minha matrícula ser cancelada
+    - motivos para o cancelamento de matrícula
+    - o que pode ocasionar o cancelamento da minha minha matrícula
+    - quando minha matrícula é cancelada
+    - a minha matrícula pode ser cancelada
+    - cancelamento da minha matrícula
+    - matrícula cancelada
+    - motivos para o cancelamento de matrícula
+    - como minha matricula pd ser cancelada
+- intent: desistente #034
+  examples: |
+    - Desistente
+    - Quando um aluno do primeiro período letivo será considerado desistente de seu curso?
+    - quando um aluno é considerado desistente
+    - quando o aluno passa a ser considerado desistente
+    - o que acontece para um aluno ser desistente
+    - o que é preciso acontecer para um aluno ser considerado desistente
+    - em que ocasião um aluno é considerado desistente
+    - quando sou considerado desistente
+    - o que acontece se eu não frequentar o 5 primeiros dias de aula
+    - quantos dias posso faltar no começo da escola?
+    - e se eu não for nos primeiros dias de aula?
+    - quais motivos para o aluno ser considerado desistente
+    - quando um aluno será considerado desistente
+    - aluno desistente
+    - desistente do curso
+    - o que é preciso acontecer para o aluno ser considerado desistente
+    - quando eu passo a ser desistente
+    - quais os requisitos para um aluno ser considerado desistente
+- intent: documentos_matricula #035
+  examples: |
+    - Documentos necessários matrícula
+    - Quais documentos necessito para fazer minha matrícula?
+    - documentos necessários para matrícula
+    - quais são os documentos necessários para fazer a matrícula
+    - documentos necessários para eu fazer a minha matrícula
+    - documentos necessários para a matrícula inicial
+    - documentos necessários para a minha matrícula
+    - quais documentos preciso para fazer a matrícula
+    - documentos necessários para realizar a matrícula
+    - documentos que o aluno precisa para fazer a matrícula
+    - documentos que o aluno precisa ter para realizar a matrícula
+    - quais os documentos necessários para fazer a matrícula
+    - Quais documentos devo levar na hora de fazer minha matrícula?
+    - Que documentos são usadas para realizar minha matrícula?
+- intent: chamada_suplentes #036
+  examples: |
+    - Chamada de suplentes
+    - Qual o período para chamada dos suplentes?
+    - prazo para a chamada de suplentes
+    - como ocorre a chamada de suplentes?
+    - como é realizada a chamada de suplentes?
+    - em quanto tempo é realizada a chamada de suplentes?
+    - em quantos dias os suplentes são chamados
+    - período para a chamada de suplentes
+    - em quanto tempo os suplentes são chamados
+    - qual o período para os suplentes serem chamados
+    - período para a convocação de suplentes
+    - como funciona o preenchimento por suplentes?
+    - suplentes
+- intent: quando_sou_aluno #037
+  examples: |
+    - Quando sou aluno
+    - Uma vez realizada a matrícula, sou definitivamente aluno do Ifes?
+    - quando minha matrícula é efetivada
+    - quando me torno aluno do ifes
+    - a partir de que momento sou aluno do ifes
+    - após eu fazer a matrícula já sou considerado aluno
+    - ser considerado aluno do ifes
+    - quando sou definitivamente aluno do ifes
+    - a partir de que momento sou considerado aluno do ifes
+    - quando posso me chamar um aluno IFES?
+    - quando é oficial que sou um aluno?
+- intent: prazo_matricula #038
+  examples: |
+    - Prazo para efetivar
+    - Prazo p/ efetivar
+    - Qual prazo tenho para efetivar minha matrícula?
+    - prazo para realizar a matrícula
+    - qual prazo tenho para fazer a minha matrícula
+    - prazo para efetivar a matrícula
+    - quanto tempo tenho para realizar a minha matrícula
+    - prazo para efetivar a minha matrícula
+    - prazo para realizar a minha matrícula
+    - qual prazo tenho para realizar a minha matrícula
+    - qual o prazo para eu fazer a minha matrícula
+    - qual o período que eu tenho para realizar a minha matrícula
+    - quanto tempo tenho para fazer a minha matrícula
+    - em quanto tempo devo fazer minha matrícula?
+    - qual o prazo de matricula
+    - prazo de matricula
+- intent: renovacao_matricula #039
+  examples: |
+    - Sobre renovação
+    - Como é feita a rematrícula?
+    - sobre renovação de matrícula
+    - renovação de matrícula?
+    - rematrícula
+    - como é feita a renovação de matrícula?
+    - a rematrícula é feita automaticamente?
+    - a rematricula é realizada automaticamente
+    - como funciona a re-matrícula?
+    - gostaria de saber sobre a rematricula
+    - me explique sobre a re-matricula
+    - como é realizada a re-matrícula?
+    - preciso fazer a minha rematricula
+    - preciso fazer a renovação de matrícula?
+    - como faço a rematrícula?
+    - como faço a renovação de matrícula
+    - posso renovar minha matrícula?
+    - é possível a renovação da minha matrícula?
+    - a rematrícula é automática?
+    - preciso cuidar da minha matrícula para o ano que vem?
+    - continuo na escola automaticamente ano que vem?
+    - eu preciso fazer algo para continuar na escola ano que vem?
+- intent: regime_domiciliar_efetivacao #040
+  examples: |
+    - Quando é efetivado regime domiciliar
+    - A partir de que momento o regime domiciliar é efetivado?
+    - quando o regime domiciliar é efetivado
+    - a partir de que momento o regime domiciliar passa a valer
+    - quando o regime domiciliar passa a valer
+    - quando o regime domiciliar é realmente efetivado
+    - quando o regime domiciliar é confirmado
+    - a partir de que momento o regime domiciliar é confirmado
+    - quando o meu regime domiciliar passa a valer
+    - quando o regime domiciliar está valendo
+
+# intents de entretenimento
 - intent: minha_religiao
   examples: |
     - qual seu religião?
@@ -410,19 +1028,27 @@ nlu:
     - Me conte as horas
     - Que horas sao agr
     - Quais as horas?
-- intent: minha_license
+- intent: esta_feliz
   examples: |
-    - Qual sua license?
-    - Qual license vc usa?
-    - Qual é a license q tu usa?
-    - Me fala qual license vc usa
-    - Voce tem alguma license?
-    - Que licensa voce usa bot?
-    - Fala sobre licenses por favor
-    - vc tem alguma licença?
-- intent: fallback
+    - Estou bem
+    - Estou ótima
+    - Me sinto feliz
+    - Estou feliz demais!
+    - Tudo bem
+    - Tudo ótimo
+    - Tudo ok
+    - Estou feliz!
+    - Estou muito bem também!
+    - estou bem tambem!
+- intent: esta_triste
   examples: |
-    - Qualquer coisa
-    - Algo desconhecido
-    - 2 + 3 é o que?
-    - cuidando da vida
+    - To meio triste
+    - Me sinto triste
+    - To mal
+    - Me sinto mal
+    - Estou para baixo
+    - Não muito bem
+    - To pra baixo no momento
+    - mal
+    - tudo está ruim
+    - Estou triste

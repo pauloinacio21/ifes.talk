@@ -1,6 +1,5 @@
 version: "2.0"
 stories:
-- story: Cumprimentar
 - story: cumprimento inicial
   steps:
   - intent: cumprimentar
@@ -35,9 +34,9 @@ stories:
   - action: utter_ok
   - action: utter_continuar_conversa
   - action: action_listen
-- story: tudo_bem_?
+- story: como_esta
   steps:
-  - intent: tudo_bem_?
+  - intent: como_esta
   - action: utter_como_estou
   - action: action_listen
 - story: agradecimento
@@ -108,3 +107,213 @@ stories:
   - intent: minha_license
   - action: utter_minha_license
   - action: action_listen
+- story: Pedir para o usuario repetir o nome porque não entende
+  steps:
+    - intent: informar_nome
+    - action: utter_nao_entendi
+    - intent: informar_nome
+- story: transferencia de outra instituição para o ifes #001
+  steps:
+  - intent: transferencia_de_outra_escola
+  - action: utter_transferencia_de_outra_escola
+  - action: utter_continuar_conversa
+- story: transferencia do ifes para outra escola #002
+  steps:
+  - intent: transferencia_para_outra_escola
+  - action: utter_transferencia_para_outra_escola
+  - action: utter_continuar_conversa
+- story: reunioes de representantes #003
+  steps:
+  - intent: representantes_reunioes
+  - action: utter_representantes_reunioes
+  - action: utter_continuar_conversa
+- story: representantes de turma #004
+  steps:
+  - intent: representantes_da_turma
+  - action: utter_representantes_da_turma
+  - action: utter_continuar_conversa
+- story: Mudança da modalidade entre presencial e a distância #005
+  steps:
+  - intent: mudanca_modalidade_presencial_distancia
+  - action: utter_mudanca_modalidade_presencial_distancia
+  - action: utter_continuar_conversa
+- story: Mudança de campus geral #006
+  steps:
+    - intent: mudanca_campus_geral
+    - action: utter_mudanca_campus_geral
+    - action: utter_continuar_conversa
+- story: Mudança de turno #007
+  steps:
+    - intent: mudanca_turno
+    - action: utter_mudanca_turno
+    - action: utter_continuar_conversa
+- story: Quando pode mudar de campus #008
+  steps:
+    - intent: mudanca_campus_quando
+    - action: utter_mudanca_campus_quando
+    - action: utter_continuar_conversa
+- story: Mudanca de turma #009
+  steps:
+    - intent: mudanca_turma 
+    - action: utter_mudanca_turma
+    - action: utter_continuar_conversa
+- story: Mudanca Curso #010
+  steps:
+    - intent: mudanca_curso
+    - action: utter_mudanca_curso
+    - action: utter_continuar_conversa
+- story: Os prazos de entrega das avaliações #011
+  steps:
+    - intent: prazos_entregas_avaliacoes
+    - action: utter_prazos_entregas_avaliacoes
+    - action: utter_continuar_conversa
+- story: Conteúdos das avaliações escolares #012
+  steps:
+    - intent: conteudos_avaliacoes
+    - action: utter_conteudos_avaliacoes
+    - action: utter_continuar_conversa
+- story: Conteúdos das avaliações escolares para pessoas com necessidades específicas #013
+  steps:
+    - intent: conteudos_avaliacoes_necessidadades_especificas
+    - action: utter_conteudos_avaliacoes_necessidadades_especificas
+    - action: utter_continuar_conversa
+- story: Quantidade mínima e máxima de avaliações #014
+  steps:
+    - intent: quantidade_avaliacoes
+    - action: utter_quantidade_avaliacoes
+    - action: utter_continuar_conversa
+- story: Valor mínimo e máximo das avaliações #015
+  steps: 
+    - intent: pontuacao_avaliacoes
+    - action: utter_pontuacao_avaliacoes
+    - action: utter_continuar_conversa
+- story: Recuperação #016
+  steps:
+    - intent: recuperacao
+    - action: utter_recuperacao
+    - action: utter_continuar_conversa
+- story: Pontuação Semestral #017
+  steps:
+    - intent: pontuacao_semestral
+    - action: utter_pontuacao_semestral
+    - action: utter_continuar_conversa
+- story: Quanto tempo o aluno tem para concluir seu curso #018
+  steps:
+    - intent: periodo_maximo_conclusao 
+    - action: utter_periodo_maximo_conclusao 
+    - action: utter_continuar_conversa
+- story: Quando o aluno fica retido no mesmo ano #019
+  steps:
+    - intent: ficar_retido
+    - action: utter_ficar_retido
+    - action: utter_continuar_conversa
+- story: Promoção parcial #020
+  steps:
+    - intent: promocao_parcial
+    - action: utter_promocao_parcial
+    - action: utter_continuar_conversa
+- story: Dependência #021
+  steps:
+    - intent: dependencia
+    - action: utter_dependencia
+    - action: utter_continuar_conversa
+- story: Máximo de matérias que pode fazer na dependencia #022
+  steps:
+    - intent: maximo_materias_dependencia
+    - action: utter_maximo_materias_dependencia
+    - action: utter_continuar_conversa
+- story: Revisão das notas das avaliações #023
+  steps:
+    - intent: revisao_notas_parciais
+    - action: utter_revisao_notas_parciais
+    - action: utter_continuar_conversa
+- story: Revisão das Notas finais #024
+  steps: 
+    - intent: revisao_notas_finais
+    - action: utter_revisao_notas_finais
+    - action: utter_continuar_conversa
+- story: Frequência obrigatória às aulas #025
+  steps:
+    - intent: frequencia_minima
+    - action: utter_frequencia_minima
+    - action: utter_continuar_conversa
+- story: Quando o aluno é aprovado #026
+  steps:
+    - intent: condicoes_aprovacao
+    - action: utter_condicoes_aprovacao
+    - action: utter_continuar_conversa
+- story: O que é a dependencia #027
+  steps:
+    - intent: dependencia_geral
+    - action: utter_dependencia_geral
+    - action: utter_continuar_conversa
+- story: Aproveitamento de disciplinas já cursadas em outra escola #028
+  steps:
+    - intent: aproveitamento_disciplinas
+    - action: utter_aproveitamento_disciplinas
+    - action: utter_continuar_conversa
+- story: Numero de dias letivos #029
+  steps:
+    - intent: numero_dias_letivos
+    - action: utter_numero_dias_letivos
+    - action: utter_continuar_conversa
+- story: Disciplinas optativas #030
+  steps:
+    - intent: disciplinas_optativas
+    - action: utter_disciplinas_optativas
+    - action: utter_continuar_conversa
+- story: Trancamento de matricula #031
+  steps:
+    - intent: trancamento_matricula
+    - action: utter_trancamento_matricula
+    - action: utter_continuar_conversa
+- story: Quando é proibido trancar matricula #032
+  steps:
+    - intent: quando_proibido_trancamento_matricula
+    - action: utter_quando_proibido_trancamento_matricula
+    - action: utter_continuar_conversa
+- story: Cancelamento de matrícula #033
+  steps:
+    - intent: cancelamento_matricula
+    - action: utter_cancelamento_matricula
+    - action: utter_continuar_conversa
+- story: Desistente #034
+  steps:
+    - intent: desistente
+    - action: utter_desistente
+    - action: utter_continuar_conversa
+- story: documentos necessarios para matricula #035
+  steps:
+    - intent: documentos_matricula
+    - action: utter_documentos_matricula
+    - action: utter_continuar_conversa
+- story: Chamada de suplentes#036
+  steps:
+    - intent: chamada_suplentes
+    - action: utter_chamada_suplentes
+    - action: utter_continuar_conversa
+- story: Quando vira oficialmente um aluno #037
+  steps:
+    - intent: quando_sou_aluno
+    - action: utter_quando_sou_aluno
+    - action: utter_continuar_conversa
+- story: prazo para a matricula #038
+  steps:
+    - intent: prazo_matricula
+    - action: utter_prazo_matricula
+    - action: utter_continuar_conversa
+- story: Renovação de Matrícula #039
+  steps:
+    - intent: renovacao_matricula
+    - action: utter_renovacao_matricula
+    - action: utter_continuar_conversa
+- story: Quando o regime domiciliar é efetivado #040
+  steps:
+    - intent: regime_domiciliar_efetivacao
+    - action: utter_regime_domiciliar_efetivacao
+    - action: utter_continuar_conversa
+# - story: #04
+#   steps:
+#     - intent: 
+#     - action: utter_
+#     - action: utter_continuar_conversa

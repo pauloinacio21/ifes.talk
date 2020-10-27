@@ -2,90 +2,77 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: happy path 1
+- story: cumprimento
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      oii
+    intent: cumprimentar
+  - action: utter_cumprimentar
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      [João] {nome_usuario} 
+    intent: informar_nome
+  - action: utter_cumprimentar_usuario_nome
+  - action: listen
 
-- story: happy path 2
+- story: como estou 1
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      como vc esta?
+    intent: como_esta
+  - action: utter_como_estou
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      bem
+    intent: esta_feliz
+  - action: utter_usuario_esta_feliz
+  - action: utter_listen
 
-- story: sad path 1
+- story: como estou 2
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      vc ta bem?
+    intent: como_esta
+  - action: utter_como_estou
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
+      mal
+    intent: esta_triste
+  - action: utter_fica_feliz
+  - action: utter_listen
 
-- story: sad path 2
+- story: despedida
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+      tchau
+    intent: despedir
+  - action: utter_despedir
 
-- story: sad path 3
+- story: sou um bot
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
+      vc é um bot??
+    intent: meu_objetivo
+  - action: utter_meu_objetivo
 
-- story: say goodbye
+# stories do ROD
+- story: transferencia de outra instituição para o ifes #001
   steps:
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      quero me transferir para o ifes
+    intent: transferencia_de_outra_escola
+  - action: utter_transferencia_de_outra_escola
+  - action: utter_continuar_conversa
 
-- story: bot challenge
+- story: transferencia do ifes para outra escola #002
   steps:
   - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      quero sair do ifes
+    intent: transferencia_para_outra_escola
+  - action: utter_transferencia_para_outra_escola
+  - action: utter_continuar_conversa
+
+- story: Pedir para o usuario repetir o nome porque não entende
+  steps:
+  - user: |
+      Whindersson
+    intent: informar_nome
+    - action: utter_nao_entendi
+    - intent: informar_nome

@@ -6,8 +6,8 @@ stories:
   steps:
   - user: |
       oii
-    intent: cumprimentar
-  - action: utter_cumprimentar
+    intent: cumprimento
+  - action: utter_cumprimento
   - user: |
       [João] {nome_usuario} 
     intent: informar_nome
@@ -74,5 +74,5 @@ stories:
   - user: |
       Whindersson
     intent: informar_nome
-    - action: utter_nao_entendi
-    - intent: informar_nome
+  - action: utter_nao_entendi
+  - intent: informar_nome

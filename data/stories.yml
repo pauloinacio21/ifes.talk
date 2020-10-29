@@ -458,13 +458,102 @@ stories:
     - intent: reuniao_pedagogica_membros
     - action: utter_reuniao_pedagogica_membros
     - action: utter_continuar_conversa
-
-# - story: #07
-#   steps:
-#     - intent: 
-#     - action: utter_
-#     - action: utter_continuar_conversa
-# - story: #07
+- story: A quantidade de reuniões pedagógicas que devem ter #071
+  steps:
+    - intent: reuniao_pedagogica_quantidade
+    - action: utter_reuniao_pedagogica_quantidade
+    - action: utter_continuar_conversa
+- story: Sobre a monitoria #072
+  steps:
+    - intent: monitoria
+    - action: utter_monitoria
+    - action: utter_continuar_conversa
+- story: Sobre o estágio #073
+  steps:
+    - intent: estagio
+    - action: utter_estagio
+    - action: utter_continuar_conversa
+- story: Corpo discente #074
+  steps:
+    - intent: corpo_discente
+    - action: utter_corpo_discente
+    - action: utter_continuar_conversa
+- story: Validade do ROD 2020 #075
+  steps:
+    - intent: rod_2020_validade
+    - action: utter_rod_2020_validade
+    - action: utter_continuar_conversa
+- story: Capítulo do ROD #076
+  steps:
+    - intent: tit_cap_rod
+    - action: utter_tit_cap_rod
+    - action: utter_continuar_conversa
+- story: Capítulo dos cursos, currículos e planos de ensino #077
+  steps:
+    - intent: tit_cap_cursos_curriculos_planos_ensino
+    - action: utter_tit_cap_cursos_curriculos_planos_ensino
+    - action: utter_continuar_conversa
+- story: Capítulo do período letivo #078
+  steps:
+    - intent: tit_cap_periodo_letivo
+    - action: utter_tit_cap_periodo_letivo
+    - action: utter_continuar_conversa
+- story: Capítulo da admissão e da matrícula #079
+  steps:
+    - intent: tit_cap_admissao_matricula
+    - action: utter_tit_cap_admissao_matricula
+    - action: utter_continuar_conversa
+- story: Capítulo atendimento domiciliar #080
+  steps:
+    - intent: tit_cap_atendimento_domiciliar
+    - action: utter_tit_cap_atendimento_domiciliar
+    - action: utter_continuar_conversa
+- story: Capítulo das transferências e adaptações #081
+  steps:
+    - intent: tit_cap_transferencias_adaptacoes
+    - action: utter_tit_cap_transferencias_adaptacoes
+    - action: utter_continuar_conversa
+- story: Capítulo das modalidades #082
+  steps:
+    - intent: tit_cap_modalidades
+    - action: utter_tit_cap_modalidades
+    - action: utter_continuar_conversa
+- story: Capítulo das reuniões pedagógicas #083
+  steps:
+    - intent: tit_cap_reunioes_pedagogicas
+    - action: utter_tit_cap_reunioes_pedagogicas
+    - action: utter_continuar_conversa
+- story: Título das outras atividades de ensino #084
+  steps:
+    - intent: tit_outras_atividades_ensino
+    - action: utter_tit_outras_atividades_ensino
+    - action: utter_continuar_conversa
+- story: Capítulo do estágio curricular #085
+  steps:
+    - intent: tit_cap_estagio_curricular
+    - action: utter_tit_cap_estagio_curricular
+    - action: utter_continuar_conversa
+- story: Título das organizações e orientações discentes #086
+  steps:
+    - intent: tit_organizacoes_orientacoes_discentes
+    - action: utter_tit_organizacoes_orientacoes_discentes
+    - action: utter_continuar_conversa
+- story: Título dos certificados e diplomas #087
+  steps:
+    - intent: tit_certificados_diplomas
+    - action: utter_tit_certificados_diplomas
+    - action: utter_continuar_conversa
+- story: Título do intercâmbio acadêmico #088
+  steps:
+    - intent: tit_intercambio_academico
+    - action: utter_tit_intercambio_academico
+    - action: utter_continuar_conversa
+- story: Título das disposições gerais e transitórias #089
+  steps:
+    - intent: tit_disposicoes_gerais_transitorias
+    - action: utter_tit_disposicoes_gerais_transitorias
+    - action: utter_continuar_conversa
+# - story: #090
 #   steps:
 #     - intent: 
 #     - action: utter_

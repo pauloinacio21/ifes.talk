@@ -90,7 +90,26 @@ intents:
     - reuniao_pedagogica_final #068
     - reuniao_pedagogica_decisao_final #069
     - reuniao_pedagogica_membros #070
-
+    - reuniao_pedagogica_quantidade #071
+    - monitoria #072
+    - estagio #073
+    - corpo_discente #074
+    - rod_2020_validade #075
+    - tit_cap_rod #076
+    - tit_cap_cursos_curriculos_planos_ensino #077
+    - tit_cap_periodo_letivo #078
+    - tit_cap_admissao_matricula #079
+    - tit_cap_atendimento_domiciliar #080
+    - tit_cap_transferencias_adaptacoes #081
+    - tit_cap_modalidades #082
+    - tit_cap_reunioes_pedagogicas #083
+    - tit_outras_atividades_ensino #084
+    - tit_cap_estagio_curricular #085
+    - tit_organizacoes_orientacoes_discentes #086
+    - tit_certificados_diplomas #087
+    - tit_intercambio_academico #088 
+    - tit_disposicoes_gerais_transitorias #089
+    # -  #090        
 ## intents de entretenimento 
     - minha_religiao
     - musica
@@ -238,7 +257,7 @@ responses:
     utter_regime_domiciliar_gravidas: #044
         - text: "A aluna gestante terá direito a 3 meses de atendimento domiciliar a partir do oitavo mês de gestação.\nVocê terá bastante tempo para cuidar e dar muito amor para esse serumaninho aí 😍\nPara mais informações, basta consultar o artigo 59 § 1° do ROD."
     utter_cumprimento: #045
-        - text: "Olá, eu sou o ifes.talk, sou especialista no ROD (Regulamento da Organização Didática), e tenho bastante conhecimento sobre os seus direitos e deveres! Estou aqui para tentar resolver o seu problema. Então vamos lá!\nTodas as respostas que eu possuo são baseadas no Regulamento da Organização Didática dos Cursos Técnicos do IFES (ROD), versão 2020. Esse pode ser acessado pelo link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf \nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos do ROD, então você deve procurar a pedagogia ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir! Para começar então, diga-me seu nome!"
+        - text: "Olá, eu sou o ifes.talk, sou especialista no ROD e tenho bastante conhecimento sobre os seus direitos e deveres! Estou aqui para tentar resolver o seu problema, então vamos lá!\nTodas as respostas que eu possuo são baseadas no Regulamento da Organização Didática dos Cursos Técnicos do IFES (ROD), versão 2020. Este pode ser acessado pelo link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf \nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos do ROD, então você deve procurar a pedagogia ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir! Para começar então, diga-me seu nome!"
     utter_rod_geral: #046
         - text: "O Regulamento da Organização Didática dos Cursos Técnicos, mais conhecido como ROD, é um documento do IFES que possui todas as regras e processos didáticos e pedagógicos que devem ser seguidos dentro do IFES.\nPara mais informações, basta consultar o artigo 1° do ROD."
     utter_plano_ensino_contem: #047
@@ -250,15 +269,15 @@ responses:
     utter_oferta_cursos: #050
         - text: "Os cursos podem funcionar de forma semestral ou anual, nas modalidades presencial e/ou a distância.\nOs cursos em regime anual podem ser organizados em bimestres, trimestres ou semestres. \nOs cursos técnicos podem ser integrados ao ensino médio, concomitante, subsequente ou EJA.\nPara mais informações, basta consultar o artigo 19 do ROD."
     utter_tempo_oferta_aulas: #051
-      - text: "Os cursos podem ser oferecidos nos turnos matutino, vespertino, noturno e integral.\nAs aulas podem ser dadas de segunda-feira a sabádo.\nPara os cursos a distância, a Educação a Distância será melhor orientada de acordo com a MEC/Setec.\nPara mais informações, basta consultar o artigo 20 do ROD."
+      - text: "Os cursos podem ser oferecidos nos turnos matutino, vespertino, noturno e integral.\nAs aulas podem ser dadas de segunda-feira a sabádo.\nPara os cursos a distância, a Educação a Distância será melhor orientada de acordo com o MEC/Setec.\nPara mais informações, basta consultar o artigo 20 do ROD."
     utter_calendario_academico_conteudo: #052
-      - text: "No calendário acadêmico, obrigatoriamente são previstos 22 informações para estarem contidos nele. Ficaria uma lista grande demais se eu escrevesse aqui rsrs, então procura lá no ROD!\nPara essas informações é só consultar o artigo 21 do ROD."
+      - text: "No calendário acadêmico, obrigatoriamente são previstas 22 informações para estarem contidas nele. Ficaria uma lista grande demais se eu escrevesse aqui rsrs, então procura lá no ROD!\nPara essas informações é só consultar o artigo 21 do ROD."
     utter_calendario_academico_localizacao: #053
       - text: "Os calendários acadêmicos estarão publicados no site do IFES do seu campus na parte de Sistema de Informações Acadêmicas, é só procurar lá!\nPara mais informações, basta consultar o artigo 22 § 5ºdo ROD."
     utter_ifes_condicoes: #054
       - text: "Para ingressar no IFES é preciso participar do processo seletivo que será realizado para os cursos.\nOs critérios de seleção, as normas e detalhes de cada curso estarão no edital.\nPara aqueles com necessidades específicas é garantida diferentes condições para a realização da prova conforme a manifestação do candidato no ato da inscrição.\nPara os candidatos do EJA, os procedimentos do processo seletivo podem ser um pouco diferentes, é só procurar os detalhes no edital.\nE a quantidade de vagas disponibilizadas depende do curso, também algo presente no edital.\nPara mais informações, basta consultar os artigos 23 e 24 do ROD."
     utter_preenchimento_vagas_discentes_ifes: #055
-      - text: "A partir do segundo período letivo, de acordo com ordem de prioridade, os candidatos para o preenchimento de vagas ociosas precisam estar em uma das seguintes categorias:\nAprovados em mudança de turno;\nAutorizados a fazer reintegração de matrícula no mesmo campus, curso, modalidade de oferta e polo de apoio presencial;\nAprovados em mudança de campus, polo de apoio presencial ou modalidade para um mesmo curso;\nAprovados em mudança de curso.\nPara mais informações, basta consultar o artigo 25 § 1º do ROD."
+      - text: "O preenchimento de vagas ociosas ocorre a partir do segundo período letivo, de acordo com ordem de prioridade, os candidatos precisam estar em uma das seguintes categorias:\nAprovados em mudança de turno;\nAutorizados a fazer reintegração de matrícula no mesmo campus, curso, modalidade de oferta e polo de apoio presencial;\nAprovados em mudança de campus, polo de apoio presencial ou modalidade para um mesmo curso;\nAprovados em mudança de curso.\nPara mais informações, basta consultar o artigo 25 § 1º do ROD."
     utter_matricula_sobre: #056
       - text: "A matrícula é o ato que vincula oficialmente o candidato ao curso escolhido caso aprovado no processo seletivo e satisfaça as condições de ingresso dentro dos prazos estabelecidos no calendário acadêmico.\nPara mais informações, basta consultar o artigo 27 do ROD."
     utter_reintegracao_matricula_sobre: #057
@@ -266,9 +285,9 @@ responses:
     utter_reintegracao_matricula_condicoes: #058
       - text: "Você pode requerer a reintegração da matrícula se teve a matrícula cancelada por não obter a frequência obrigatória de 75% num curso ou por não realizar a reabertura da matrícula quando esse foi trancado.\nSe for pedir a reintegração da matrícula tem que ser dentro do prazo previsto no calendário acadêmico.\nO requerimento da reintegração deve ser entrado no Protocolo Acadêmico, CRA do campus, SA do Cefor ou no polo presencial, para serem analisados de acordo com a existência de vagas e alguns critérios de desempate.\nPara mais informações, basta consultar o artigo 37 do ROD."
     utter_segunda_chance_avaliacao_turma: #059
-      - text: "Se mais da metade da sua turma tiver um resultado 'insatisfatório' numa avaliativa, pode-se pedir uma intervenção pedagógica, para ter uma chance de substituição da avaliação por outra.\nPara mais informações, basta consultar o artigo 72 do ROD."
+      - text: "Se mais da metade da sua turma tiver um resultado 'insatisfatório' numa avaliativa, pode-se pedir uma intervenção pedagógica para ter uma chance de substituição da avaliação por outra.\nPara mais informações, basta consultar o artigo 72 do ROD."
     utter_segunda_chance_avaliacao_discente: #060
-      - text: "O discente pode requerer uma segunda chance de avaliação no campus ou polo de apoio presencial caso satisfaça os critérios do Código de Ética e Disciplina do Corpo Discente do Ifes.\nSe esse que tiver uma segunda oportunidade mas não comparecer a ele, além de receber zero ele não vai mais ter o direito de oportunidades assim.\nPara mais informações, basta consultar o artigo 73 do ROD."
+      - text: "O discente pode requerer uma segunda chance de avaliação no campus ou polo de apoio presencial caso satisfaça os critérios do Código de Ética e Disciplina do Corpo Discente do Ifes.\nSe esse tiver uma segunda oportunidade, mas não comparecer a ela, além de receber zero, ele não vai mais ter o direito de oportunidades assim.\nPara mais informações, basta consultar o artigo 73 do ROD."
     utter_estudantes_distancia_avaliacao_rendimento: #061
       - text: "A avaliação do rendimento daqueles estudando a distância é feita a partir do cumprimento das atividades programadas, da realização de avaliações presenciais, e da prevalência dos resultados de avaliações presenciais comparado aos outros resultados de avaliações a distância.\nPara mais informações, basta consultar o artigo 74 do ROD."
     utter_pontuacao_trimestral: #062
@@ -280,7 +299,7 @@ responses:
     utter_reuniao_pedagogica_sobre: #065
       - text: "As reuniões pedagógicas servem para refletir, decidir e revisar a prática educativa, para entender como as turmas estão se encaixando nisso e trocar experiências para poder melhorar o processo de ensino-aprendizagem.\nExistem três tipos de reuniões pedagógicas: inicial, intermediária e final.\nPara mais informações, basta consultar o artigo 90 do ROD."
     utter_reuniao_pedagogica_inicial: #066
-      - text: "A Reunião Pedagógica Inicial serve para:\n1) Discutir e sugerir estratégias de ensino para ter uma boa aprendizagem, garantindo também metadologias diferentes para aqueles com necessidades específicas;\n2) Avaliar e sugerir a revisão dos Planos de Ensino se acharem necessário;\n3) Sugerir umas adequações a o que planejaram para envolver mais conteúdos interdisciplinares;\n4) Promover debates sobre o processo educacional e as rotinas do campus (ou polo de apoio presencial para quem estuda a distância) para sempre aprimorar algo se precisar.\nPara mais informações, basta consultar o artigo 91 do ROD."
+      - text: "A Reunião Pedagógica Inicial serve para:\n1) Discutir e sugerir estratégias de ensino para ter uma boa aprendizagem, garantindo também metadologias diferentes para aqueles com necessidades específicas;\n2) Avaliar e sugerir a revisão dos Planos de Ensino se acharem necessário;\n3) Sugerir umas adequações a o que planejaram para envolver mais conteúdos interdisciplinares;\n4) Promover debates sobre o processo educacional e as rotinas do campus (ou polo de apoio presencial, para quem estuda a distância) para sempre aprimorar algo se precisar.\nPara mais informações, basta consultar o artigo 91 do ROD."
     utter_reuniao_pedagogica_intermediaria: #067
       - text: "A Reunião Pedagógica Intermediária serve para:\n1) Discutir dificuldades da turma no processo de ensino-aprendizagem até o momento;\n2) Analisar o relatório de avaliação elaborado pela turma (geralmente por responsabilidade dos representantes de turma);\n3) Sugerir medidas de ensino novas para superar as dificuldades relatadas;\n4) Sugerir adequações ao conteúdo planejado do curso para haver uma maior interdisciplinaridade;\n5) Documentar oficialmente as questões submetidas e discutidas da reunião.\nPara mais informações, basta consultar o artigo 92 do ROD."
     utter_reuniao_pedagogica_final: #068
@@ -289,7 +308,46 @@ responses:
       - text: "Na Reunião Pedagógica Final, a análise para a progressão ou retenção dos discentes que podem reprovar envolve os registros e acompanhamentos feitos pelos docentes ao longo do período letivo, em que a qualidade não pode ser menos importante que a quantidade, ou seja, se esforço foi demonstrado, tem mais chance de passar. Aqueles que têm direito ao voto final são:\nDocentes que atuam na turma;\nRepresentante do Setor Pedagógico;\nCoordenador de Curso;\n1 membro da equipe de atendimento multidisciplinar da assistência estudantil;\n1 membro do Napne para os alunos acompanhados por esse Núcleo;\nPara quem estuda a distância, mediadores que atuam na turma.\nCaso tenha um empate, vai ser priorizado o voto do(s) docente(s) da matéria em questão.\nPara mais informações, basta consultar o artigo 94 do ROD."
     utter_reuniao_pedagogica_membros: #070
       - text: "Vamos para a listinha! Os membros da Reunião Pedagógica são:\n1) 1 representante do setor pedagógico (participação obrigatória nas 3 reuniões);\n2) Todos os docentes que atuam na turma (participação obrigatória nas 3 reuniões);\n3) O Coordenador do Curso ou representante (participação obrigatória nas 3 reuniões);\n4) Diretor de Ensino e Coordenador Geral de Ensino (participação facultativa nas 3 reuniões);\n5) 1 representante da Coordenadoria de Registros Acadêmicos (participação obrigatória nas reunião final);\n6) 1 representante de turma (participação obrigatória na reunião intermediária);\n7) Para modalidade EJA, a turma toda deve participar em horário normal de aula na reunião intermediária;\n8) 1 representante da Coordenadoria Geral da Assistência à Comunidade ou o setor equivalente do campus (participação obrigatória nas 3 reuniões);\n9) 1 membro da equipe de atendimento multidisciplinarda assistência estudantil (participação obrigatória nas 3 reuniões);\n10) 1 membro do Napne (participação obrigatória nas 3 reuniões se a turma tem alunos acompanhados por esse núcleo). \nBastante gente... são reuniões importantes afinal né KKKKKKKKKKKKKK\nPara mais informações, basta consultar o artigo 95 do ROD."
-
+    utter_reuniao_pedagogica_quantidade: #071
+        - text: "Considerando cada curso, as reuniões pedagógicas devem estar especificadas no calendário acadêmico.\nPara aqueles de regime semestral ou modular, deve ter no mínimo 3 reuniões.\nPara aqueles de regime anual organizados em bimestres ou semestres, deve ter no mínimo 5 reuniões pedagógicas.\nPara aqueles de regime anual organizados em trimestre, deve ter no mínimo 4 reuniões pedagógicas.\nPara aqueles de cursos a distância, deve ter no mínimo 2 reuniões presenciais por período letivo.\nConsidere que a 1ª reunião é a Reunião Pedagógica Inicial, o última é a Final, e os que tiver entre esses são as Intermediárias.\nPara mais informações, basta consultar os artigos 98 e 99 do ROD."
+    utter_monitoria: #072
+        - text: "Na monitoria alunos que são bons em certa matéria ajudam alunos com dificuldade nela. É uma forma de auxílio ao processo de ensino do professor.\nA oferta da monitoria deve respeitar a distribuição que é prevista nos editais para cada modalidade e nível de ensino.\nPara mais informações, basta consultar o artigo 100 do ROD."
+    utter_estagio: #073
+        - text: "O aluno pode fazer estágio desde que ele conclua esse e os requisitos de conclusão do curso dentro do dobro do tempo normalmente previsto do curso. Então atenção porque se passar do tempo você perde a matrícula! E cabe ao Ifes possibilitar condições para ser realizado o estágio obrigatório. \nPara mais informações, basta consultar os artigos 101 e 102 do ROD."
+    utter_corpo_discente: #074
+        - text: "O corpo discente é formado pelos alunos matriculados e ativos no Ifes e podem se organizar em Grêmios e/ou representantes de turma que são eleitos em cada período letivo.\nPara mais informações, basta consultar o artigo 103 do ROD."
+    utter_rod_2020_validade: #075
+        - text: "O ROD 2020, que é o ROD em que me baseio para responder suas perguntas atualmente, é válido por 4 anos desde sua implementação, e depois disso é avaliado de novo por toda a comunidade escolar.\nPara mais informações, basta consultar o artigo 106 do ROD."
+    utter_tit_cap_rod: #076
+        - text: "Dá uma olhada no capítulo I do ROD atual, 'do rod', do título I, 'das diretrizes gerais'! Esse abrange os artigos 1 a 5~"
+    utter_tit_cap_cursos_curriculos_planos_ensino: #077
+        - text: "Dá uma olhada no capítulo I do ROD atual, 'cursos, currículos e planos de ensino', do título II, 'da organização didática'! Esse abrange os artigos 6 a 18~"
+    utter_tit_cap_periodo_letivo: #078
+        - text: "Dá uma olhada no capítulo I do ROD atual, 'do período letivo', do título III, 'do regime escolar'! Esse abrange os artigos 19 a 22~"
+    utter_tit_cap_admissao_matricula: #079
+        - text: "Dá uma olhada no capítulo II do ROD atual, 'da admissão e da matrícula', do título III, 'do regime escolar'! Esse abrange os artigos 23 a 57~"
+    utter_tit_cap_atendimento_domiciliar: #080
+        - text: "Dá uma olhada no capítulo III do ROD atual, 'do atendimento domiciliar', do título III, 'do regime escolar'! Esse abrange os artigos 58 a 62~"
+    utter_tit_cap_transferencias_adaptacoes: #081
+        - text: "Dá uma olhada no capítulo IV do ROD atual, 'das transferências e adaptações', do título III, 'do regime escolar'! Esse abrange os artigos 63 a 68~"
+    utter_tit_cap_modalidades: #082
+        - text: "Dá uma olhada no capítulo I do ROD atual, 'das modalidades', do título IV, 'da avaliação escolar'! Esse abrange os artigos 69 a 89~"
+    utter_tit_cap_reunioes_pedagogicas: #083
+        - text: "Dá uma olhada no capítulo II do ROD atual, 'das reuniões pedagógicas', do título IV, 'da avaliação escolar'! Esse abrange os artigos 90 a 99~"
+    utter_tit_outras_atividades_ensino: #084
+        - text: "Dá uma olhada no título V do ROD atual, 'das outras atividades de ensino'! Faz parte deste o artigo 100~"
+    utter_tit_cap_estagio_curricular: #085
+        - text: "Dá uma olhada no capítulo I do ROD atual, 'do estágio curricular', do título V, 'das outras atividades de ensino'! Esse abrange os artigos 101 e 102~"
+    utter_tit_organizacoes_orientacoes_discentes: #086
+        - text: "Dá uma olhada no título VI do ROD atual, 'das organizações e orientações discentes'! Faz parte deste o artigo 103~"
+    utter_tit_certificados_diplomas: #087
+        - text: "Dá uma olhada no título VII do ROD atual, 'dos certificados e diplomas'! Faz parte deste o artigo 104~"
+    utter_tit_intercambio_academico: #088
+        - text: "Dá uma olhada no título VIII do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste o artigo 105~"
+    utter_tit_disposicoes_gerais_transitorias: #089
+        - text: "Dá uma olhada no título IX do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste os artigos 106 a 108~"
+    # utter_: #090
+    #     - text: ""
 ## utters de entretenimento
     utter_minha_religiao:
         - text: "Eu acredito que existe um Deus que funciona à base de luz, como um computador

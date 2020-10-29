@@ -1,5 +1,6 @@
 version: "2.0"
 nlu:
+# intents gerais
   - intent: informar_nome
     examples: |
       - [Diego](nome_usuario)
@@ -229,6 +230,8 @@ nlu:
       - Pq voce existe?
       - Aí, qual teu objetivo?
       - Qual seu objetivo??
+      - pra que voce serve
+      - pq vc existe
   - intent: saber_nome
     examples: |
       - Qual meu nome?
@@ -258,7 +261,7 @@ nlu:
     examples: |
       - me ajuda
       - me ajude
-      - Meajude
+      - Me ajude
       - ajude me
       - Me ajuda por favor
       - Me ajuda pf
@@ -591,7 +594,6 @@ nlu:
       - o que acontece se eu tirar nota abaixo de 60 total
       - tirei menos que 60 pontos no semestre
       - quando eu fico de dependência
-      - fala sobre a dependencia
   - intent: maximo_materias_dependencia #022
     examples: |
       - Máximo de disciplinas dp.
@@ -613,9 +615,10 @@ nlu:
       - o que acontece se eu reprovar em duas matérias
       - o que acontece se eu reprovar em três matérias
       - quantas matérias posso fazer na dependência?
+      - Máximod e materias dependencia
   - intent: revisao_notas_parciais #023
     examples: |
-      - Não concordo com minha nota, o que faço?
+      - revisao das notas das avaliacoes
       - quero pedir revisão da nota da minha prova
       - posso pedir revisão das minhas provas
       - posso pedir revisão da minha prova
@@ -642,7 +645,6 @@ nlu:
       - Quando posso pedir revisão do meu resultado final ?
       - revisão do resultado final
       - revisão da nota final
-      - posso pedir a revisão da minha nota
       - posso pedir revisão da nota do semestre
       - posso pedir revisão do meu resultado final
       - tenho direito de pedir revisão da minha nota final
@@ -754,10 +756,8 @@ nlu:
     examples: |
       - Sobre trancamento
       - Como funciona o trancamento de matrícula?
-      - trancamento de matrícula
       - como tranco a minha matrícula
       - como faço o trancamento da minha matrícula
-      - posso trancar a minha matrícula
       - como realizo o trancamento da minha matrícula
       - trancamento da minha matrícula
       - procedimento de trancamento de matrícula
@@ -770,9 +770,9 @@ nlu:
       - como trancar o curso
       - quero trancar o curso
       - trancar o curso
+      - sobre o trancamento de matricula
   - intent: quando_proibido_trancamento_matricula #032
     examples: |
-      - Quando não posso
       - quando não posso trancar a minha matrícula
       - em que circunstâncias não posso trancar a minha matrícula
       - quando não posso trancar a matrícula
@@ -881,6 +881,8 @@ nlu:
       - em quanto tempo devo fazer minha matrícula?
       - qual o prazo de matricula
       - prazo de matricula
+      - prazos pra fazer a matricula
+      - ate quando posso fazer matricula
   - intent: renovacao_matricula #039
     examples: |
       - Sobre renovação
@@ -934,6 +936,7 @@ nlu:
       - posso pedir o regime domiciliar?
       - estou doente, posso pedir o regime domiciliar
       - estou doente, posso solicitar o regime domiciliar?
+      - quero solicitar o regime domiciliar
   - intent: regime_domiciliar_sobre #042
     examples: |
       - Estou doente
@@ -949,13 +952,11 @@ nlu:
       - estou muito doente
       - o que é o regime domiciliar?
       - eu devo ficar doente por um tempo, como faço as aulas?
-      - afastamento
   - intent: prazo_regime_domiciliar_laudo_medico #043
     examples: |
-      - Prazo para apresentar o laudo do regime domiciliar
+      - Prazo para apresentar o laudo medico para o regime domiciliar
       - Prazo para o laudo médico regime domiciliar
       - Qual o prazo máximo para apresentar o atestado médico para o regime domiciliar ?
-      - prazo para apresentar o atestado médico
       - prazo para apresentar o atestado para o regime domiciliar
       - quanto tempo tenho para entregar o atestado médico para o regime domiciliar
       - quando tempo tenho para apresentar o laudo para o regime domiciliar
@@ -976,6 +977,7 @@ nlu:
       - alunas grávidas têm direito ao regime domiciliar
       - se eu ficar grávida, posso tirar um tempo da escola?
       - se estou grávida, posso não ir pra escola
+      - sobre o regime domiciliar para grávidas
   - intent: cumprimento #045
     examples: |
       - ei
@@ -1033,6 +1035,7 @@ nlu:
       - O professor pode mudar o plano de ensino?
       - Depois de apresentar, o prof ainda pode mudar seu plano de ensino
       - é possível alterar o plano d ensino dps de um tempo?
+      - data de entrega e divulgacao dos planos de ensino
   - intent: coeficiente_rendimento #049
     examples: |
       - coeficiente de rendimento
@@ -1078,6 +1081,7 @@ nlu:
       - Os cursos podem ter que turnos?
       - As aulas podem ocorrer em que dias?
       - Em quais dias da semana podem ter aula
+      - dias e horarios que podem ser letivos
   - intent: calendario_academico_conteudo #052
     examples: |
       - conteudo calendario academico
@@ -1119,7 +1123,7 @@ nlu:
       - quais os jeitos de entrar no ifes?
       - processo seletivo para o EJA
       - Como posso ingressar no Ifes?
-      - Quantas vagas são oferecias?
+      - Quantas vagas são oferecidas?
       - Quantas vagas tem para entrar no ifes?
       - quantidade de vagas
       - quantidade de vagas disponibilizadas para ser um aluno do IFES
@@ -1272,12 +1276,10 @@ nlu:
       - Para que servem as reuniões pedagogicas?
       - para oq serve reuniao pedagógica
       - me fala sobre as reunioes pedagógicas
-      - quantas reuniões pedagogicas tem?
       - quais sao os tipos de reuniao pedagogica
       - tipos de reunião pedagógica
       - razão de ter reunioes pedagogicas
       - Oq acontece nas reunioes pedagogicas?
-      - quantas reunioes tem num ano?
       - oq rola numa reuniao pedagogica?
   - intent: reuniao_pedagogica_inicial #066
     examples: |
@@ -1361,14 +1363,349 @@ nlu:
       - Quem pode atender as reunioes pedagogicas?
       - Eu posso ir pra uma reuniao pedagogica?
       - Membros das reuniões pedagógicas
-
-  # - intent:  #06
+  - intent: reuniao_pedagogica_quantidade #071
+    examples: |
+      - Quantidade de reuniões pedagógicas
+      - Mínimo reunioes pedagógicas
+      - reuniões pedagógicas num ano
+      - Quantas reuniões pedagogicas deverão ter?
+      - Quantas reunioes pedagogicas sao obrigatorias
+      - Qual a quantidade de erunioes pedagogicas que sao obrigados a fazer
+      - numero de reunioes pedagogicas necessárias
+      - Quantas reunioes pedagogicas necessarias existem?
+      - Podem marcar quantas reunioes pedagógicas
+      - Qual seria o mínimo de reuniões pedagógicas?
+      - Onde são previstos as reuniões pedagogicas
+      - É planejado com antecêndencia as reunioes pedagogicas
+      - é decidido antes já as reunioes pedagogicas
+      - Qual o mínimo de reunioes que a escola deve fazer?
+  - intent: monitoria #072
+    examples: |
+      - Monitoria
+      - sobre a monitoria
+      - oq é a monitoria?
+      - o que seria a monitoria?
+      - como funciona a monitoria
+      - o que acontece na monitoria?
+      -Distribuição de vagas da monitoria
+      - alunos das aula para outros alunos
+      - alunos ajudando o professor
+      - como os alunos podem ajudar o professor a ensinar?
+      - auxílio de ensino ao prof.    
+      - vagas da monitoria funcionam como?
+      - como um aluno pode dar aula para outro aluno?
+      - os alunos com facilidade em alguma matéria podem ajudar aqueles que são ruins na mesma matéria?    
+  - intent: estagio #073
+    examples: |
+      - estágio
+      - sobre o Estagio
+      - me conta como funciona o estágio
+      - Estágio obrigatório    
+      - Tempo para fazer estagio
+      - Quanto tempo tenho para concluir o estagio?
+      - Quanto tempo tem para concluir um estagio
+      - Tempo máximo para a conclusão do estágio
+      - Quanto tempo eu teria para fazer estágio?
+      - Qual o tempo que eu teria se fosse fazer estágio?
+      - Informações estágio
+      - período de tempo para estagio
+      - período máximo para a realização do estagio
+      - o ifes ajuda no estagio?
+  - intent: corpo_discente #074
+    examples: |
+      - Corpo Discente
+      - sobre o corpo discente
+      - corpo discente do ifes
+      - IFES Corpo discente
+      - Como os alunos podem se organizar no ifes?
+      - Organizações de alunos do ifes
+      - Grêmio
+      - como é formado o corpo discente?
+      - organização do corpo discente do Ifes
+      - Os alunos podem ser organizados de algum jeito na escola?
+      - existe algum tipo de corpo discente ?
+      - como fazer parte do corpo discente
+      - oq faz parte do corpo discente
+  - intent: rod_2020_validade #075
+    examples: |
+      - validade ROD 2020
+      - rod 2020 validade
+      - Qual a validade do rod?
+      - validade ROD
+      - Por quanto tempo o rod atual vale?
+      - O ROD 2020 é válido até quando?
+      - Tempo de validade do rod atual
+      - até quando esse rod é valido
+      - quando eles mudam o rod
+      - Quando eles trocam o rod?
+      - de quanto em quantos anos o rod é mudado?
+      - tempo valido desse tod
+      - rod atual duração
+      - por quanto tempo o rod2020 pode ser usado
+      - por quanto temp o Rod 2020 vale?
+      - Quando o rod atual será inválido
+      - quando o rod 2020 é invalido
+      - quando n vale mais o rod de agora
+  - intent: tit_cap_rod #076
+    examples: |
+      - Qual o capítulo do ROD
+      - capitulo rod
+      - Qual o capítulo que fala do ROD?
+      - em qual capitulo do rod é falado sobre o rod?
+      - rod capitulo que fala sobre ele
+      - rod cap que aborda ele
+      - Em qual capitulo do ROD2020 é falado sobre o rod?
+      - Qual a parte do rod atual que fala dele?
+      - Em qual parte do Rod 2020 fala do rod
+      - Que artigos falam sobre o rod
+      - Artigos que abrangem o rod
+      - Quais os artigos do rod que falam do rod?
+      - Onde fala das diretrizes gerais no rod?
+      - Local q fala d diretrizes gerais no rod atual
+  - intent: tit_cap_cursos_curriculos_planos_ensino #077
+    examples: |
+      - Qual o capítulo dos cursos, currículos e planos de ensino?
+      - capitulo cursos, currículos e planos de ensino
+      - Qual o capítulo que fala dos cursos, currículos e planos de ensino?
+      - Qual o cap que fala dos cursos?
+      - Qual o capítulo que fala dos currículos?
+      - Qual o capítulo que fala dos planos de ensino?
+      - em qual capitulo do rod é falado sobre os cursos, currículos e planos de ensino?
+      - rod capitulo que fala sobre cursos
+      - rod capitulo que aborda currículos
+      - Em qual capitulo do ROD2020 é falado sobre os planos de ensino?
+      - Qual a parte do rod atual que fala dos planos de ensino cursos e currículos?
+      - Em qual parte do Rod 2020 fala dos cursos, planos de ensino e currículo
+      - Que artigos falam sobre os cursos
+      - Artigos que abrangem os cursos, currículos e planos de ensino
+      - Quais os artigos do rod que falam dos cursos?
+      - Onde fala da organização didática no rod?
+      - Local q fala d organizacao didatica no rod atual
+      - Onde fala da organização de ensino no rod2020?
+  - intent: tit_cap_periodo_letivo #078
+    examples: |
+      - Qual o capítulo do período letivo?
+      - capitulo período letivo
+      - Qual o capítulo que fala do período letivo?
+      - Qual o cap. que fala do períodos letivos?
+      - em qual capitulo do rod é falado sobre o período letivo?
+      - rod capitulo que fala sobre período letivo
+      - rod capitulo que aborda período letivo
+      - Em qual capitulo do ROD2020 é falado sobre o período letivo?
+      - Qual a parte do rod atual que fala do período letivo?
+      - Em qual parte do Rod 2020 fala do período letivo
+      - Que artigos falam sobre o período letivo
+      - Artigos que abrangem o período letivo
+      - Quais os artigos do rod que falam do período letivo?
+      - Local q fala d período letivo no rod atual
+      - Onde fala do período letivo no rod2020?
+  - intent: tit_cap_admissao_matricula #079
+    examples: |
+      - Qual o capítulo da admissão e da matrícula?
+      - capitulo da admissão e da matrícula
+      - capitulo admissão
+      - capítulo matrícula
+      - Qual o capítulo que fala da admissão e da matrícula?
+      - Qual o cap. que fala da admissão e da matrícula?
+      - em qual capitulo do rod é falado sobre a admissão e matrícula?
+      - rod capitulo que fala sobre admissão e matrícula
+      - rod capitulo que aborda admissão e matrícula
+      - Em qual capitulo do ROD2020 é falado sobre a admissão e matrícula?
+      - Qual a parte do rod atual que fala da admissão e matrícula?
+      - Em qual parte do Rod 2020 fala da admissão e matrícula
+      - Que artigos falam sobre a admissão e matrícula
+      - Artigos que abrangem a admissão e matrícula
+      - Quais os artigos do rod que falam da admissão e matrícula?
+      - Local q fala d admissão e matrícula no rod atual
+      - Onde fala do admissão e matrícula no rod2020?
+      - Onde fala das condições do ifes no rod
+      - onde fala da renovação da matrícula no ROD 2020
+      - capítulo em que fala do trancamento da matrícula
+      - cap com assunto do cancelamento da matrícula
+      - onde fala do requerimento da reintegração das matrícula no rod
+      - local que aborda a matrícula em componentes curriculares optativos
+      - local que fala do aproveitamento de conhecimentos curriculares optativos no rod
+      - do aproveitamento de conhecimentos e experiências anteriores no rod
+      - capitulo as mudanças de turma, turno, campus e polo de apoio presencial
+      - da mudança de modalidade no rod 2020
+      - onde fala da mudança de curso no ROD?
+  - intent: tit_cap_atendimento_domiciliar #080
+    examples: |
+          - Qual o capítulo do atendimento domiciliar?
+          - capitulo atendimento domiciliar
+          - Qual o capítulo que fala do atendimento domiciliar?
+          - Qual o cap. que fala do atendimento domiciliar?
+          - em qual capitulo do rod é falado sobre o atendimento domiciliar?
+          - rod capitulo que fala sobre atendimento domiciliar
+          - rod capitulo que aborda atendimento domiciliar
+          - Em qual capitulo do ROD2020 é falado sobre o atendimento domiciliar?
+          - Qual a parte do rod atual que fala do atendimento domiciliar?
+          - Em qual parte do Rod 2020 fala do atendimento domiciliar
+          - Que artigos falam sobre o atendimento domiciliar
+          - Artigos que abrangem o atendimento domiciliar
+          - Quais os artigos do rod que falam do atendimento domiciliar?
+          - Local q fala d atendimento domiciliar no rod atual
+          - Onde fala do atendimento domiciliar no rod2020?
+  - intent: tit_cap_transferencias_adaptacoes #081
+    examples: |
+      - Qual o capítulo das transferências e adaptações?
+      - capitulo transferências e adaptações
+      - Qual o capítulo que fala das transferências e adaptações?
+      - Qual o capítulo que fala das transferências?
+      - Qual o capítulo que fala das adaptações?
+      - Qual o cap. que fala das transferências e adaptações?
+      - em qual capitulo do rod é falado sobre as transferências e adaptações?
+      - rod capitulo que fala sobre transferências e adaptações
+      - rod capitulo que aborda transferências e adaptações
+      - Em qual capitulo do ROD2020 é falado sobre as transferências e adaptações?
+      - Qual a parte do rod atual que fala das transferências e adaptações?
+      - Em qual parte do Rod 2020 fala das transferências e adaptações
+      - Que artigos falam sobre as transferências e adaptações
+      - Artigos que abrangem as transferências e adaptações
+      - Quais os artigos do rod que falam das transferências e adaptações
+      - Local q fala d transferências no rod atual
+      - Local q fala d adaptações no rod atual
+      - Onde fala das transferências e adaptações no rod2020?
+  - intent: tit_cap_modalidades #082
+    examples: |
+      - Qual o capítulo das modalidades?
+      - capitulo modalidades
+      - Qual o capítulo que fala das modalidades?
+      - Qual o cap. que fala das modalidades?
+      - em qual capitulo do rod é falado sobre as modalidades?
+      - rod capitulo que fala sobre avaliação de aprendizagem
+      - rod capitulo que fala sobre modalidades
+      - rod capitulo que fala sobre verificação de rendimento escolar
+      - rod capitulo que fala sobre regime de dependência
+      - rod capitulo que aborda modalidades
+      - Em qual capitulo do ROD2020 é falado sobre as modalidades?
+      - Qual a parte do rod atual que fala das modalidades?
+      - Em qual parte do Rod 2020 fala das modalidades
+      - Que artigos falam sobre as modalidades
+      - Artigos que abrangem as modalidades
+      - Quais os artigos do rod que falam das modalidades?
+      - Local q fala da avaliação de aprendizagem
+      - Local q fala d modalidades no rod atual
+      - Local q fala da verificação de rendimento escolar
+      - Local q fala do regime de dependência
+      - Onde fala das modalidades no rod2020?
+  - intent: tit_cap_reunioes_pedagogicas #083
+    examples: |
+      - Qual o capítulo das reuniões pedagógicas?
+      - capitulo reuniões pedagógicas
+      - Qual o capítulo que fala das reuniões pedagógicas?
+      - Qual o cap. que fala das reuniões pedagógicas?
+      - em qual capitulo do rod é falado sobre as reuniões pedagógicas?
+      - rod capitulo que fala sobre reuniões pedagógicas
+      - rod capitulo que aborda reuniões pedagógicas
+      - Em qual capitulo do ROD2020 é falado sobre as reuniões pedagógicas?
+      - Qual a parte do rod atual que fala das reuniões pedagógicas?
+      - Em qual parte do Rod 2020 fala das reuniões pedagógicas
+      - Que artigos falam sobre as reuniões pedagógicas
+      - Artigos que abrangem as reuniões pedagógicas
+      - Quais os artigos do rod que falam das reuniões pedagógicas?
+      - Local q fala d reuniões pedagógicas no rod atual
+      - Onde fala das reuniões pedagógicas no rod2020?
+  - intent: tit_outras_atividades_ensino #084
+    examples: |
+      - título outras atividades de ensino
+      - em qual título do rod fala das outras atividades de ensino
+      - Qual a parte do rod atual que fala das outras atividades de ensino?
+      - Em qual parte do Rod 2020 fala das outras atividades de ensino
+      - Que artigos falam sobre as outras atividades de ensino
+      - Artigos que abrangem as outras atividades de ensino
+      - Qual o artigo do rod que fala das outras atividades de ensino?
+      - Local q fala d outras atividades de ensino no rod atual
+      - Onde fala das outras atividades de ensino no rod2020?
+  - intent: tit_cap_estagio_curricular #085
+    examples: |
+      - Qual o capítulo do estágio curricular?
+      - capitulo estágio curricular
+      - Qual o capítulo que fala do estágio curricular?
+      - Qual o cap. que fala do estágio curricular?
+      - em qual capitulo do rod é falado sobre o estágio curricular?
+      - rod capitulo que fala sobre estágio curricular
+      - rod capitulo que aborda estágio curricular
+      - Em qual capitulo do ROD2020 é falado sobre estágio curricular?
+      - Qual a parte do rod atual que fala do estágio curricular?
+      - Em qual parte do Rod 2020 fala do estágio curricular
+      - Que artigos falam sobre o estágio curricular
+      - Artigos que abrangem o estágio curricular
+      - Quais os artigos do rod que falam do estágio curricular?
+      - Local q fala d estágio curriculars de ensino no rod atual
+      - Onde fala do estágio curricular no rod2020?
+  - intent: tit_organizacoes_orientacoes_discentes #086
+    examples: |
+      - título organizações e orientações discentes
+      - em qual título do rod fala das organizações e orientações discentes
+      - em qual título do rod fala das organizações?
+      - capítulo organizações e orientações discentes    
+      - em qual cap fala das organizações e orientações discentes
+      - em qual título do rod fala das orientações discentes?
+      - Qual a parte do rod atual que fala das organizações e orientações discentes?
+      - Em qual parte do Rod 2020 fala das organizações e orientações discentes
+      - Que artigos falam sobre as organizações e orientações discentes
+      - Artigos que abrangem as orientações discentes e organizações
+      - Qual o artigo do rod que fala das organizações e orientações discentes?
+      - Local q fala d organizações e orientações discentes no rod atual
+      - Onde fala das organizações e orientações discentes no rod2020?
+  - intent: tit_certificados_diplomas #087
+    examples: |
+      - título certificados e diplomas
+      - em qual título do rod fala dos diplomas
+      - em qual título do rod fala dos certificados?
+      - capítulo certificados e diplomas
+      - em qual cap fala dos certificados e diplomas
+      - em qual título do rod fala dos certificados e diplomas?
+      - Qual a parte do rod atual que fala dos certificados e diplomas?
+      - Em qual parte do Rod 2020 fala dos certificados e diplomas
+      - Que artigos falam sobre os certificados e diplomas
+      - Artigos que abrangem os certificados e diplomas
+      - Artigos que abrangem os certificados?
+      - Artigos que abrangem os diplomas
+      - Qual o artigo do rod que fala dos certificados e diplomas?
+      - Local q fala d certificados e diplomas no rod atual
+      - Onde fala dos certificados e diplomas no rod2020
+  - intent: tit_intercambio_academico #088
+    examples: |
+      - título intercâmbio acadêmico
+      - em qual título do intercâmbio acadêmico
+      - em qual título do rod fala do intercâmbio?
+      - capítulo intercâmbio acadêmico
+      - em qual cap fala do intercâmbio
+      - em qual título do rod fala do intercâmbio acadêmico?
+      - Qual a parte do rod atual que fala do intercâmbio acadêmico?
+      - Em qual parte do Rod 2020 fala do intercâmbio
+      - Que artigo fala sobre o intercâmbio acadêmicos
+      - Artigos que abrangem intercâmbio acadêmico
+      - Artigo que abrange o intercâmbio?
+      - Qual o artigo do rod que fala do intercâmbio acadêmico?
+      - Local q fala d intercâmbio no rod atual
+      - Onde fala do intercâmbio acadêmico no rod2020
+  - intent: tit_disposicoes_gerais_transitorias #089
+    examples: |
+      - título disposições gerais e transitórias
+      - título informações extras
+      - título das coisas gerais
+      - em qual título do rod fala das disposições gerais e transitórias
+      - em qual título do rod fala das disposições gerais?
+      - em qual título do rod fala das disposições transitórias?
+      - capítulo disposições gerais e transitórias
+      - em qual cap fala das disposições gerais e transitórias
+      - em qual título do rod fala das disposições gerais e transitórias?
+      - Qual a parte do rod atual que fala das disposições gerais e transitórias?
+      - Em qual parte do Rod 2020 fala das disposições gerais e transitórias
+      - onde fala no rod sobre coisas extras
+      - Que artigos falam sobre as disposições gerais 
+      - Que artigos falam sobre as disposições transitórias
+      - Artigos que abrangem as disposições gerais e transitórias
+      - Qual o artigo do rod que fala das disposições gerais e transitórias?
+      - Local q fala d disposições gerais e transitórias no rod atual
+      - Onde fala das disposições gerais e transitórias no rod2020?
+  # - intent:  #090
   #   examples: |
 
-  # - intent:  #06
-  #   examples: |
-
-  # intents de entretenimento
+# intents de entretenimento
   - intent: minha_religiao
     examples: |
       - qual seu religião?

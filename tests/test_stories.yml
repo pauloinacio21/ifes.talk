@@ -13,7 +13,6 @@ stories:
     intent: informar_nome
   - action: utter_cumprimentar_usuario_nome
   - action: listen
-
 - story: como estou 1
   steps:
   - user: |
@@ -25,7 +24,6 @@ stories:
     intent: esta_feliz
   - action: utter_usuario_esta_feliz
   - action: utter_listen
-
 - story: como estou 2
   steps:
   - user: |
@@ -37,14 +35,12 @@ stories:
     intent: esta_triste
   - action: utter_fica_feliz
   - action: utter_listen
-
 - story: despedida
   steps:
   - user: |
       tchau
     intent: despedir
   - action: utter_despedir
-
 - story: sou um bot
   steps:
   - user: |
@@ -60,7 +56,6 @@ stories:
     intent: transferencia_de_outra_escola
   - action: utter_transferencia_de_outra_escola
   - action: utter_continuar_conversa
-
 - story: transferencia do ifes para outra escola #002
   steps:
   - user: |
@@ -68,7 +63,6 @@ stories:
     intent: transferencia_para_outra_escola
   - action: utter_transferencia_para_outra_escola
   - action: utter_continuar_conversa
-
 - story: Pedir para o usuario repetir o nome porque não entende
   steps:
   - user: |

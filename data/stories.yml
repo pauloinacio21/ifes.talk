@@ -1,12 +1,5 @@
 version: "2.0"
 stories:
-- story: cumprimento inicial
-  steps:
-  - intent: cumprimentar
-  - action: utter_cumprimentar
-  - intent: informar_nome
-  - action: utter_cumprimentar_usuario_nome
-  - action: action_listen
 - story: despedida
   steps:
   - intent: despedir
@@ -312,7 +305,166 @@ stories:
     - intent: regime_domiciliar_efetivacao
     - action: utter_regime_domiciliar_efetivacao
     - action: utter_continuar_conversa
-# - story: #04
+- story: Quando pode solicitar o regime domiciliar #041
+  steps:
+    - intent: regime_domiciliar_condicoes
+    - action: utter_regime_domiciliar_condicoes
+    - action: utter_continuar_conversa
+- story: Sobre o regime domiciliar #042
+  steps:
+    - intent: regime_domiciliar_sobre
+    - action: utter_regime_domiciliar_sobre
+    - action: utter_continuar_conversa
+- story: Prazo laudo médico para o regime domiciliar #043
+  steps:
+    - intent: prazo_regime_domiciliar_laudo_medico
+    - action: utter_prazo_regime_domiciliar_laudo_medico
+    - action: utter_continuar_conversa
+- story: Regime domiciliar para grávidas #044
+  steps:
+    - intent: regime_domiciliar_gravidas
+    - action: utter_regime_domiciliar_gravidas
+    - action: utter_continuar_conversa
+- story: Cumprimentação #045
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimento
+  - intent: informar_nome
+  - action: utter_cumprimentar_usuario_nome
+  - action: action_listen
+- story: O que é o ROD #046
+  steps:
+    - intent: rod_geral
+    - action: utter_rod_geral
+    - action: utter_continuar_conversa
+- story: O que o Plano de Ensino contém #047
+  steps:
+    - intent: plano_ensino_contem
+    - action: utter_plano_ensino_contem
+    - action: utter_continuar_conversa
+- story: Datas de entrega e de divulgação dos Planos de Ensino #048
+  steps:
+    - intent: plano_ensino_datas
+    - action: utter_plano_ensino_datas
+    - action: utter_continuar_conversa
+- story: Coeficiente de Rendimento #049
+  steps:
+    - intent: coeficiente_rendimento
+    - action: utter_coeficiente_rendimento
+    - action: utter_continuar_conversa
+- story: Como os cursos podem ser ofertados #050
+  steps:
+    - intent: oferta_cursos
+    - action: utter_oferta_cursos
+    - action: utter_continuar_conversa
+- story: Dias e turnos que as aulas podem ser oferecidas #051
+  steps:
+    - intent: tempo_oferta_aulas
+    - action: utter_tempo_oferta_aulas
+    - action: utter_continuar_conversa
+- story: O que o calendário acadêmico precisa conter #052
+  steps:
+    - intent: calendario_academico_conteudo
+    - action: utter_calendario_academico_conteudo
+    - action: utter_continuar_conversa
+- story: Locais para encontrar o Calendário Acadêmico #053
+  steps:
+    - intent: calendario_academico_localizacao
+    - action: utter_calendario_academico_localizacao
+    - action: utter_continuar_conversa
+- story: Como entrar no IFES #054
+  steps:
+    - intent: ifes_condicoes
+    - action: utter_ifes_condicoes
+    - action: utter_continuar_conversa
+- story: Preenchimento de vagas para discentes do IFES #055
+  steps:
+    - intent: preenchimento_vagas_discentes_ifes
+    - action: utter_preenchimento_vagas_discentes_ifes
+    - action: utter_continuar_conversa
+- story: O que exatamente é a matrícula #056
+  steps:
+    - intent: matricula_sobre
+    - action: utter_matricula_sobre
+    - action: utter_continuar_conversa
+- story: O que é a reintegração da matrícula #057
+  steps:
+    - intent: reintegracao_matricula_sobre
+    - action: utter_reintegracao_matricula_sobre
+    - action: utter_continuar_conversa
+- story: Quando pode fazer a reintegração da matrícula #058
+  steps:
+    - intent: reintegracao_matricula_condicoes
+    - action: utter_reintegracao_matricula_condicoes
+    - action: utter_continuar_conversa
+- story: A possibilidade da turma inteira ter uma outra chance de prova #059
+  steps:
+    - intent: segunda_chance_avaliacao_turma
+    - action: utter_segunda_chance_avaliacao_turma
+    - action: utter_continuar_conversa
+- story: Segunda chance de avaliação pelo discente #060
+  steps:
+    - intent: segunda_chance_avaliacao_discente
+    - action: utter_segunda_chance_avaliacao_discente
+    - action: utter_continuar_conversa
+- story: Avaliação do rendimento de alunos estudando a distância #061
+  steps:
+    - intent: estudantes_distancia_avaliacao_rendimento
+    - action: utter_estudantes_distancia_avaliacao_rendimento
+    - action: utter_continuar_conversa
+- story: Pontuação trimestral #062
+  steps:
+    - intent: pontuacao_trimestral
+    - action: utter_pontuacao_trimestral
+    - action: utter_continuar_conversa
+- story: Pontuação Bimestral #063
+  steps:
+    - intent: pontuacao_bimestral
+    - action: utter_pontuacao_bimestral
+    - action: utter_continuar_conversa
+- story: Registros frequências, atividades e notas no acadêmico de quem estuda no presencial
+ #064
+  steps:
+    - intent: registro_informacoes_no_academico
+    - action: utter_registro_informacoes_no_academico
+    - action: utter_continuar_conversa
+- story: Sobre as reuniões pedagógicas #065
+  steps:
+    - intent: reuniao_pedagogica_sobre
+    - action: utter_reuniao_pedagogica_sobre
+    - action: utter_continuar_conversa
+- story: Sobre a Reunião Pedagógica Inicial #066
+  steps:
+    - intent: reuniao_pedagogica_inicial
+    - action: utter_reuniao_pedagogica_inicial
+    - action: utter_continuar_conversa
+- story: Sobre a Reunião Pedagógica Intermediária #067
+  steps:
+    - intent: reuniao_pedagogica_intermediaria
+    - action: utter_reuniao_pedagogica_intermediaria
+    - action: utter_continuar_conversa
+- story: Sobre a Reunião Pedagógica Final #068
+  steps:
+    - intent: reuniao_pedagogica_final
+    - action: utter_reuniao_pedagogica_final
+    - action: utter_continuar_conversa
+- story: Votação final de progressão ou retenção de um aluno #069
+  steps:
+    - intent: reuniao_pedagogica_decisao_final
+    - action: utter_reuniao_pedagogica_decisao_final
+    - action: utter_continuar_conversa
+- story: Membros da reunião pedagógica #070
+  steps:
+    - intent: reuniao_pedagogica_membros
+    - action: utter_reuniao_pedagogica_membros
+    - action: utter_continuar_conversa
+
+# - story: #07
+#   steps:
+#     - intent: 
+#     - action: utter_
+#     - action: utter_continuar_conversa
+# - story: #07
 #   steps:
 #     - intent: 
 #     - action: utter_

@@ -289,7 +289,6 @@ nlu:
       - Algo desconhecido
       - 2 + 3 é o que?
       - cuidando da vida
-
 # intents do ROD
   - intent: transferencia_de_outra_escola #001
     examples: |
@@ -314,7 +313,6 @@ nlu:
       - transferência para outra escola
       - mudar de escola
       - me mudar para outra escola
-      - ir para outra escola
   - intent: representantes_reunioes #003
     examples: |
       - Reuniões dos representantes
@@ -366,7 +364,7 @@ nlu:
       - como consigo fazer uma transferência de campus?
       - gostaria de transferir de campus
       - sobre mudar de campus
-      - transferencia entre os ifes
+      - transferência entre os ifes
   - intent: mudanca_turno #007
     examples: |
       - Mudança de turno
@@ -390,7 +388,7 @@ nlu:
   - intent: mudanca_campus_quando #008
     examples: |
       - Qnd mudar de campus
-      - Quando muder de campus?
+      - Quando mudar de campus?
       - Quando posso mudar de campus?
       - quando posso pedir a mudança de campus?
       - fale quando posso trocar meu campus
@@ -407,6 +405,10 @@ nlu:
       - quando posso mudar de turma
       - quero mudar de turma
       - quero trocar de turma
+      - quero estudar em um outra turma
+      - quero ir para a outra turma
+      - como faço para trocar de turma
+      - posso fazer parte de outra turma?
       - posso transferir para outra turma?
       - transferência turma
   - intent: mudanca_curso #010
@@ -415,7 +417,7 @@ nlu:
       - Posso mudar de curso?
       - mudança de curso
       - trocar de curso
-      - quando posso mar de curso
+      - quando posso mudar de curso
       - quero mudar de curso
       - quero trocar de curso
       - quero estudar em outro curso
@@ -423,7 +425,7 @@ nlu:
       - como faço para trocar de curso
       - gostaria de fazer outro curso
       - como faço algum outro curso?
-      - como faço um curso difernte do meu?
+      - como faço um curso diferente do meu?
       - transferência de curso
       - quero transferir de curso
   - intent: prazos_entregas_avaliacoes #011
@@ -565,12 +567,10 @@ nlu:
       - como repito o mesmo ano?
       - como repetir um ano
       - o que deve acontecer para eu repetir o ano
-      - reprovar
-      - reprovacao
-      - quando que reprova
-      - quando eu fico reprovado
-      - quantos pontos para reprovar
-      - reprovação de ano
+      - Como posso reprovar?
+      - Como você reprova?
+      - Como funciona a reprovação?
+      - Reprovação
   - intent: promocao_parcial #020
     examples: |
       - Promoção parcial
@@ -615,7 +615,7 @@ nlu:
       - o que acontece se eu reprovar em duas matérias
       - o que acontece se eu reprovar em três matérias
       - quantas matérias posso fazer na dependência?
-      - Máximod e materias dependencia
+      - Máximo de materias dependencia
   - intent: revisao_notas_parciais #023
     examples: |
       - revisao das notas das avaliacoes
@@ -641,6 +641,7 @@ nlu:
       - posso pedir para o professor revisar a correção da minha prova?
   - intent: revisao_notas_finais #024
     examples: |
+      - Revisão da nota final
       - Resultado final revisão
       - Quando posso pedir revisão do meu resultado final ?
       - revisão do resultado final
@@ -773,7 +774,7 @@ nlu:
       - sobre o trancamento de matricula
   - intent: quando_proibido_trancamento_matricula #032
     examples: |
-      - quando não posso trancar a minha matrícula
+      - prazos para fazer a matricula
       - em que circunstâncias não posso trancar a minha matrícula
       - quando não posso trancar a matrícula
       - quando o trancamento de matrícula não é possível
@@ -879,13 +880,12 @@ nlu:
       - qual o período que eu tenho para realizar a minha matrícula
       - quanto tempo tenho para fazer a minha matrícula
       - em quanto tempo devo fazer minha matrícula?
-      - qual o prazo de matricula
-      - prazo de matricula
-      - prazos pra fazer a matricula
+      - prazos para fazer a matricula
       - ate quando posso fazer matricula
   - intent: renovacao_matricula #039
     examples: |
       - Sobre renovação
+      - renovação da matricula
       - Como é feita a rematrícula?
       - sobre renovação de matrícula
       - renovação de matrícula?
@@ -921,6 +921,7 @@ nlu:
       - quando o regime domiciliar está valendo
   - intent: regime_domiciliar_condicoes #041
     examples: |
+      - quando pode solicitar regime domiciliar
       - Quando posso solicitar regime domiciliar
       - Qnd posso solicitar regime domiciliar?
       - Em que situações eu posso solicitar regime domiciliar?
@@ -942,7 +943,6 @@ nlu:
       - Estou doente
       - estou passando mal
       - não posso ir a aula pois estou doente
-      - quero solicitar o regime domiciliar
       - como funciona o regime domiciliar?
       - fiquei doente e não posso ir a aula
       - não consigo frequentar a aula
@@ -952,6 +952,7 @@ nlu:
       - estou muito doente
       - o que é o regime domiciliar?
       - eu devo ficar doente por um tempo, como faço as aulas?
+      - oq eh regime domiciliar
   - intent: prazo_regime_domiciliar_laudo_medico #043
     examples: |
       - Prazo para apresentar o laudo medico para o regime domiciliar
@@ -993,7 +994,6 @@ nlu:
       - boa noite
   - intent: rod_geral #046
     examples: |
-      - ROD
       - O que é o ROD?
       - Oq eh o rod?
       - Para que o rod serve?
@@ -1002,6 +1002,10 @@ nlu:
       - O que tem no rod?
       - Como funciona o ROD?
       - O que ROD significa?
+      - oq exatamente seria o Rod?
+      - função do rod
+      - para o que serve o ROD?
+      - o porque da existência do rod
   - intent: plano_ensino_contem #047
     examples: |
       - Conteúdo plano de ensino
@@ -1035,7 +1039,7 @@ nlu:
       - O professor pode mudar o plano de ensino?
       - Depois de apresentar, o prof ainda pode mudar seu plano de ensino
       - é possível alterar o plano d ensino dps de um tempo?
-      - data de entrega e divulgacao dos planos de ensino
+      - datas de entrega e divulgacao dos planos de ensino
   - intent: coeficiente_rendimento #049
     examples: |
       - coeficiente de rendimento
@@ -1110,6 +1114,7 @@ nlu:
       - localizacao do calendario academico
       - o calendario academico fica disponibilizado em algum lugar?
       - me fala onde posso ver o calendario academico
+      - como achar o calendario academico
   - intent: ifes_condicoes #054
     examples: |
       - como entrar no ifes
@@ -1145,10 +1150,8 @@ nlu:
       - Se sobrar alguma vaga num curso, como pode preencher?
   - intent: matricula_sobre #056
     examples: |
-      - matrícula
       - O que é a matrícula?
-      - Oq exatamente a matrícula
-      - Me explica sobre a matricula
+      - Oq exatamente é a matrícula
       - Como funciona a matrícula para entrar no Ifes?
       - Como é a matrícula do ifes?
       - qual a definição da matricula do ifes?
@@ -1178,6 +1181,7 @@ nlu:
       - É possível voltar a ser aluno IFES após cancelado por alguma razao?
       - Se eu reprovar por falta, posso continuar estudando?
       - Se eu não frequentar aulas o suficiente, posso continuar com minha matrícula?
+      - Quando pode fazer a reintegração da matrícula
   - intent: segunda_chance_avaliacao_turma #059
     examples: |
       - turma toda refazer prova
@@ -1193,9 +1197,9 @@ nlu:
       - Se a sala toda foi mal na avaliação, podemos pedir um novo?
       - Oq fazemos se a maioria da sala foi mal na prova
       - E se a maioria da minha turma foi mal na avalicao?
+      - Segunda chance de avaliação por uma sala inteira
   - intent: segunda_chance_avaliacao_discente #060
     examples: |
-      - Eu posso pedir uma segunda chance numa prova?
       - Segunda chance avaliacao para mim
       - Posso pedir para fazer uma prova separada como outra chance?
       - Pode ser aplicada outra prova para mim?
@@ -1207,6 +1211,7 @@ nlu:
       - E se eu n puder fazer a outra prova que pedi separado
       - quero outra chance para fazer uma avaliativa
       - É possível eu pedir uma outra prova para mim?
+      - Segunda chance de avaliação por um discente
   - intent: estudantes_distancia_avaliacao_rendimento #061
     examples: |
       - avaliacao de rendimento de alunos a distancia
@@ -1272,10 +1277,8 @@ nlu:
   - intent: reuniao_pedagogica_sobre #065
     examples: |
       - O que são as reuniões pedagógicas
-      - Sobre reunioes pedagogicas
       - Para que servem as reuniões pedagogicas?
       - para oq serve reuniao pedagógica
-      - me fala sobre as reunioes pedagógicas
       - quais sao os tipos de reuniao pedagogica
       - tipos de reunião pedagógica
       - razão de ter reunioes pedagogicas
@@ -1297,6 +1300,7 @@ nlu:
       - qual a razao da reuniao pedagogica inicial
       - assuntos da primeira reuniao pedagogica
       - Falam sobre oq na reunião pedagógica inicial?
+      - sobre a reuniao pedagogica inicial
   - intent: reuniao_pedagogica_intermediaria #067
     examples: |
       - Reunião Pedagógica Intermediária
@@ -1313,6 +1317,7 @@ nlu:
       - qual a razao da reuniao pedagogica mediana
       - assuntos da segunda reuniao pedagogica
       - Falam sobre oq na reunião pedagógica intermediaria?
+      - sobre a reuniao pedagogica intermediaria
   - intent: reuniao_pedagogica_final #068
     examples: |
       - Reunião Pedagógica Final
@@ -1329,6 +1334,7 @@ nlu:
       - qual a razao da reuniao pedagogica final
       - assuntos da terceira reuniao pedagogica
       - Falam sobre oq na reunião pedagógica final?
+      - sobre a reuniao pedagogica final
   - intent: reuniao_pedagogica_decisao_final #069
     examples: |
       - reuniao pedagogica decisão final
@@ -1348,6 +1354,7 @@ nlu:
       - Como tenho mais chances de passar de ano mesmo com uma nota final ruim?
       - Final de ano reprovação decisão
       - Decisão de reprovação na reuniao pedagogica final como funciona
+      - decisões de reprovação reunião pedagógica
   - intent: reuniao_pedagogica_membros #070
     examples: |
       - Participantes Reuniões Pedagógicas
@@ -1370,7 +1377,7 @@ nlu:
       - reuniões pedagógicas num ano
       - Quantas reuniões pedagogicas deverão ter?
       - Quantas reunioes pedagogicas sao obrigatorias
-      - Qual a quantidade de erunioes pedagogicas que sao obrigados a fazer
+      - Qual a quantidade de reunioes pedagogicas que sao obrigados a fazer
       - numero de reunioes pedagogicas necessárias
       - Quantas reunioes pedagogicas necessarias existem?
       - Podem marcar quantas reunioes pedagógicas
@@ -1379,6 +1386,8 @@ nlu:
       - É planejado com antecêndencia as reunioes pedagogicas
       - é decidido antes já as reunioes pedagogicas
       - Qual o mínimo de reunioes que a escola deve fazer?
+      - Qual a quant d reunioes pedagogicas que sao obrigados a serem feitos
+      - podem ter quantas reuniões pedagógicas intermediárias?
   - intent: monitoria #072
     examples: |
       - Monitoria
@@ -1446,6 +1455,8 @@ nlu:
       - Quando o rod atual será inválido
       - quando o rod 2020 é invalido
       - quando n vale mais o rod de agora
+      - Validade do ROD atual
+      - Validade do ROD
   - intent: tit_cap_rod #076
     examples: |
       - Qual o capítulo do ROD
@@ -1462,6 +1473,8 @@ nlu:
       - Quais os artigos do rod que falam do rod?
       - Onde fala das diretrizes gerais no rod?
       - Local q fala d diretrizes gerais no rod atual
+      - O capítulo do ROD que fala sobre o ROD
+      - onde fala do rod no rod?
   - intent: tit_cap_cursos_curriculos_planos_ensino #077
     examples: |
       - Qual o capítulo dos cursos, currículos e planos de ensino?
@@ -1702,9 +1715,24 @@ nlu:
       - Qual o artigo do rod que fala das disposições gerais e transitórias?
       - Local q fala d disposições gerais e transitórias no rod atual
       - Onde fala das disposições gerais e transitórias no rod2020?
-  # - intent:  #090
-  #   examples: |
-
+  - intent: sumario_rod #090
+    examples: |
+      - Sumário ROD
+      - sumario do rod
+      - sumário do rod atual
+      - Rod 2020 sumário
+      - capítulos rod 2020
+      - me apresenta os capítulos do rod atual
+      - fala todos os capítulos do rod
+      - resume pra mim aí os capitulos do rod
+      - caps que tem no rod
+      - lista dos capítulos do ROD
+      - títulos do Rod
+      - Quais os títulos do ROD
+      - Quais são os capítulos que tem no rod?
+      - Que capitulos existem no rod
+      - Como estão divididos os capítulos no ROD?
+      - rod capitulos
 # intents de entretenimento
   - intent: minha_religiao
     examples: |

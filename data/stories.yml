@@ -553,8 +553,8 @@ stories:
     - intent: tit_disposicoes_gerais_transitorias
     - action: utter_tit_disposicoes_gerais_transitorias
     - action: utter_continuar_conversa
-# - story: #090
-#   steps:
-#     - intent: 
-#     - action: utter_
-#     - action: utter_continuar_conversa
+- story: Sumário do ROD 2020 #090
+  steps:
+    - intent: sumario_rod
+    - action: utter_sumario_rod
+    - action: utter_continuar_conversa

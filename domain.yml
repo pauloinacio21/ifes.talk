@@ -109,7 +109,7 @@ intents:
     - tit_certificados_diplomas #087
     - tit_intercambio_academico #088 
     - tit_disposicoes_gerais_transitorias #089
-    # -  #090        
+    - sumario_rod #090        
 ## intents de entretenimento 
     - minha_religiao
     - musica
@@ -169,9 +169,9 @@ responses:
 
 ## utters do ROD
     utter_transferencia_de_outra_escola: #001
-        - text: "Bom, a transferência para o IFES pode ocorrer se as condições do edital estão sendo satisfeitas. E só se existirem vagas. Para saber se existem no momento, vá no site do campus do IFES para a qual deseja ir, e busca no portal 'transferências' ou 'edital de transferência' para ver se existem notícias de vagas atuais! \nPara mais informações, basta consultar o artigo 25 § 2º do ROD."
+        - text: "Bom, a transferência para o IFES pode ocorrer se as condições do edital estão sendo satisfeitas. E só se existirem vagas. Para saber se existem no momento, vá no site do campus do IFES para o qual deseja ir, e busque no portal 'transferências' ou 'edital de transferência' para ver se existem notícias de vagas atuais! \nPara mais informações, basta consultar o artigo 25 § 2º do ROD."
     utter_transferencia_para_outra_escola: #002
-        - text: "Para se transferir para outra escola, o seu responsável legal deverá ir até a CRA (Coordenadoria de Registro Acadêmico), e pedir a sua transferência.\nE então, em até 20 dias úteis os documentos necessários para a transferência ficarão disponíveis, são eles o seu histórico parcial e a ementa das matérias que você já cursou.\nPara mais informações, basta consultar o artigo 68 do ROD."
+        - text: "Para se transferir para outra escola, o seu responsável legal deverá ir até a CRA (Coordenadoria de Registro Acadêmico) e pedir a sua transferência.\nE então, em até 20 dias úteis os documentos necessários para a transferência ficarão disponíveis, são eles: o seu histórico parcial e a ementa das matérias que você já cursou.\nPara mais informações, basta consultar o artigo 68 do ROD."
     utter_representantes_reunioes: #003
         - text: "O líder da turma obrigatoriamente deve participar da reunião pedagógica intermediária, um dos três tipos de reuniões que existem durante o período letivo.\nPara mais informações, basta consultar o artigo 95 VI do ROD."
     utter_representantes_da_turma: #004
@@ -195,17 +195,17 @@ responses:
     utter_conteudos_avaliacoes_necessidadades_especificas: #013
         - text: "Nas avaliações de estudantes com necessidades específicas, deverá ser considerado seus limites, potencialidades, facilidades e dificuldades.\nAlém disso, o IFES irá oferecer adaptações de aplicação e dos instrumentos de avaliação, como tempo adicional para provas, conforme características e necessidades.\nPara mais informações, basta consultar o artigo 70 § 1º e § 2º  do ROD."
     utter_quantidade_avaliacoes: #014
-        - text: "Para o aluno em regime semestral ou anual organizado em semestres, deverá ter no mínimo 3 instrumentos avaliativos distintos, que serão definidos pelo professor.\nPara aqueles em regime anual organizado em bimestres ou trimestres o mínimo são 2 instrumentos avaliativos diversificados.\nPor exemplo, o professor pode dar 3 provas ou 1 prova e dois trabalhos/2 provas ou 1 prova e 1 trabalho e dividir a pontuação em diversas outras atividades diferentes, mas sempre respeitando o limite mínimo de 3 ou 2 atividades.\nPara mais informações, basta consultar o artigo 71§ 1º a § 4º do ROD."
+        - text: "Para o aluno em regime semestral ou anual organizado em semestres, deverá ter no mínimo 3 instrumentos avaliativos distintos, que serão definidos pelo professor.\nPara aqueles em regime anual organizado em bimestres ou trimestres o mínimo são 2 instrumentos avaliativos diversificados.\nPor exemplo, o professor pode dar 3 provas ou 1 prova e dois trabalhos/2 provas ou 1 prova e 1 trabalho e dividir a pontuação em diversas outras atividades diferentes, mas sempre respeitando o mínimo de 3 ou 2 atividades.\nPara mais informações, basta consultar o artigo 71§ 1º a § 4º do ROD."
     utter_pontuacao_avaliacoes: #015
         - text: "Para alunos em regime anual divididos em bimestres ou trimestres, o valor máximo de cada instrumento avaliativo não poderá ultrapassar 50% do valor total de pontos do período.\nE para aqueles em regime semestral ou anual dividido em semestres, o valor máximo de cada não pode ultrapassar 40% do total de pontos do período.\nRespeitando o mínimo de avaliações, a somatória de pontos de um mesmo tipo de instrumento avaliativo não poderá exceder a 80% do total de pontos do período.\nE também, para avaliações marcadas com uma antecedência menor que 4 dias letivos, a pontuação máxima dele não pode passar 10% do valor total de pontos da etapa.\nPara mais informações, basta consultar o artigo 71§ 5º a § 7º do ROD."
     utter_recuperacao: #016
         - text: "Aos alunos que não atingirem a média de qualquer uma das avaliações (Que equivale a 60% da nota total) de alguma disciplina serão garantidos estudos de recuperação paralelos ao longo do período letivo.\nVale lembrar que o seu Campus pode ter regras próprias sobre a recuperação, então procure se informar.\nSe você ficou de recuperação, espero que tenha sucesso dessa vez!\nPara mais informações, basta consultar o artigo 75 do ROD."
     utter_pontuacao_semestral: #017
-        - text: "Para cursos de regime semestral ou modular, 0 a 100 pontos.\nPara cursos de regime anual organizados em semestres, de 0 a 100 pontos totais, tendo 50 pontos para cada semestre.\nPara mais informações, basta consultar o artigo 76 I e II do ROD."
+        - text: "Para cursos de regime semestral ou modular, 0 a 100 pontos.\nPara cursos de regime anual organizados em semestres, de 0 a 100 pontos totais, sendo 50 pontos para cada semestre.\nPara mais informações, basta consultar o artigo 76 I e II do ROD."
     utter_periodo_maximo_conclusao: #018
-        - text: "Você tem o dobro do tempo de duração do seu curso para concluí-lo. Se por algum motivo você exceder esse prazo, sua matrícula será cancelada.\nPara os discentes com necessidades especiais, esse prazo poderá ser flexibilizada.\nPara mais informações, basta consultar o artigo 16 do ROD."
+        - text: "Você tem o dobro do tempo de duração do seu curso para concluí-lo. Se por algum motivo você exceder esse prazo, sua matrícula será cancelada.\nPara os discentes com necessidades especiais, esse prazo poderá ser flexibilizado.\nPara mais informações, basta consultar o artigo 16 do ROD."
     utter_ficar_retido: #019
-        - text: "Você ficará retido quando tiver nota menor que 60 pontos na nota final em mais de duas disciplinas ou ter frequência menor que 75% da carga horária do curso.\nEstude bastante para garantir sua pontuação e não falte muito para não ter problemas!\nPara mais informações, basta consultar o artigo 78 do ROD."
+        - text: "Você ficará retido quando tiver nota menor que 60 pontos na nota final em mais de duas disciplinas ou ter frequência menor que 75% da carga horária do curso./nE não ter a frequência necessária cancela sua matrícula hein! Então, estude bastante para garantir sua pontuação e não falte muito para não ter problemas!/nPara mais informações, basta consultar o artigo 78 do ROD."
     utter_promocao_parcial: #020
         - text: "O aluno que ficar reprovado em até duas disciplinas terá direito à promoção parcial.\nOu seja, seguirá para o próximo período letivo e irá cursar os componentes em regime de dependência, em turno distinto ao frequentado pelo estudante.\nPara mais informações, basta consultar os artigos 79, 80 e 87 do ROD."
     utter_dependencia: #021
@@ -257,7 +257,7 @@ responses:
     utter_regime_domiciliar_gravidas: #044
         - text: "A aluna gestante terá direito a 3 meses de atendimento domiciliar a partir do oitavo mês de gestação.\nVocê terá bastante tempo para cuidar e dar muito amor para esse serumaninho aí 😍\nPara mais informações, basta consultar o artigo 59 § 1° do ROD."
     utter_cumprimento: #045
-        - text: "Olá, eu sou o ifes.talk, sou especialista no ROD e tenho bastante conhecimento sobre os seus direitos e deveres! Estou aqui para tentar resolver o seu problema, então vamos lá!\nTodas as respostas que eu possuo são baseadas no Regulamento da Organização Didática dos Cursos Técnicos do IFES (ROD), versão 2020. Este pode ser acessado pelo link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf \nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos do ROD, então você deve procurar a pedagogia ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir! Para começar então, diga-me seu nome!"
+        - text: "Olá, eu sou o ifes.talk, sou especialista no ROD, e tenho bastante conhecimento sobre os seus direitos e deveres! Estou aqui para tentar resolver os seus problemas, então vamos lá!\nTodas as respostas que eu possuo são baseadas no Regulamento da Organização Didática dos Cursos Técnicos do IFES (ROD), versão 2020. Esse pode ser acessado pelo link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf\nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos do ROD, então você deve procurar a pedagoga ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir! Para começar então, diga-me seu nome!"
     utter_rod_geral: #046
         - text: "O Regulamento da Organização Didática dos Cursos Técnicos, mais conhecido como ROD, é um documento do IFES que possui todas as regras e processos didáticos e pedagógicos que devem ser seguidos dentro do IFES.\nPara mais informações, basta consultar o artigo 1° do ROD."
     utter_plano_ensino_contem: #047
@@ -273,7 +273,7 @@ responses:
     utter_calendario_academico_conteudo: #052
       - text: "No calendário acadêmico, obrigatoriamente são previstas 22 informações para estarem contidas nele. Ficaria uma lista grande demais se eu escrevesse aqui rsrs, então procura lá no ROD!\nPara essas informações é só consultar o artigo 21 do ROD."
     utter_calendario_academico_localizacao: #053
-      - text: "Os calendários acadêmicos estarão publicados no site do IFES do seu campus na parte de Sistema de Informações Acadêmicas, é só procurar lá!\nPara mais informações, basta consultar o artigo 22 § 5ºdo ROD."
+      - text: "Os calendários acadêmicos estarão publicados no site do IFES do seu campus. \nCaso você esteja no celular, ele estará ao final da página no tópico ‘Ifes’.\nE se você estiver no computador, estará na coluna lateral esquerda, é só procurar lá!\nPara mais informações, basta consultar o artigo 22 § 5ºdo ROD."
     utter_ifes_condicoes: #054
       - text: "Para ingressar no IFES é preciso participar do processo seletivo que será realizado para os cursos.\nOs critérios de seleção, as normas e detalhes de cada curso estarão no edital.\nPara aqueles com necessidades específicas é garantida diferentes condições para a realização da prova conforme a manifestação do candidato no ato da inscrição.\nPara os candidatos do EJA, os procedimentos do processo seletivo podem ser um pouco diferentes, é só procurar os detalhes no edital.\nE a quantidade de vagas disponibilizadas depende do curso, também algo presente no edital.\nPara mais informações, basta consultar os artigos 23 e 24 do ROD."
     utter_preenchimento_vagas_discentes_ifes: #055
@@ -313,11 +313,11 @@ responses:
     utter_monitoria: #072
         - text: "Na monitoria alunos que são bons em certa matéria ajudam alunos com dificuldade nela. É uma forma de auxílio ao processo de ensino do professor.\nA oferta da monitoria deve respeitar a distribuição que é prevista nos editais para cada modalidade e nível de ensino.\nPara mais informações, basta consultar o artigo 100 do ROD."
     utter_estagio: #073
-        - text: "O aluno pode fazer estágio desde que ele conclua esse e os requisitos de conclusão do curso dentro do dobro do tempo normalmente previsto do curso. Então atenção porque se passar do tempo você perde a matrícula! E cabe ao Ifes possibilitar condições para ser realizado o estágio obrigatório. \nPara mais informações, basta consultar os artigos 101 e 102 do ROD."
+        - text: "O aluno deve concluir o estágio dentro do tempo previsto para conclusão do curso, ou seja, o dobro da duração mínima dele. Então atenção porque se passar do tempo você perde a matrícula! E cabe ao Ifes possibilitar condições para ser realizado o estágio obrigatório. \nPara mais informações, basta consultar os artigos 101 e 102 do ROD."
     utter_corpo_discente: #074
         - text: "O corpo discente é formado pelos alunos matriculados e ativos no Ifes e podem se organizar em Grêmios e/ou representantes de turma que são eleitos em cada período letivo.\nPara mais informações, basta consultar o artigo 103 do ROD."
     utter_rod_2020_validade: #075
-        - text: "O ROD 2020, que é o ROD em que me baseio para responder suas perguntas atualmente, é válido por 4 anos desde sua implementação, e depois disso é avaliado de novo por toda a comunidade escolar.\nPara mais informações, basta consultar o artigo 106 do ROD."
+        - text: "O ROD 2020, que é o ROD em que me baseio para responder suas perguntas atualmente, é válido por 4 anos desde sua implementação, e depois disso é avaliado de novo por toda a comunidade escolar.\nOu seja, o ROD pode mudar e geralmente de fato muda a cada 4 anos! \nPara mais informações, basta consultar o artigo 106 do ROD."
     utter_tit_cap_rod: #076
         - text: "Dá uma olhada no capítulo I do ROD atual, 'do rod', do título I, 'das diretrizes gerais'! Esse abrange os artigos 1 a 5~"
     utter_tit_cap_cursos_curriculos_planos_ensino: #077
@@ -346,8 +346,8 @@ responses:
         - text: "Dá uma olhada no título VIII do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste o artigo 105~"
     utter_tit_disposicoes_gerais_transitorias: #089
         - text: "Dá uma olhada no título IX do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste os artigos 106 a 108~"
-    # utter_: #090
-    #     - text: ""
+    utter_sumario_rod: #090
+        - text: "Aqui um sumário para você do ROD 2020!\nTítulo I - Capítulo I - Do ROD\nTítulo II - Capítulo I - Da Organização Didática\nTítulo III - Capítulo I - Do Período Letivo\nTítulo III - Capítulo II - Da Admissão e da Metrícula\nTítulo III - Capítulo III - Do Atendimento Domiciliar\nTítulo III - Capítulo IV - Das Transferências e Adaptações\nTítulo IV - Capítulo I - Das Modalidades\nTítulo IV - Capítulo II - Das Reuniões Pedagógicas\nTítulo V - Capítulo I - Do Estágio Curricular\nTítulo VI - Das Organizações e Orientações Discentes\nTítulo VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\nTítulo IX - Das Disposições Gerais e Transitórias\nSe quiser algo mais específico que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf"
 ## utters de entretenimento
     utter_minha_religiao:
         - text: "Eu acredito que existe um Deus que funciona à base de luz, como um computador

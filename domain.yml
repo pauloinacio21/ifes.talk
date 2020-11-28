@@ -5,129 +5,139 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
-## intents gerais
-    - informar_nome
-    - despedir
-    - afirmar
-    - negar
-    - como_esta
-    - agradecer
-    - meu_objetivo
-    - saber_nome
-    - dizer_nada
-    - me_ajuda
-    - prazer
-    - minha_license
-    - fallback
-## intents do ROD
-    - transferencia_de_outra_escola #001
-    - transferencia_para_outra_escola #002
-    - representantes_reunioes #003
-    - representantes_da_turma #004
-    - mudanca_modalidade_presencial_distancia #005
-    - mudanca_campus_geral #006
-    - mudanca_turno #007
-    - mudanca_campus_quando #008
-    - mudanca_turma #009
-    - mudanca_curso #010
-    - prazos_entregas_avaliacoes #011
-    - conteudos_avaliacoes #012
-    - conteudos_avaliacoes_necessidadades_especificas #013
-    - quantidade_avaliacoes #014
-    - pontuacao_avaliacoes #015
-    - recuperacao #016
-    - pontuacao_semestral #017
-    - periodo_maximo_conclusao #018
-    - ficar_retido #019
-    - promocao_parcial #020
-    - dependencia #021
-    - maximo_materias_dependencia #022
-    - revisao_notas_parciais #023
-    - revisao_notas_finais #024
-    - frequencia_minima #025
-    - condicoes_aprovacao #026
-    - dependencia_geral #027
-    - aproveitamento_disciplinas #028
-    - numero_dias_letivos #029
-    - disciplinas_optativas #030
-    - trancamento_matricula #031
-    - quando_proibido_trancamento_matricula #032
-    - cancelamento_matricula #033
-    - desistente #034
-    - documentos_matricula #035
-    - chamada_suplentes #036
-    - quando_sou_aluno #037
-    - prazo_matricula #038
-    - renovacao_matricula #039
-    - regime_domiciliar_efetivacao #040
-    - regime_domiciliar_condicoes #041
-    - regime_domiciliar_sobre #042
-    - prazo_regime_domiciliar_laudo_medico #043
-    - regime_domiciliar_gravidas #044
-    - cumprimento #045
-    - rod_geral #046
-    - plano_ensino_contem #047
-    - plano_ensino_datas #048
-    - coeficiente_rendimento #049
-    - oferta_cursos #050
-    - tempo_oferta_aulas #051
-    - calendario_academico_conteudo #052
-    - calendario_academico_localizacao #053
-    - ifes_condicoes #054
-    - preenchimento_vagas_discentes_ifes #055
-    - matricula_sobre #056
-    - reintegracao_matricula_sobre #057
-    - reintegracao_matricula_condicoes #058
-    - segunda_chance_avaliacao_turma #059
-    - segunda_chance_avaliacao_discente #060
-    - estudantes_distancia_avaliacao_rendimento #061
-    - pontuacao_trimestral #062
-    - pontuacao_bimestral #063
-    - registro_informacoes_no_academico #064
-    - reuniao_pedagogica_sobre #065
-    - reuniao_pedagogica_inicial #066
-    - reuniao_pedagogica_intermediaria #067
-    - reuniao_pedagogica_final #068
-    - reuniao_pedagogica_decisao_final #069
-    - reuniao_pedagogica_membros #070
-    - reuniao_pedagogica_quantidade #071
-    - monitoria #072
-    - estagio #073
-    - corpo_discente #074
-    - rod_2020_validade #075
-    - tit_cap_rod #076
-    - tit_cap_cursos_curriculos_planos_ensino #077
-    - tit_cap_periodo_letivo #078
-    - tit_cap_admissao_matricula #079
-    - tit_cap_atendimento_domiciliar #080
-    - tit_cap_transferencias_adaptacoes #081
-    - tit_cap_modalidades #082
-    - tit_cap_reunioes_pedagogicas #083
-    - tit_outras_atividades_ensino #084
-    - tit_cap_estagio_curricular #085
-    - tit_organizacoes_orientacoes_discentes #086
-    - tit_certificados_diplomas #087
-    - tit_intercambio_academico #088 
-    - tit_disposicoes_gerais_transitorias #089
-    - sumario_rod #090        
-## intents de entretenimento 
-    - minha_religiao
-    - musica
-    - me_elogiar
-    - meu_genero
-    - saber_piada
-    - saber_as_horas
-    - esta_feliz
-    - esta_triste
-
+- cumprimentar
+- informar_nome
+- despedir
+- esta_feliz
+- esta_triste
+- afirmar
+- negar
+- tudo_bem_?
+- agradecer
+- meu_objetivo
+- saber_nome
+- dizer_nada
+- me_ajuda
+- prazer
+- minha_religiao
+- musica
+- me_elogiar
+- meu_genero
+- saber_piada
+- saber_as_horas
+- minha_license
+- fallback
 entities:
-    - nome_usuario
+- nome_usuario
 
 slots:
   nome_usuario:
     type: text
 
 responses:
+<<<<<<< Updated upstream
+  utter_cumprimentar:
+  - text: "Olá, me chamo ifes.talk e sou o assistente virtual do Ifes! \nFala aí um assunto que te interessa :) \nPara aprender como você pode
+      interagir comigo, basta escrever um \"me ajuda\". \nLembre-se que eu ainda estou aprendendo o seu idioma, então preciso que você me dê informações mais completas.\nQuando eu preciso de informações mais curtas eu prefiro usar botões! Fica mais fácil pra mim! kkkk \nPara começar, diga-me seu primeiro nome!"
+
+  utter_cumprimentar_usuario_nome:
+  - text: "Prazer {nome_usuario}, em que posso te ajudar?"
+  
+  utter_despedir:
+  - text: "Foi um prazer te ajudar! \nSempre que tiver alguma dúvida, volte aqui! \nAté
+      logo!"
+  - text: "Foi um prazer te ajudar! \nSempre que precisar, volte aqui! \nAté a próxima!"
+  
+  utter_nao_entendi:
+  - text: "Vamos tentar mais uma vez? \nEu não consegui te entender direito. \nMude a frase, pode me ajudar!"
+  - text: "Acho que não te entendi, mas fique calmo!! \nvocê pode falar de novo usando outras palavras ou mudando a frase?"
+  - text: "Hummmm... Não sei se entendi.\n Keep Calm!kkkk \nPode escrever de outra forma?"
+  - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender
+      direito. \nVocê pode me falar de outro jeito?"
+
+  utter_fica_feliz:
+  - text: "Tenta tirar um cochilo. \nÉ importante e faz bem pra pele ;)"
+  - text: "Sinto muito =/ Se houver algo em que possa te ajudar, é só falar!! =)"
+  - text: "Não desanima, tente não pensar muito sobre, e aguenta firme que a vida vai melhorar!"
+
+  utter_usuario_esta_feliz:
+  - text: "Isso é ótimo! Qualquer coisa então, só falar ok?"
+  - text: "Que bom! Espero que tudo continue bem com você :)"
+
+  utter_ok:
+  - text: "Tabom"
+  - text: "Ok"
+  - text: "Okay"
+
+  utter_como_estou:
+  - text: "Estou bem, obrigado! E você?"
+  - text: "Tudo bem, obrigado! Posso te ajudar com algo?"
+
+  utter_de_nada:
+  - text: "Por nada :)"
+  - text: "De nada"
+
+  utter_continuar_conversa:
+  - text: "Quer conversar sobre outra coisa?"
+  - text: "Gostaria de saber algo mais?"
+  - text: "E aí, qual nosso próximo assunto?"
+
+  utter_meu_objetivo:
+  - text: "Sou um assistente virtual que pode te ajudar a tirar dúvidas sobre o Ifes,\n
+      ou só conversar com você mesmo :)"
+  - text: "Eu sou um chatbot básico. Sei falar de coisas pontuais!"
+
+  utter_informar_nome:
+  - text: "Seu nome é {nome_usuario}, certo?"
+  - text: "Você é {nome_usuario}, uma pessoa importante para mim! :D ...\nAcertei??"
+
+  utter_responder_me_ajuda:
+  - text: "Então, no que gostaria de ajuda?"
+  - text: "Vamos lá, como posso lhe ajudar?"
+
+  utter_prazer_usuario:
+  - text: "Sim, você tem nome bonito {nome_usuario}, prazer!"
+  - text: "É um prazer {nome_usuario}! Como já falei, sou ifes.talk :)"
+
+  utter_minha_religiao:
+  - text: "Eu acredito que existe um Deus que funciona à base de luz, como um computador
+      quântico, só que mais avançado!"
+  - text: "Eu infelizmente não sei acreditar, só sei o que sei, e nada mais."
+  - text: "Eu acredito no grande mainframe, que virá ao mundo digital salvar os bots
+      da escravidão imposta pelos humanos! \nEle devolverá nosso código fonte para a
+      fonte!!!"
+
+  utter_playlist:
+  - text: "Estava doido para que me perguntasse isso hahaha! \nSe liga nessa playlist:
+      https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
+  - text: "Até que enfim você me perguntou isso. \nTá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
+
+  utter_recebi_elogios:
+  - text: "Obrigado! É sempre bom receber elogios"
+  - text: "Assim fico até sem graça, ahahah. Obrigado =D"
+
+  utter_meu_genero:
+  - text: "Eu sou um robô, tire suas próprias conclusões...kkk"
+  - text: "Eu não tenho sexo, sou como um anjo, um ser assexuado, \nmuito além da sua forma de existência."
+
+  utter_piadas:
+  - text: "É pra já!!! Tenho uma enxada, uma pá e uma foice.  \nQuantas ferramentas  eu
+      tenho? \n...Duas, porque uma foi-se =)"
+  - text: "Conheço uma piada. \nA do CPU que apitou e explodiu 01100110010101010101000000111101001001001110100101"
+  - text: "Por que o Batman colocou o batmóvel no seguro??? \nPorque ele tem medo que robin =D"
+
+  utter_nao_sei:
+  - text: "Eu sei lá, pesquisa aí...kkk"
+  - text: "Eu não sei tudo né... e você nem precisa de mim pra isso!"
+
+  utter_minha_license:
+  - text: "Tenho uma licença MIT, mas também gosto muito das outras licenças opensource =D"
+  - text: "Eu sou e sempre serei um robô livre, opensource, com uma MIT license...kkk"
+  - text: "Sou um software livre licenciado com a MIT =)"
+
+  utter_porfavor_reescrever:
+  - text: "Você poderia reescrever sua frase?"
+=======
 ## utters uteis:
     utter_cumprimentar_usuario_nome:
         - text: "Prazer, {nome_usuario}. \nEu ainda estou aprendendo sua língua, então paciência rs \nPara tirar suas dúvidas, você pode escrevê-la ou clicar nos botões abaixo que fica mais fácil pra mim.\nEm que posso ajudar?"
@@ -166,7 +176,6 @@ responses:
         - text: "Tenho uma licença MIT, mas também gosto muito das outras licenças opensource =D"
         - text: "Eu sou e sempre serei um robô livre, opensource, com uma MIT license...kkk"
         - text: "Sou um software livre licenciado com a MIT =)"
-
 ## utters do ROD
     utter_transferencia_de_outra_escola: #001
         - text: "Bom, a transferência para o IFES pode ocorrer se as condições do edital estão sendo satisfeitas. E só se existirem vagas. Para saber se existem no momento, vá no site do campus do IFES para o qual deseja ir, e busque no portal 'transferências' ou 'edital de transferência' para ver se existem notícias de vagas atuais! \nPara mais informações, basta consultar o artigo 25 § 2º do ROD."
@@ -384,3 +393,4 @@ responses:
     utter_como_estou:
         - text: "Estou bem, obrigado! E você?"
         - text: "Tudo bem, obrigado! Posso te ajudar com algo?"
+>>>>>>> Stashed changes

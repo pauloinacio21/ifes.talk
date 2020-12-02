@@ -1,141 +1,144 @@
 version: "2.0"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 
 intents:
 ## intents gerais
-- informar_nome
-- despedir
-- afirmar
-- negar
-- como_esta
-- agradecer
-- meu_objetivo
-- saber_nome
-- dizer_nada
-- me_ajuda
-- prazer
-- minha_license
-- fallback
+    - informar_nome
+    - despedir
+    - afirmar
+    - negar
+    - como_esta
+    - agradecer
+    - meu_objetivo
+    - saber_nome
+    - dizer_nada
+    - me_ajuda
+    - prazer
+    - minha_license
+    - fallback
 ## intents do ROD
-- transferencia_de_outra_escola #001
-- transferencia_para_outra_escola #002
-- representantes_reunioes #003
-- representantes_da_turma #004
-- mudanca_modalidade_presencial_distancia #005
-- mudanca_campus_geral #006
-- mudanca_turno #007
-- mudanca_campus_quando #008
-- mudanca_turma #009
-- mudanca_curso #010
-- prazos_entregas_avaliacoes #011
-- conteudos_avaliacoes #012
-- conteudos_avaliacoes_necessidadades_especificas #013
-- quantidade_avaliacoes #014
-- pontuacao_avaliacoes #015
-- recuperacao #016
-- pontuacao_semestral #017
-- periodo_maximo_conclusao #018
-- ficar_retido #019
-- promocao_parcial #020
-- dependencia_condicoes #021
-- maximo_materias_dependencia #022
-- revisao_notas_parciais #023
-- revisao_notas_finais #024
-- frequencia_minima #025
-- condicoes_aprovacao #026
-- dependencia_geral #027
-- aproveitamento_disciplinas #028
-- numero_dias_letivos #029
-- disciplinas_optativas #030
-- trancamento_matricula_sobre #031
-- quando_proibido_trancamento_matricula #032
-- cancelamento_matricula #033
-- desistente #034
-- documentos_matricula #035
-- chamada_suplentes #036
-- quando_sou_aluno #037
-- prazo_matricula #038
-- renovacao_matricula #039
-- regime_domiciliar_efetivacao #040
-- regime_domiciliar_condicoes #041
-- regime_domiciliar_sobre #042
-- prazo_regime_domiciliar_laudo_medico #043
-- regime_domiciliar_gravidas #044
-- cumprimento #045
-- rod_geral #046
-- plano_ensino_contem #047
-- plano_ensino_datas #048
-- coeficiente_rendimento #049
-- oferta_cursos #050
-- tempo_oferta_aulas #051
-- calendario_academico_conteudo #052
-- calendario_academico_localizacao #053
-- ifes_condicoes #054
-- preenchimento_vagas_discentes_ifes #055
-- matricula_sobre #056
-- reintegracao_matricula_sobre #057
-- reintegracao_matricula_condicoes #058
-- segunda_chance_avaliacao_turma #059
-- segunda_chance_avaliacao_discente #060
-- estudantes_distancia_avaliacao_rendimento #061
-- pontuacao_trimestral #062
-- pontuacao_bimestral #063
-- registro_informacoes_no_academico #064
-- reuniao_pedagogica_sobre #065
-- reuniao_pedagogica_inicial #066
-- reuniao_pedagogica_intermediaria #067
-- reuniao_pedagogica_final #068
-- reuniao_pedagogica_decisao_final #069
-- reuniao_pedagogica_membros #070
-- reuniao_pedagogica_quantidade #071
-- monitoria #072
-- estagio #073
-- corpo_discente #074
-- rod_2020_validade #075
-- tit_cap_rod #076
-- tit_cap_cursos_curriculos_planos_ensino #077
-- tit_cap_periodo_letivo #078
-- tit_cap_admissao_matricula #079
-- tit_cap_atendimento_domiciliar #080
-- tit_cap_transferencias_adaptacoes #081
-- tit_cap_modalidades #082
-- tit_cap_reunioes_pedagogicas #083
-- tit_outras_atividades_ensino #084
-- tit_cap_estagio_curricular #085
-- tit_organizacoes_orientacoes_discentes #086
-- tit_certificados_diplomas #087
-- tit_intercambio_academico #088 
-- tit_disposicoes_gerais_transitorias #089
-- sumario_rod #090    
+    - transferencia_de_outra_escola #001
+    - transferencia_para_outra_escola #002
+    - representantes_reunioes #003
+    - representantes_da_turma #004
+    - mudanca_modalidade_presencial_distancia #005
+    - mudanca_campus_geral #006
+    - mudanca_turno #007
+    - mudanca_campus_quando #008
+    - mudanca_turma #009
+    - mudanca_curso #010
+    - prazos_entregas_avaliacoes #011
+    - conteudos_avaliacoes #012
+    - conteudos_avaliacoes_necessidadades_especificas #013
+    - quantidade_avaliacoes #014
+    - pontuacao_avaliacoes #015
+    - recuperacao #016
+    - pontuacao_semestral #017
+    - periodo_maximo_conclusao #018
+    - ficar_retido #019
+    - promocao_parcial #020
+    - dependencia_condicoes #021
+    - maximo_materias_dependencia #022
+    - revisao_notas_parciais #023
+    - revisao_notas_finais #024
+    - frequencia_minima #025
+    - condicoes_aprovacao #026
+    - dependencia_geral #027
+    - aproveitamento_disciplinas #028
+    - numero_dias_letivos #029
+    - disciplinas_optativas #030
+    - trancamento_matricula_sobre #031
+    - quando_proibido_trancamento_matricula #032
+    - cancelamento_matricula #033
+    - desistente #034
+    - documentos_matricula #035
+    - chamada_suplentes #036
+    - quando_sou_aluno #037
+    - prazo_matricula #038
+    - renovacao_matricula #039
+    - regime_domiciliar_efetivacao #040
+    - regime_domiciliar_condicoes #041
+    - regime_domiciliar_sobre #042
+    - prazo_regime_domiciliar_laudo_medico #043
+    - regime_domiciliar_gravidas #044
+    - cumprimento #045
+    - rod_geral #046
+    - plano_ensino_contem #047
+    - plano_ensino_datas #048
+    - coeficiente_rendimento #049
+    - oferta_cursos #050
+    - tempo_oferta_aulas #051
+    - calendario_academico_conteudo #052
+    - calendario_academico_localizacao #053
+    - ifes_condicoes #054
+    - preenchimento_vagas_discentes_ifes #055
+    - matricula_sobre #056
+    - reintegracao_matricula_sobre #057
+    - reintegracao_matricula_condicoes #058
+    - segunda_chance_avaliacao_turma #059
+    - segunda_chance_avaliacao_discente #060
+    - estudantes_distancia_avaliacao_rendimento #061
+    - pontuacao_trimestral #062
+    - pontuacao_bimestral #063
+    - registro_informacoes_no_academico #064
+    - reuniao_pedagogica_sobre #065
+    - reuniao_pedagogica_inicial #066
+    - reuniao_pedagogica_intermediaria #067
+    - reuniao_pedagogica_final #068
+    - reuniao_pedagogica_decisao_final #069
+    - reuniao_pedagogica_membros #070
+    - reuniao_pedagogica_quantidade #071
+    - monitoria #072
+    - estagio #073
+    - corpo_discente #074
+    - rod_2020_validade #075
+    - tit_cap_rod #076
+    - tit_cap_cursos_curriculos_planos_ensino #077
+    - tit_cap_periodo_letivo #078
+    - tit_cap_admissao_matricula #079
+    - tit_cap_atendimento_domiciliar #080
+    - tit_cap_transferencias_adaptacoes #081
+    - tit_cap_modalidades #082
+    - tit_cap_reunioes_pedagogicas #083
+    - tit_outras_atividades_ensino #084
+    - tit_cap_estagio_curricular #085
+    - tit_organizacoes_orientacoes_discentes #086
+    - tit_certificados_diplomas #087
+    - tit_intercambio_academico #088 
+    - tit_disposicoes_gerais_transitorias #089
+    - sumario_rod #090    
 ## intents de assuntos gerais
-- transferencias #01  
-- mudanca_campus #01  
-- representantes #02
-- avaliacoes #03
-- pontuacoes #04
-- dependencia #05
-- revisao_notas #06
-- dias_letivos #07
-- matricula #08
-- trancamento_matricula #08
-- reintegracao_matricula #08
-- regime_domiciliar #09
-- plano_ensino #10
-- calendario_academico #11
-- segunda_chance_avaliacao #12
-- reuniao_pedagogica #13
-- rod #14
+    - transferencias #01  
+    - mudanca_campus #01  
+    - representantes #02
+    - avaliacoes #03
+    - pontuacoes #04
+    - dependencia #05
+    - revisao_notas #06
+    - dias_letivos #07
+    - matricula #08
+    - trancamento_matricula #08
+    - reintegracao_matricula #08
+    - regime_domiciliar #09
+    - plano_ensino #10
+    - calendario_academico #11
+    - segunda_chance_avaliacao #12
+    - reuniao_pedagogica #13
+    - rod #14
 ## intents de entretenimento 
-- minha_religiao
-- musica
-- me_elogiar
-- meu_genero
-- saber_piada
-- saber_as_horas
-- esta_feliz
-- esta_triste
+    - minha_religiao
+    - musica
+    - me_elogiar
+    - meu_genero
+    - saber_piada
+    - saber_as_horas
+    - esta_feliz
+    - esta_triste
 
 entities:
-- nome_usuario
+    - nome_usuario
 
 slots:
     nome_usuario:
@@ -179,8 +182,7 @@ responses:
         - text: "Tenho uma licença MIT, mas também gosto muito das outras licenças opensource =D"
         - text: "Eu sou e sempre serei um robô livre, opensource, com uma MIT license...kkk"
         - text: "Sou um software livre licenciado com a MIT =)"
-
-    ## utters do ROD
+## utters do ROD
     utter_transferencia_de_outra_escola: #001
         - text: "Bom, a transferência para o IFES pode ocorrer se as condições do edital estão sendo satisfeitas. E só se existirem vagas. Para saber se existem no momento, vá no site do campus do IFES para o qual deseja ir, e busque no portal 'transferências' ou 'edital de transferência' para ver se existem notícias de vagas atuais! \nPara mais informações, basta consultar o artigo 25 § 2º do ROD."
     utter_transferencia_para_outra_escola: #002
@@ -361,7 +363,7 @@ responses:
         - text: "Dá uma olhada no título IX do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste os artigos 106 a 108~"
     utter_sumario_rod: #090
         - text: "Aqui um sumário para você do ROD 2020!\nTítulo I - Capítulo I - Do ROD\nTítulo II - Capítulo I - Da Organização Didática\nTítulo III - Capítulo I - Do Período Letivo\nTítulo III - Capítulo II - Da Admissão e da Metrícula\nTítulo III - Capítulo III - Do Atendimento Domiciliar\nTítulo III - Capítulo IV - Das Transferências e Adaptações\nTítulo IV - Capítulo I - Das Modalidades\nTítulo IV - Capítulo II - Das Reuniões Pedagógicas\nTítulo V - Capítulo I - Do Estágio Curricular\nTítulo VI - Das Organizações e Orientações Discentes\nTítulo VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\nTítulo IX - Das Disposições Gerais e Transitórias\nSe quiser algo mais específico que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf"
-    ## utters dos assuntos gerais
+## utters dos assuntos gerais
     utter_transferencias: #01
         - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais sobre?\n\nTransferência de outra instituição para o IFES\nTransferência do IFES para outra instituição\nMudança da modalidade entre presencial e a distância\nMudança de campus\nMudança de turno\nMudança de turma\nMudança de curso\n"
     utter_mudanca_campus: #01
@@ -396,7 +398,7 @@ responses:
         - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?\n\nO que são as reuniões pedagógicas\nMembros das reuniões pedagógicas\nQuantidade de reuniões pedagógicas\nSobre a reunião pedagógica inicial\nSobre a reunião pedagógica intermediária\nSobre a reunião pedagógica final\nDecisões de reprovação na reunião pedagógica\n"
     utter_rod: #14
         - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?\n\nO que é o ROD\nValidade do ROD atual\nO capítulo do ROD que fala sobre o ROD\nSumário do ROD atual\n"
-    ## utters de entretenimento
+## utters de entretenimento
     utter_minha_religiao:
         - text: "Eu acredito que existe um Deus que funciona à base de luz, como um computador
             quântico, só que mais avançado!"
@@ -432,7 +434,3 @@ responses:
     utter_como_estou:
         - text: "Estou bem, obrigado! E você?"
         - text: "Tudo bem, obrigado! Posso te ajudar com algo?"
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true

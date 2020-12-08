@@ -1,6 +1,6 @@
 version: "2.0"
 nlu:
-# intents gerais
+# intents chitchat
   - intent: informar_nome
     examples: |
       - [Diego](nome_usuario)
@@ -289,6 +289,138 @@ nlu:
       - Algo desconhecido
       - 2 + 3 é o que?
       - cuidando da vida
+    - intent: minha_religiao
+    examples: |
+      - qual seu religião?
+      - Qual é sua religião?
+      - Qual tua religiao?
+      - Me fala sua religião
+      - Me conte tua religião
+      - Você tem alguma religiao?
+      - C tem alguma religião?
+      - Você acredita em algo?
+      - Noq vc acredita?
+      - Em o que você acredita?
+      - Acreditas em algo?
+      - C acredita em algum deus?
+      - Vc tem algum Deus?
+      - Você acredita em alguma coisa?
+      - qual sua religiao
+  - intent: musica
+    examples: |
+      - Você gosta de que tipo de música?
+      - Gosta de música?
+      - C gosta de música?
+      - Gosta de algum tipo de música?
+      - Tem alguma playlist pra recomendar?
+      - Me fale quais músicas você gosta
+      - Me conte q tipo de musica vc escuta
+      - Fala aí seu gosto musical
+      - Qual seu gosto musical?
+      - Me recomenda alguma playlist
+      - Me recomende uma playlist
+      - Me recomenda alguma música ai
+      - me recomende musicass
+      - me dá uma playlist pra escutar
+      - tens alguma playlist boa?
+      - me fale sobre seu gosto musical
+      - qual o seu tipo de musica?
+      - Ei, tem alguma musica que voce escuta?
+  - intent: me_elogiar
+    examples: |
+      - vc é lindo
+      - Você eh lindo
+      - tu é linda
+      - Vc é pft
+      - C é perfeito
+      - Vc é incrível
+      - Que incrível!
+      - Muito incrível
+      - Que épico!
+      - Epico demais
+      - Amei
+      - Isso é muito bom
+      - parabéns, amei
+      - parabens, adorei
+      - Você fez bem!
+      - C fez muito bem
+      - C é maravilhoso
+      - Te acho espetacular
+      - Vc é ótimo
+      - Voce é o melhor!
+      - Vc é muito legal
+      - Te acho super legal
+      - C é legalzão
+  - intent: meu_genero
+    examples: |
+      - qual seu genêro?
+      - Qual é seu genero?
+      - Qual teu genero
+      - vc é homem ou mulher?
+      - C é homem?
+      - Você é um homem?
+      - Tu é um homem?
+      - C é homem
+      - Voce é um homem ou uma mulher
+      - vc é menino ou menina
+      - C é mulher?
+      - Você eh uma mulher?
+      - tu é mulher
+      - c é menina ou menino??
+      - vc é uma menina?
+      - es uma menina?
+      - Qual seu sexo?
+      - Me fale seu sexo
+      - Conta seu sexo aí
+      - qual teu genero
+  - intent: saber_piada
+    examples: |
+      - Me conta uma piada
+      - Me fala alguma piada
+      - Conte-me uma piada
+      - Fala uma piada
+      - Fale alguma piada aí
+      - Tem alguma piada?
+      - Tem uma piada para me contar?
+      - Poderia me falar uma piada?
+      - conte uma piada por favot
+      - fala algo engraçado
+      - manda a piada aí
+      - Conte alguma coisa engraçado
+  - intent: saber_as_horas
+    examples: |
+      - Que horas são?
+      - Q horas sao agora?
+      - Quais as horas?
+      - Qual o horário do momento?
+      - Me fale as horas por favor
+      - Me conte as horas
+      - Que horas sao agr
+      - Quais as horas?
+  - intent: esta_feliz
+    examples: |
+      - Estou bem
+      - Estou ótima
+      - Me sinto feliz
+      - Estou feliz demais!
+      - Tudo bem
+      - Tudo ótimo
+      - Tudo ok
+      - Estou feliz!
+      - Estou muito bem também!
+      - estou bem tambem!
+  - intent: esta_triste
+    examples: |
+      - To meio triste
+      - Me sinto triste
+      - To mal
+      - Me sinto mal
+      - Estou para baixo
+      - Não muito bem
+      - To pra baixo no momento
+      - mal
+      - tudo está ruim
+      - Estou triste
 # intents do ROD
   - intent: transferencia_de_outra_escola #001
     examples: |
@@ -1729,140 +1861,6 @@ nlu:
       - Que capitulos existem no [rod]
       - Como estão divididos os capítulos no [ROD]?
       - [rod] capitulos
-# intents de entretenimento
-  - intent: minha_religiao
-    examples: |
-      - qual seu religião?
-      - Qual é sua religião?
-      - Qual tua religiao?
-      - Me fala sua religião
-      - Me conte tua religião
-      - Você tem alguma religiao?
-      - C tem alguma religião?
-      - Você acredita em algo?
-      - Noq vc acredita?
-      - Em o que você acredita?
-      - Acreditas em algo?
-      - C acredita em algum deus?
-      - Vc tem algum Deus?
-      - Você acredita em alguma coisa?
-      - qual sua religiao
-  - intent: musica
-    examples: |
-      - Você gosta de que tipo de música?
-      - Gosta de música?
-      - C gosta de música?
-      - Gosta de algum tipo de música?
-      - Tem alguma playlist pra recomendar?
-      - Me fale quais músicas você gosta
-      - Me conte q tipo de musica vc escuta
-      - Fala aí seu gosto musical
-      - Qual seu gosto musical?
-      - Me recomenda alguma playlist
-      - Me recomende uma playlist
-      - Me recomenda alguma música ai
-      - me recomende musicass
-      - me dá uma playlist pra escutar
-      - tens alguma playlist boa?
-      - me fale sobre seu gosto musical
-      - qual o seu tipo de musica?
-      - Ei, tem alguma musica que voce escuta?
-  - intent: me_elogiar
-    examples: |
-      - vc é lindo
-      - Você eh lindo
-      - tu é linda
-      - Vc é pft
-      - C é perfeito
-      - Vc é incrível
-      - Que incrível!
-      - Muito incrível
-      - Que épico!
-      - Epico demais
-      - Amei
-      - Isso é muito bom
-      - parabéns, amei
-      - parabens, adorei
-      - Você fez bem!
-      - C fez muito bem
-      - C é maravilhoso
-      - Te acho espetacular
-      - Vc é ótimo
-      - Voce é o melhor!
-      - Vc é muito legal
-      - Te acho super legal
-      - C é legalzão
-  - intent: meu_genero
-    examples: |
-      - qual seu genêro?
-      - Qual é seu genero?
-      - Qual teu genero
-      - vc é homem ou mulher?
-      - C é homem?
-      - Você é um homem?
-      - Tu é um homem?
-      - C é homem
-      - Voce é um homem ou uma mulher
-      - vc é menino ou menina
-      - C é mulher?
-      - Você eh uma mulher?
-      - tu é mulher
-      - c é menina ou menino??
-      - vc é uma menina?
-      - es uma menina?
-      - Qual seu sexo?
-      - Me fale seu sexo
-      - Conta seu sexo aí
-      - qual teu genero
-  - intent: saber_piada
-    examples: |
-      - Me conta uma piada
-      - Me fala alguma piada
-      - Conte-me uma piada
-      - Fala uma piada
-      - Fale alguma piada aí
-      - Tem alguma piada?
-      - Tem uma piada para me contar?
-      - Poderia me falar uma piada?
-      - conte uma piada por favot
-      - fala algo engraçado
-      - manda a piada aí
-      - Conte alguma coisa engraçado
-  - intent: saber_as_horas
-    examples: |
-      - Que horas são?
-      - Q horas sao agora?
-      - Quais as horas?
-      - Qual o horário do momento?
-      - Me fale as horas por favor
-      - Me conte as horas
-      - Que horas sao agr
-      - Quais as horas?
-  - intent: esta_feliz
-    examples: |
-      - Estou bem
-      - Estou ótima
-      - Me sinto feliz
-      - Estou feliz demais!
-      - Tudo bem
-      - Tudo ótimo
-      - Tudo ok
-      - Estou feliz!
-      - Estou muito bem também!
-      - estou bem tambem!
-  - intent: esta_triste
-    examples: |
-      - To meio triste
-      - Me sinto triste
-      - To mal
-      - Me sinto mal
-      - Estou para baixo
-      - Não muito bem
-      - To pra baixo no momento
-      - mal
-      - tudo está ruim
-      - Estou triste
-
 # synonyms
   - synonym: bomdia
     examples: |

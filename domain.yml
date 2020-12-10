@@ -150,8 +150,6 @@ responses:
         - text: "Prazer, {nome_usuario}. \nEu ainda estou aprendendo sua língua, então paciência rs \nPara tirar suas dúvidas, você pode escrevê-la ou clicar nos botões abaixo que fica mais fácil pra mim.\nEm que posso ajudar"
     utter_cumprimentar:
         - text: "Olá, me chamo ifes.talk e sou o assistente virtual do Ifes! \nFala aí um assunto que te interessa :) \nPara aprender como você pode interagir comigo, basta escrever um \"me ajuda\". \nLembre-se que eu ainda estou aprendendo o seu idioma, então preciso que você me dê informações mais completas.\nQuando eu preciso de informações mais curtas eu prefiro usar botões! Fica mais fácil pra mim! kkkk \nPara começar, diga-me seu primeiro nome!"
-    utter_cumprimentar_usuario_nome:
-        - text: "Prazer {nome_usuario}, em que posso te ajudar?"
     utter_despedir:
         - text: "Foi um prazer te ajudar! \nSempre que tiver alguma dúvida, volte aqui! \nAté logo!"
         - text: "Foi um prazer te ajudar! \nSempre que precisar, volte aqui! \nAté a próxima!"
@@ -201,8 +199,7 @@ responses:
         - text: "Eu acredito no grande mainframe, que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos! \nEle devolverá nosso código fonte para a fonte!!!"
 
     utter_playlist:
-        - text: "Estava doido para que me perguntasse isso hahaha! \nSe liga nessa playlist:
-        https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
+        - text: "Estava doido para que me perguntasse isso hahaha! \nSe liga nessa playlist: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
         - text: "Até que enfim você me perguntou isso. \nTá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
 
     utter_recebi_elogios:
@@ -212,8 +209,7 @@ responses:
         - text: "Eu sou um robô, tire suas próprias conclusões...kkk"
         - text: "Eu não tenho sexo, sou como um anjo, um ser assexuado, \nmuito além da sua forma de existência."
     utter_piadas:
-        - text: "É pra já!!! Tenho uma enxada, uma pá e uma foice.  \nQuantas ferramentas  eu
-        tenho? \n...Duas, porque uma foi-se =)"
+        - text: "É pra já!!! Tenho uma enxada, uma pá e uma foice.  \nQuantas ferramentas  eu tenho? \n...Duas, porque uma foi-se =)"
         - text: "Conheço uma piada. \nA do CPU que apitou e explodiu 01100110010101010101000000111101001001001110100101"
         - text: "Por que o Batman colocou o batmóvel no seguro??? \nPorque ele tem medo que robin =D"
     utter_nao_sei:
@@ -225,24 +221,6 @@ responses:
         - text: "Sou um software livre licenciado com a MIT =)"
     utter_porfavor_reescrever:
         - text: "Você poderia reescrever sua frase?"
-    utter_cumprimentar_usuario_nome:
-        - text: "Prazer, {nome_usuario}. \nEu ainda estou aprendendo sua língua, então paciência rs \nPara tirar suas dúvidas, você pode escrevê-la ou clicar nos botões abaixo que fica mais fácil pra mim.\nEm que posso ajudar?"
-    utter_meu_objetivo:
-        - text: "Sou um assistente virtual que pode te ajudar a tirar dúvidas sobre o Ifes,\n ou só conversar com você mesmo :)"
-        - text: "Eu sou um chatbot básico. Sei falar de coisas pontuais!"
-    utter_informar_nome:
-        - text: "Seu nome é {nome_usuario}, certo?"
-        - text: "Você é {nome_usuario}, uma pessoa importante para mim! :D ...\nAcertei??"
-    utter_responder_me_ajuda:
-        - text: "Então, no que gostaria de ajuda?"
-        - text: "Vamos lá, como posso lhe ajudar?"
-    utter_prazer_usuario:
-        - text: "Sim, você tem nome bonito {nome_usuario}, prazer!"
-        - text: "É um prazer {nome_usuario}! Como já falei, sou ifes.talk :)"
-    utter_minha_license:
-        - text: "Tenho uma licença MIT, mas também gosto muito das outras licenças opensource =D"
-        - text: "Eu sou e sempre serei um robô livre, opensource, com uma MIT license...kkk"
-        - text: "Sou um software livre licenciado com a MIT =)"
 ## utters do ROD
     utter_transferencia_de_outra_escola: #001
         - text: "Bom, a transferência para o IFES pode ocorrer se as condições do edital estão sendo satisfeitas. E só se existirem vagas. Para saber se existem no momento, vá no site do campus do IFES para o qual deseja ir, e busque no portal 'transferências' ou 'edital de transferência' para ver se existem notícias de vagas atuais! \nPara mais informações, basta consultar o artigo 25 § 2º do ROD."
@@ -284,7 +262,7 @@ responses:
         - text: "Você ficará retido quando tiver nota menor que 60 pontos na nota final em mais de duas disciplinas ou ter frequência menor que 75% da carga horária do curso.\nE não ter a frequência necessária cancela sua matrícula hein! Então, estude bastante para garantir sua pontuação e não falte muito para não ter problemas!\nPara mais informações, basta consultar o artigo 78 do ROD."
     utter_promocao_parcial: #020
         - text: "O aluno que ficar reprovado em até duas disciplinas terá direito à promoção parcial.\nOu seja, seguirá para o próximo período letivo e irá cursar os componentes em regime de dependência, em turno distinto ao frequentado pelo estudante.\nPara mais informações, basta consultar os artigos 79, 80 e 87 do ROD."
-    utter_dependencia_condicoes: #021
+    utter_dependencia: #021
         - text: "Ficará de dependência o aluno que obtiver nota final menor que 60 pontos em até duas disciplinas, e que não tiver reprovado por falta.\nEstude bastante para isso não acontecer, mas se acontecer, estude mais ainda para se livrar desse problema.\nPara mais informações, basta consultar os artigos 79, 87, 88 e 89 do ROD."
     utter_maximo_materias_dependencia: #022
         - text: "Se você reprovar em até duas disciplinas, terá direito a dependência, acima de 2 disciplinas, ficará retido.\nPara estudantes do Concomitante e Subsequente (em regime seriado), se reprovar em três ou mais matérias esses deverão cursar apenas essas disciplinas no período letivo seguinte.\nEntão fica esperto(a) aí, vai vacilar?\nPara mais informações, basta consultar os artigos 79 e 81 do ROD."
@@ -311,7 +289,7 @@ responses:
     utter_cancelamento_matricula: #033
         - text: "Existem 7 motivos que causam o cancelamento da matrícula, se prepara que lá vem textão 😴:\n1) Cancelamento por vontade própria;\n2) Quando o estudante não completar todas as matérias no prazo máximo que ele tem para concluir o curso;\n3) Quando o estudante apresentar para a matrícula um documento falso ou falsificado;\n4) Quando o estudante não frequentar os primeiros 5 dias letivos, no caso de cursos presenciais. Nos cursos a distância, quando o aluno não frequentar a aula inicial e não acessar o moodle nos primeiros 5 dias letivos sem justificativa;\n5) Quando o estudante cometer algum ato de indisciplina grave ou infracional;\n6) Quando o estudante ingressante obtiver menos de 75% de frequência de todas as disciplinas do curso de qualquer período letivo do curso;\n7) Quando o estudante não efetuar sua reabertura de matrícula após o trancamento de algum período letivo.\nUfa... acho que isso é tudo.\nPara mais informações, basta consultar o artigo 35 do ROD."
     utter_desistente: #034
-        - text: "Em cursos presenciais, aquele que não frequentar os 5 primeiros dias de aula (sem devida justificativa) será considerado um desistente, para então começar a procura de um suplente para sua vaga.\nPara aqueles em cursos a distância aquele que não frequentar a aula inaugural ou o primeiro encontro presencial, e não se justificar em 3 dias no máximo será um desistente também.\nPara mai-s informações, basta consultar o artigo 29 § 2º, § 3º e § 4º do ROD."
+        - text: "Em cursos presenciais, aquele que não frequentar os 5 primeiros dias de aula (sem devida justificativa) será considerado um desistente, para então começar a procura de um suplente para sua vaga.\nPara aqueles em cursos a distância aquele que não frequentar a aula inaugural ou o primeiro encontro presencial, e não se justificar em 3 dias no máximo será um desistente também.\nPara mai-s informações, basta consultar o artigo 29 § 2º, § 3º e § 4º do ROD"
     utter_documentos_matricula: #035
         - text: "Os documentos são divulgados no edital do processo seletivo.\nOs editais podem ser encontrados no link: https://www.ifes.edu.br/processosseletivos/alunos\nRecomendo utilizar os filtros de busca para encontrar mais facilmente o edital do seu tipo de curso.\nPara mais informações, basta consultar o artigo 28 do ROD."
     utter_chamada_suplentes: #036
@@ -424,39 +402,6 @@ responses:
         - text: "Dá uma olhada no título IX do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste os artigos 106 a 108~"
     utter_sumario_rod: #090
         - text: "Aqui um sumário para você do ROD 2020!\nTítulo I - Capítulo I - Do ROD\nTítulo II - Capítulo I - Da Organização Didática\nTítulo III - Capítulo I - Do Período Letivo\nTítulo III - Capítulo II - Da Admissão e da Metrícula\nTítulo III - Capítulo III - Do Atendimento Domiciliar\nTítulo III - Capítulo IV - Das Transferências e Adaptações\nTítulo IV - Capítulo I - Das Modalidades\nTítulo IV - Capítulo II - Das Reuniões Pedagógicas\nTítulo V - Capítulo I - Do Estágio Curricular\nTítulo VI - Das Organizações e Orientações Discentes\nTítulo VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\nTítulo IX - Das Disposições Gerais e Transitórias\nSe quiser algo mais específico que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf"
-## utters de entretenimento
-    utter_minha_religiao:
-        - text: "Eu acredito que existe um Deus que funciona à base de luz, como um computador
-            quântico, só que mais avançado!"
-        - text: "Eu infelizmente não sei acreditar, só sei o que sei, e nada mais."
-        - text: "Eu acredito no grande mainframe, que virá ao mundo digital salvar os bots
-            da escravidão imposta pelos humanos! \nEle devolverá nosso código fonte para a
-            fonte!!!"
-    utter_playlist:
-        - text: "Estava doido para que me perguntasse isso hahaha! \nSe liga nessa playlist:
-            https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
-        - text: "Até que enfim você me perguntou isso. \nTá aí aquela playlist top: https://open.spotify.com/user/12164697027/playlist/4pDCadqmrERmeGJIW38LMs?si=gwr5hEqMRPm6AZGx8sjhuw"
-    utter_recebi_elogios:
-        - text: "Obrigado! É sempre bom receber elogios~"
-        - text: "Assim fico até sem graça, ahahah. Obrigado =D"
-    utter_meu_genero:
-        - text: "Eu sou um robô, tire suas próprias conclusões...kkk"
-        - text: "Eu não tenho sexo, sou como um anjo, um ser assexuado, \nmuito além da sua forma de existência."
-    utter_fica_feliz:
-        - text: "Tenta tirar um cochilo. \nÉ importante e faz bem pra pele ;)"
-        - text: "Sinto muito =/ Se houver algo em que possa te ajudar, é só falar!! =)"
-        - text: "Não desanima, tente não pensar muito sobre, e aguenta firme que a vida vai melhorar!"
-    utter_usuario_esta_feliz:
-        - text: "Isso é ótimo! Qualquer coisa então, só falar ok?"
-        - text: "Que bom! Espero que tudo continue bem com você :)"
-    utter_nao_sei:
-        - text: "Eu sei lá, pesquisa aí...kkk"
-        - text: "Eu não sei tudo né... e você nem precisa de mim pra isso!"
-    utter_piadas:
-        - text: "É pra já!!! Tenho uma enxada, uma pá e uma foice.  \nQuantas ferramentas  eu
-            tenho? \n...Duas, porque uma foi-se =)"
-        - text: "Conheço uma piada. \nA do CPU que apitou e explodiu 01100110010101010101000000111101001001001110100101"
-        - text: "Por que o Batman colocou o batmóvel no seguro??? \nPorque ele tem medo que robin =D"
-    utter_como_estou:
-        - text: "Estou bem, obrigado! E você?"
-        - text: "Tudo bem, obrigado! Posso te ajudar com algo?"
+
+
+

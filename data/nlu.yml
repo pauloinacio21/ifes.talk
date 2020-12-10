@@ -289,7 +289,7 @@ nlu:
       - Algo desconhecido
       - 2 + 3 é o que?
       - cuidando da vida
-    - intent: minha_religiao
+  - intent: minha_religiao
     examples: |
       - qual seu religião?
       - Qual é sua religião?
@@ -2031,13 +2031,14 @@ nlu:
       - alunos
       - estudantes
   - synonym: rematrícula
-    - renovação da matrícula
-    - renovacao da matricula
-    - renovação de matricula
-    - rematrícula
-    - rematricula
-    - re-matricula
-    - re matricula
+    examples: |
+      - renovação da matrícula
+      - renovacao da matricula
+      - renovação de matricula
+      - rematrícula
+      - rematricula
+      - re-matricula
+      - re matricula
   - synonym: regime domiciliar
     examples: |
       - regime domiciliar

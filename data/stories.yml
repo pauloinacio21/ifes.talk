@@ -558,3 +558,90 @@ stories:
     - intent: sumario_rod
     - action: utter_sumario_rod
     - action: utter_continuar_conversa
+
+### Assuntos gerais
+- story: Assunto 1
+  steps:
+    - intent: transferencias
+    - action: utter_transferencias
+    - action: utter_continuar_conversa
+- story: Assunto 1.4
+  steps:
+    - intent: mudanca_campus
+    - action: utter_mudanca_campus
+    - action: utter_continuar_conversa
+- story: Assunto 2
+  steps:
+    - intent: representantes
+    - action: utter_representantes
+    - action: utter_continuar_conversa
+- story: Assunto 3
+  steps:
+    - intent: avaliacoes
+    - action: utter_avaliacoes
+    - action: utter_continuar_conversa
+- story: Assunto 4
+  steps:
+    - intent: pontuacoes
+    - action: utter_pontuacoes
+    - action: utter_continuar_conversa
+- story: Assunto 5
+  steps:
+    - intent: dependencia
+    - action: utter_dependencia
+    - action: utter_continuar_conversa
+- story: Assunto 6
+  steps:
+    - intent: revisao_notas
+    - action: utter_revisao_notas
+    - action: utter_continuar_conversa
+- story: Assunto 7
+  steps:
+    - intent: dias_letivos
+    - action: utter_dias_letivos
+    - action: utter_continuar_conversa
+- story: Assunto 8
+  steps:
+    - intent: matricula
+    - action: utter_matricula
+    - action: utter_continuar_conversa
+- story: Assunto 8.1.5
+  steps:
+    - intent: trancamento_matricula
+    - action: utter_trancamento_matricula
+    - action: utter_continuar_conversa
+- story: Assunto 8.1.7
+  steps:
+    - intent: reintegracao_matricula
+    - action: utter_reintegracao_matricula
+    - action: utter_continuar_conversa
+- story: Assunto 9
+  steps:
+    - intent: regime_domiciliar
+    - action: utter_regime_domiciliar
+    - action: utter_continuar_conversa
+- story: Assunto 10
+  steps:
+    - intent: plano_ensino
+    - action: utter_plano_ensino
+    - action: utter_continuar_conversa
+- story: Assunto 11
+  steps:
+    - intent: calendario_academico
+    - action: utter_calendario_academico
+    - action: utter_continuar_conversa
+- story: Assunto 12
+  steps:
+    - intent: segunda_chance_avaliacao
+    - action: utter_segunda_chance_avaliacao
+    - action: utter_continuar_conversa
+- story: Assunto 13
+  steps:
+    - intent: reuniao_pedagogica
+    - action: utter_reuniao_pedagogica
+    - action: utter_continuar_conversa
+- story: Assunto 14
+  steps:
+    - intent: rod
+    - action: utter_rod
+    - action: utter_continuar_conversa

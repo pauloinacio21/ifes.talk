@@ -131,6 +131,7 @@ intents:
 - esta_feliz
 - esta_triste
 - nlu_fallback
+
 entities:
 - nome_usuario
 slots:
@@ -138,6 +139,7 @@ slots:
     type: text
     influence_conversation: true
 responses:
+# chitchat
   utter_cumprimentar_usuario_nome:
   - text: "Prazer, {nome_usuario}. \nEu ainda estou aprendendo sua língua, então paciência\
       \ rs \nPara tirar suas dúvidas, você pode escrevê-la ou clicar nos botões abaixo\
@@ -231,6 +233,7 @@ responses:
   - text: Sou um software livre licenciado com a MIT =)
   utter_porfavor_reescrever:
   - text: Você poderia reescrever sua frase?
+# rod
   utter_transferencia_de_outra_escola:
   - text: "Bom, a transferência para o IFES pode ocorrer se as condições do edital\
       \ estão sendo satisfeitas. E só se existirem vagas. Para saber se existem no\
@@ -822,3 +825,39 @@ responses:
       Título VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\n\
       Título IX - Das Disposições Gerais e Transitórias\nSe quiser algo mais específico\
       \ que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf"
+### Assuntos gerais
+  utter_transferencias: #1
+  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\nTransferência de outra instituição para o IFES\nTransferência do IFES para outra instituição\nMudança da modalidade entre presencial e a distância\nMudança de campus\nMudança de turno\nMudança de turma\nMudança de curso\n"
+  utter_mudanca_campus: #1.4
+  - text: "De qual das seguintes opções sobre a mudança de campus você gostaria de saber mais sobre?\n\nSobre mudar de campus\nQuando posso mudar de campus\n"
+  utter_representantes: #2
+  - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\nSobre representantes de turma\nReuniões dos representantes\n"
+  utter_avaliacoes: #3
+  - text: "De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre?\n\nConteúdos avaliações\nComo avaliações funcionam para pessoas com necessidades específicas\nPrazos das entregas de avaliações\nQuantidade de avaliações\nPontuações das avaliações\n"
+  utter_pontuacoes: #4
+  - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?\n\nPontuação semestral\nPontuação trimestral\nPontuação bimestral\nPontuações das avaliações\n"
+  utter_dependencia: #5
+  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\nSobre a dependência\nMáximo de matérias da dependência\n"
+  utter_revisao_notas: #6
+  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\nRevisão das notas das avaliações\nRevisão da nota final\n"
+  utter_dias_letivos: #7
+  - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?\n\nNúmero de dias letivos\nDias e horários que podem ser letivos\n"
+  utter_matricula: #8
+  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?\n\nO que é a matrícula\nDocumentos necessários para a matrícula\nPrazos para fazer a matrícula\nRenovação da matrícula\nTrancamento de matrícula\nCancelamento da matrícula\nReintegração da matrícula\n"
+  utter_trancamento_matricula: #8.1.5
+  - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\nSobre o trancamento de matrícula\nQuando não posso trancar a matrícula\n"
+  utter_reintegracao_matricula: #8.1.7
+  - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\nO que é a reintegração da matrícula\nQuando pode fazer a reintegração da matrícula\n"
+  utter_regime_domiciliar: #9
+  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\nSobre o regime domiciliar\nQuando pode solicitar o regime domiciliar\nQuando o regime domiciliar é efetivado\nPrazo para apresentar o laudo médico para o regime domiciliar\nSobre o regime domiciliar para grávidas\n"
+  utter_plano_ensino: #10
+  - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?\n\nConteúdo plano de ensino\nDatas de entrega e de divulgação dos planos de ensino\n"
+  utter_calendario_academico: #11
+  - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?\n\nConteúdo calendário acadêmico\nOnde é possível visualizar o calendário acadêmico\n"
+  utter_segunda_chance_avaliacao: #12
+  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?\n\nSegunda chance de avaliação por uma sala inteira\nSegunda chance de avaliação por um discente\n"
+  utter_reuniao_pedagogica: #13
+  - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?\n\nO que são as reuniões pedagógicas\nMembros das reuniões pedagógicas\nQuantidade de reuniões pedagógicas\nSobre a reunião pedagógica inicial\nSobre a reunião pedagógica intermediária\nSobre a reunião pedagógica final\nDecisões de reprovação na reunião pedagógica\n"
+  utter_rod: #14
+  - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?\n\nO que é o ROD\nValidade do ROD atual\nO capítulo do ROD que fala sobre o ROD\nSumário do ROD atual\n"
+

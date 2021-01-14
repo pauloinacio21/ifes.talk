@@ -712,7 +712,7 @@ nlu:
       - quando acontece a promoção parcial
       - o que acontece se eu ficar reprovado em uma disciplina
       - o que acontece se eu ficar reprovado em duas matérias
-  - intent: dependencia #021
+  - intent: dependencia_condicoes #021
     examples: |
       - Quando fico de [dep]
       - como fico de [dp]
@@ -881,7 +881,7 @@ nlu:
       - [matéria] extra
       - tem alguma [matéria] extra que posso fazer?
       - existe algum tipo de [matéria] extra?
-  - intent: trancamento_matricula #031
+  - intent: trancamento_matricula_sobre #031
     examples: |
       - Sobre trancamento
       - Como funciona o trancamento de matrícula?

@@ -362,12 +362,8 @@ responses:
       \ parcial.\nOu seja, seguirá para o próximo período letivo e irá cursar os componentes\
       \ em regime de dependência, em turno distinto ao frequentado pelo estudante.\n\
       Para mais informações, basta consultar os artigos 79, 80 e 87 do ROD."
-  utter_dependencia:
-  - text: "Ficará de dependência o aluno que obtiver nota final menor que 60 pontos\
-      \ em até duas disciplinas, e que não tiver reprovado por falta.\nEstude bastante\
-      \ para isso não acontecer, mas se acontecer, estude mais ainda para se livrar\
-      \ desse problema.\nPara mais informações, basta consultar os artigos 79, 87,\
-      \ 88 e 89 do ROD."
+  utter_dependencia_condicoes:
+  - text: "Ficará de dependência o aluno que obtiver nota final menor que 60 pontos em até duas disciplinas, e que não tiver reprovado por falta.\nEstude bastante para isso não acontecer, mas se acontecer, estude mais ainda para se livrar desse problema.\nPara mais informações, basta consultar os artigos 79, 87, 88 e 89 do ROD."
   utter_maximo_materias_dependencia:
   - text: "Se você reprovar em até duas disciplinas, terá direito a dependência, acima\
       \ de 2 disciplinas, ficará retido.\nPara estudantes do Concomitante e Subsequente\
@@ -431,17 +427,8 @@ responses:
       \ depois que a matrícula for feita só pode cancelar dentro de 15 dias, depois\
       \ não pode mais desistir.\nPara mais informações, basta consultar os artigos\
       \  38 a 41 do ROD."
-  utter_trancamento_matricula:
-  - text: "Primeiramente você precisará verificar no calendário acadêmico as datas\
-      \ reservadas para o trancamento, porque você só poderá pedir o trancamento da\
-      \ sua matrícula dentro do prazo que está no calendário acadêmico.\nO trancamento\
-      \ da matrícula terá validade de um período letivo, sendo que você só pode efetuar\
-      \ o trancamento da matrícula no máximo 2 vezes, então pode trancar 2 períodos,\
-      \ que podem ser 2 consecutivas ou 2 períodos distantes.\nPara alunos do EJA\
-      \ com curso de duração superior a 2 anos, podem haver até 3 trancamentos.\n\
-      Caso você tenha trancado a sua matrícula, você deverá pedir a reabertura dela\
-      \ no prazo que está no calendário acadêmico, senão ela pode ser cancelada.\n\
-      Para mais informações, basta consultar os artigos 33 e 34 do ROD."
+  utter_trancamento_matricula_sobre:
+  - text: "Primeiramente você precisará verificar no calendário acadêmico as datas reservadas para o trancamento, porque você só poderá pedir o trancamento da sua matrícula dentro do prazo que está no calendário acadêmico.\nO trancamento da matrícula terá validade de um período letivo, sendo que você só pode efetuar o trancamento da matrícula no máximo 2 vezes, então pode trancar 2 períodos, que podem ser 2 consecutivas ou 2 períodos distantes.\nPara alunos do EJA com curso de duração superior a 2 anos, podem haver até 3 trancamentos.\nCaso você tenha trancado a sua matrícula, você deverá pedir a reabertura dela no prazo que está no calendário acadêmico, senão ela pode ser cancelada.\nPara mais informações, basta consultar os artigos 33 e 34 do ROD."
   utter_quando_proibido_trancamento_matricula:
   - text: "A matrícula não poderá ser trancada no primeiro período letivo, quando\
       \ fora do prazo que foi estabelecido no calendário acadêmico ou para cursos\

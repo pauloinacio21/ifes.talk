@@ -207,8 +207,8 @@ stories:
     - action: utter_continuar_conversa
 - story: Dependência #021
   steps:
-    - intent: dependencia
-    - action: utter_dependencia
+    - intent: dependencia_condicoes
+    - action: utter_dependencia_condicoes
     - action: utter_continuar_conversa
 - story: Máximo de matérias que pode fazer na dependencia #022
   steps:
@@ -257,8 +257,8 @@ stories:
     - action: utter_continuar_conversa
 - story: Trancamento de matricula #031
   steps:
-    - intent: trancamento_matricula
-    - action: utter_trancamento_matricula
+    - intent: trancamento_matricula_sobre
+    - action: utter_trancamento_matricula_sobre
     - action: utter_continuar_conversa
 - story: Quando é proibido trancar matricula #032
   steps:

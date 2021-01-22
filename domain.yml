@@ -2,10 +2,6 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- mudanca_curso
-- cumprimento
-- informar_campus
-- mudanca_modalidade_presencial_distancia
 - informar_nome
 - despedir
 - afirmar
@@ -23,10 +19,12 @@ intents:
 - transferencia_para_outra_escola
 - representantes_reunioes
 - representantes_da_turma
+- mudanca_modalidade_presencial_distancia
 - mudanca_campus_geral
 - mudanca_turno
 - mudanca_campus_quando
 - mudanca_turma
+- mudanca_curso
 - prazos_entregas_avaliacoes
 - conteudos_avaliacoes
 - conteudos_avaliacoes_necessidadades_especificas
@@ -61,6 +59,7 @@ intents:
 - regime_domiciliar_sobre
 - prazo_regime_domiciliar_laudo_medico
 - regime_domiciliar_gravidas
+- cumprimento
 - rod_geral
 - plano_ensino_contem
 - plano_ensino_datas

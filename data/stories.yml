@@ -721,6 +721,7 @@ stories:
     - intent: sumario_rod
     - action: utter_sumario_rod
     - action: utter_continuar_conversa
+
 ### Assuntos gerais
 - story: Assunto 1
   steps:
@@ -884,7 +885,7 @@ stories:
     - intent: SC_colacao_grau_especial
     - action: utter_sistema_chamados
     - action: utter_continuar_conversa
-- story: Sistema de Chamados Colação de grau
+- story: Sistema de Chamados Colação de grau 
   steps:
     - intent: SC_colacao_grau
     - action: utter_sistema_chamados

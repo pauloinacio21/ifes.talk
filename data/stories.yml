@@ -160,18 +160,13 @@ stories:
 ## Fechando
 - story: Mudança de campus geral #006
   steps:
-    - intent: mudanca_campus_geral
-    - action: utter_mudanca_campus_geral
+    - intent: mudanca_campus
+    - action: utter_mudanca_campus
     - action: utter_continuar_conversa
 - story: Mudança de turno #007
   steps:
     - intent: mudanca_turno
     - action: utter_mudanca_turno
-    - action: utter_continuar_conversa
-- story: Quando pode mudar de campus #008
-  steps:
-    - intent: mudanca_campus_quando
-    - action: utter_mudanca_campus_quando
     - action: utter_continuar_conversa
 - story: Mudanca de turma #009
   steps:
@@ -727,11 +722,6 @@ stories:
   steps:
     - intent: transferencias
     - action: utter_transferencias
-    - action: action_listen
-- story: Assunto 1.4
-  steps:
-    - intent: mudanca_campus
-    - action: utter_mudanca_campus
     - action: action_listen
 - story: Assunto 2
   steps:

@@ -534,7 +534,7 @@ nlu:
       - como faço para estudar em casa
       - quero estudar em casa em vez de na escola
       - posso [estudar a distância] de algum jeito?
-  - intent: mudanca_campus_geral #006
+  - intent: mudanca_campus #006
     examples: |
       - Posso [mudar] de campus?
       - quero estudar em outro campus
@@ -548,6 +548,21 @@ nlu:
       - gostaria de [transferir] de campus
       - sobre [mudar] de campus
       - [transferência] entre os ifes
+      - Qnd [mudar] de campus
+      - Quando [mudar] de campus?
+      - Quando posso [mudar] de campus?
+      - quando posso pedir a [mudança] de campus?
+      - fale quando posso [trocar] meu campus
+      - quando poderei [trocar] de campus?
+      - quando posso [transferir] de campus
+      - [transferência] de campus quando
+      - datas em que posso [transferir] de campus
+      - [mudanca] campus
+      - [Mudança] de Campus
+      - as [mudanças] de campus
+      - [Mudança] campi
+      - [mudar] de campi
+      - [mudar] de campus
   - intent: mudanca_turno #007
     examples: |
       - [Mudança] de [turno]
@@ -565,17 +580,6 @@ nlu:
       - como estudar de [noite]
       - posso estudar no [matutino]?
       - tem como eu [trocar] para o [período noturno]?
-  - intent: mudanca_campus_quando #008
-    examples: |
-      - Qnd [mudar] de campus
-      - Quando [mudar] de campus?
-      - Quando posso [mudar] de campus?
-      - quando posso pedir a [mudança] de campus?
-      - fale quando posso [trocar] meu campus
-      - quando poderei [trocar] de campus?
-      - quando posso [transferir] de campus
-      - [transferência] de campus quando
-      - datas em que posso [transferir] de campus
   - intent: mudanca_turma #009
     examples: |
       - [Mudança] de turma
@@ -1927,14 +1931,6 @@ nlu:
       - Como posso [mudar]?
       - Que tipos de [mudança] existem?
       - Gostaria de fazer uma [mudança]
-  - intent: mudanca_campus #1.4
-    examples: |
-      - [mudanca] campus
-      - [Mudança] de Campus
-      - as [mudanças] de campus
-      - [Mudança] campi
-      - [mudar] de campi
-      - [mudar] de campus
   - intent: representantes #2
     examples: |
       - [Representantes]

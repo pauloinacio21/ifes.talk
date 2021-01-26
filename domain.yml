@@ -21,9 +21,8 @@ intents:
 - representantes_reunioes
 - representantes_da_turma
 - mudanca_modalidade_presencial_distancia
-- mudanca_campus_geral
+- mudanca_campus
 - mudanca_turno
-- mudanca_campus_quando
 - mudanca_turma
 - mudanca_curso
 - prazos_entregas_avaliacoes
@@ -107,7 +106,6 @@ intents:
 - tit_disposicoes_gerais_transitorias
 - sumario_rod
 - transferencias
-- mudanca_campus
 - representantes
 - avaliacoes
 - pontuacoes
@@ -289,12 +287,10 @@ responses:
   - text: "O líder da turma obrigatoriamente deve participar da reunião pedagógica intermediária, um dos três tipos de reuniões que existem durante o período letivo.\nPara mais informações, basta consultar o artigo 95 VI do ROD."
   utter_representantes_da_turma:
   - text: "Cada turma deverá ter um ou mais representantes. Não existe uma regra para quantos, depende do campus e turma, mas normalmente são dois. Para decidir os líderes uma eleição é realizada pelo Setor Pedagógico cada período letivo.\nPara mais informações, basta consultar o artigo 103 II do ROD."
-  utter_mudanca_campus_geral:
-  - text: "A mudança de campus só pode ser feita para o mesmo curso.\nVocê deverá pedir a mudança na CRA (Coordenadoria de Registro Acadêmico) do campus para o qual você deseja se transferir.\nPara mais informações, basta consultar o artigo 48 do ROD."
+  utter_mudanca_campus:
+  - text: "A mudança de campus só pode ser feita para o mesmo curso, e deve ser solicitada dentro do prazo estipulado no calendário acadêmico do campus no qual você irá se transferir./nVocê deverá pedir a mudança na CRA (Coordenadoria de Registro Acadêmico) do campus para o qual você deseja se transferir./nA transferência só pode ser feita se existirem vagas disponíveis e devem ser apresentados o histórico escolar, ementas das disciplinas cursadas e o Nada Consta Acadêmico./nMas pense bem tá, seu campus é tão legal, vai sentir sua falta.../nPara mais informações, basta consultar o artigo 48 do ROD."
   utter_mudanca_turno:
   - text: "A mudança de turno só poderá ser feita a partir do segundo período letivo e uma vez por período somente, sendo que a execução da mudança vai depender da existência de vagas disponíveis.\nVale lembrar que a mudança poderá ser autorizada no primeiro período letivo somente em casos especiais de necessidade e que serão avaliados.\nPara mais informações, basta consultar o artigo 47 do ROD."
-  utter_mudanca_campus_quando:
-  - text: "A mudança de campus para um mesmo curso técnico deve ser solicitada dentro do prazo estipulado no calendário acadêmico do campus no qual você irá se transferir.\nA transferência só pode ser feita se existirem vagas disponíveis e devem ser apresentados o histórico escolar, ementas das disciplinas cursadas e o Nada Consta Acadêmico.\nMas pense bem tá, seu campus é tão legal, vai sentir sua falta... \nPara mais informações, basta consultar o artigo 48 do ROD."
   utter_mudanca_turma:
   - text: "Você só poderá mudar de turma se existirem vagas disponíveis.\nNão gostou de seus coleguinhas? Sei como é...\nPara mais informações, basta consultar o artigo 46 do ROD."
   utter_prazos_entregas_avaliacoes:
@@ -447,8 +443,6 @@ responses:
   - text: "Aqui um sumário para você do ROD 2020!\nTítulo I - Capítulo I - Do ROD\nTítulo II - Capítulo I - Da Organização Didática\nTítulo III - Capítulo I - Do Período Letivo\nTítulo III - Capítulo II - Da Admissão e da Metrícula\nTítulo III - Capítulo III - Do Atendimento Domiciliar\nTítulo III - Capítulo IV - Das Transferências e Adaptações\nTítulo IV - Capítulo I - Das Modalidades\nTítulo IV - Capítulo II - Das Reuniões Pedagógicas\nTítulo V - Capítulo I - Do Estágio Curricular\nTítulo VI - Das Organizações e Orientações Discentes\nTítulo VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\nTítulo IX - Das Disposições Gerais e Transitórias\nSe quiser algo mais específico que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf"
   utter_transferencias:
   - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\nTransferência de outra instituição para o IFES\nTransferência do IFES para outra instituição\nMudança da modalidade entre presencial e a distância\nMudança de campus\nMudança de turno\nMudança de turma\nMudança de curso\n"
-  utter_mudanca_campus:
-  - text: "De qual das seguintes opções sobre a mudança de campus você gostaria de saber mais sobre?\n\nSobre mudar de campus\nQuando posso mudar de campus\n"
   utter_representantes:
   - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\nSobre representantes de turma\nReuniões dos representantes\n"
   utter_avaliacoes:
@@ -456,7 +450,7 @@ responses:
   utter_pontuacoes:
   - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?\n\nPontuação semestral\nPontuação trimestral\nPontuação bimestral\nPontuações das avaliações\n"
   utter_dependencia:
-  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\nSobre a dependência\nMáximo de matérias da dependência\n"
+  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\nO que é a dependência\nQuando fico de dependência\nMáximo de matérias da dependência\n"
   utter_revisao_notas:
   - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\nRevisão das notas das avaliações\nRevisão da nota final\n"
   utter_dias_letivos:
@@ -481,7 +475,6 @@ responses:
   - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?\n\nO que é o ROD\nValidade do ROD atual\nO capítulo do ROD que fala sobre o ROD\nSumário do ROD atual\n"
   utter_sistema_chamados:
   - text: "Você pode fazer as seguintes solicitações no Sistema de Chamados:\n- Terceira Etapa de Matrícula,\n- Cancelamento de Matrícula,\n- Matrícula Intercampi,\n- Matrícula/Ajuste de dependência para cursos técnicos concomitantes/subsequentes,\n- Matrícula Eletiva,\n- Reabertura de matrícula,\n- Reintegração de matrícula,\n- Trancamento de matrícula,\n- Atestado de escolaridade,\n- Certidão ou Certificado de conclusão,\n- Certificado de conclusão para o CREA,\n- Colação de grau especial (em casos de urgência, conforme o ROD),\n- Colação de grau regular,\n- Diploma e Histórico Final,\n- Disciplinas Intercampi,\n- Histórico final,\n- Histórico parcial,\n- Mudança de campus e/ou curso,\n- Mudança de turno,\n- Mudança para nova matriz,\n- Nada Consta para docente,\n- Regime Domiciliar,\n- Revisão de resultado final,\n- Solicitação de aproveitamento de conhecimentos e experiências anteriores.\nPara fazer essas e/ou outras solicitações, acesse o site do Sistema de Chamados e faça login com o usuário e senha utilizados no Acadêmico: <https://suporte.ifes.edu.br/ensino/front/helpdesk.public.php>.\nEm caso de dúvidas, acesse o manual no link <https://www.serra.ifes.edu.br/images/stories/Navegar_Perfil/Aluno/Manual_Sistemas_de_Chamados_CRA_-_Usuario.pdf>"
-
 
 actions:
 - action_campus_link_calendario_academico
@@ -522,9 +515,8 @@ actions:
 - utter_transferencia_para_outra_escola
 - utter_representantes_reunioes
 - utter_representantes_da_turma
-- utter_mudanca_campus_geral
+- utter_mudanca_campus
 - utter_mudanca_turno
-- utter_mudanca_campus_quando
 - utter_mudanca_turma
 - utter_prazos_entregas_avaliacoes
 - utter_conteudos_avaliacoes
@@ -600,7 +592,6 @@ actions:
 - utter_tit_disposicoes_gerais_transitorias
 - utter_sumario_rod
 - utter_transferencias
-- utter_mudanca_campus
 - utter_representantes
 - utter_avaliacoes
 - utter_pontuacoes

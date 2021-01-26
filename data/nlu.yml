@@ -902,7 +902,6 @@ nlu:
       - sobre o trancamento de matricula
   - intent: quando_proibido_trancamento_matricula #032
     examples: |
-      - prazos para fazer a matricula
       - em que circunstâncias não posso trancar a minha matrícula
       - quando não posso trancar a matrícula
       - quando o trancamento de matrícula não é possível

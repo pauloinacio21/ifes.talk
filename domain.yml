@@ -151,7 +151,7 @@ intents:
 - SC_historico_final
 - SC_historico_parcial
 - SC_mudanca_campus_turno_curso
-- SC_mudança_matriz
+- SC_mudanca_matriz
 - SC_nada_consta
 - SC_regime_domiciliar
 - SC_revisao_resultado_final

@@ -2286,7 +2286,7 @@ nlu:
       - Como fazer solicitação de mudança de [campus] [pelo site]
       - Quero mudar de [campi], com faço isso pela internet?
       - Quero solicitar mudança de [campus] pela internet
-  - intent: SC_mudança_matriz
+  - intent: SC_mudanca_matriz
     examples: |
       - [Mudança] Matriz [online]
       - [Transferência] para uma nova matriz [pelo site]

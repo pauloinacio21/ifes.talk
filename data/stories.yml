@@ -907,7 +907,7 @@ stories:
     - action: utter_continuar_conversa
 - story: Sistema de Chamados Mudança matriz
   steps:
-    - intent: SC_mudança_matriz
+    - intent: SC_mudanca_matriz
     - action: utter_sistema_chamados
     - action: utter_continuar_conversa
 - story: Sistema de Chamados Nada consta

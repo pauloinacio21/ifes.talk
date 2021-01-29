@@ -156,7 +156,6 @@ intents:
 - SC_regime_domiciliar
 - SC_revisao_resultado_final
 - SC_aproveitamento
-
 entities:
 - campus
 - nome_usuario

@@ -1249,6 +1249,15 @@ nlu:
       - oferecimento de cursos
       - como os cursos podem funcionar?
       - os cursos estao divididos em [semestres], [bimestres] ou [trimestres]?
+      - subsequente
+      - concomitante
+      - cursos subsequentes
+      - me fala sobre os cursos como os concomitantes
+      - oferta de cursos comcomitantes e subsequente
+      - cursos como EJA
+      - oferta de cursos
+      - cursos subsequentes, concomitante e integrados
+      - tipos de curso
   - intent: tempo_oferta_aulas #051
     examples: |
       - Turnos aulas

@@ -113,6 +113,11 @@ stories:
     - intent: informar_nome
     - action: utter_nao_entendi
     - intent: informar_nome
+- story: sobre o Ifes
+  steps:
+  - intent: info_ifes
+  - action: utter_info_ifes
+  - action: action_listen
 - story: transferencia de outra instituição para o ifes #001
   steps:
   - intent: transferencia_de_outra_escola
@@ -716,7 +721,36 @@ stories:
     - intent: sumario_rod
     - action: utter_sumario_rod
     - action: utter_continuar_conversa
-
+- story: Processos pedagógicos e didáticos #091
+  steps:    
+    - intent: processos_pedagogicos_e_didaticos
+    - action: utter_processos_pedagogicos_e_didaticos
+    - action: utter_continuar_conversa
+- story: educacao_nacional_constituicao_form_integral #092
+  steps:
+    - intent: educacao_nacional_constituicao_form_integral
+    - action: utter_educacao_nacional_constituicao_form_integral
+    - action: utter_continuar_conversa
+- story: gestao_educacional #093
+  steps:
+    - intent: gestao_educacional
+    - action: utter_gestao_educacional
+    - action: utter_continuar_conversa
+- story: educacao_profissional #094
+  steps:
+    - intent: educacao_profissional
+    - action: utter_educacao_profissional
+    - action: utter_continuar_conversa
+- story: responsabilidade_social #095
+  steps:
+    - intent: responsabilidade_social
+    - action: utter_responsabilidade_social
+    - action: utter_continuar_conversa
+- story: educacao_especial #096
+  steps:
+    - intent: educacao_especial
+    - action: utter_educacao_especial
+    - action: utter_continuar_conversa    
 ### Assuntos gerais
 - story: Assunto 1
   steps:
@@ -930,3 +964,14 @@ stories:
     - intent: SC_aproveitamento
     - action: utter_sistema_chamados
     - action: utter_continuar_conversa
+- story: interactive_story_1
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - intent: informar_nome
+    entities:
+    - nome_usuario: Paulo
+  - slot_was_set:
+    - nome_usuario: Paulo
+  - action: utter_nao_entendi
+  - action: action_uncheck_uncheck_all

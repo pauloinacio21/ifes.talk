@@ -1,368 +1,977 @@
-## testa acoes
-* cumprimentar
-    - utter_cumprimentar
-* testa_acoes
-    - action_teste
+version: "2.0"
+stories:
+- story: informar campus normal
+  steps:
+  - intent: informar_campus
+  - action: action_uncheck_all
+  - slot_was_set:
+    - uncheck_all: True
+  - action: utter_campus_anotado
+  - action: action_uncheck_uncheck_all
+- story: despedida
+  steps:
+  - intent: despedir
+  - action: utter_despedir
+  - action: action_listen
+- story: esta triste
+  steps:
+  - intent: esta_triste
+  - action: utter_fica_feliz
+  - action: action_listen
+- story: esta feliz
+  steps:
+  - intent: esta_feliz
+  - action: utter_usuario_esta_feliz
+  - action: action_listen
+- story: afirmação
+  steps:
+  - intent: afirmar
+  - action: utter_ok
+  - action: utter_continuar_conversa
+  - action: action_listen
+- story: negação
+  steps:
+  - intent: negar
+  - action: utter_ok
+  - action: utter_continuar_conversa
+  - action: action_listen
+- story: como_esta
+  steps:
+  - intent: como_esta
+  - action: utter_como_estou
+  - action: action_listen
+- story: agradecimento
+  steps:
+  - intent: agradecer
+  - action: utter_de_nada
+  - action: utter_continuar_conversa
+  - action: action_listen
+- story: objetivo
+  steps:
+  - intent: meu_objetivo
+  - action: utter_meu_objetivo
+  - action: action_listen
+- story: saber nome
+  steps:
+  - intent: saber_nome
+  - action: utter_informar_nome
+  - action: action_listen
+- story: nada
+  steps:
+  - intent: dizer_nada
+  - action: utter_ok
+  - action: utter_continuar_conversa
+  - action: action_listen
+- story: me ajuda
+  steps:
+  - intent: me_ajuda
+  - action: utter_responder_me_ajuda
+  - action: action_listen
+- story: prazer
+  steps:
+  - intent: prazer
+  - action: utter_prazer_usuario
+  - action: utter_continuar_conversa
+  - action: action_listen
+- story: minha_religiao
+  steps:
+  - intent: minha_religiao
+  - action: utter_minha_religiao
+  - action: action_listen
+- story: musica
+  steps:
+  - intent: musica
+  - action: utter_playlist
+  - action: action_listen
+- story: me elogiar
+  steps:
+  - intent: me_elogiar
+  - action: utter_recebi_elogios
+  - action: action_listen
+- story: meu genero
+  steps:
+  - intent: meu_genero
+  - action: utter_meu_genero
+  - action: action_listen
+- story: piadas
+  steps:
+  - intent: saber_piada
+  - action: utter_piadas
+  - action: action_listen
+- story: que horas são
+  steps:
+  - intent: saber_as_horas
+  - action: utter_nao_sei
+  - action: action_listen
+- story: license
+  steps:
+  - intent: minha_license
+  - action: utter_minha_license
+  - action: action_listen
+- story: Pedir para o usuario repetir o nome porque não entende
+  steps:
+    - intent: informar_nome
+    - action: utter_nao_entendi
+    - intent: informar_nome
+- story: sobre o Ifes
+  steps:
+  - intent: info_ifes
+  - action: utter_info_ifes
+  - action: action_listen
+- story: transferencia de outra instituição para o ifes #001
+  steps:
+  - intent: transferencia_de_outra_escola
+  - action: utter_transferencia_de_outra_escola
+  - action: utter_continuar_conversa
+- story: transferencia do ifes para outra escola #002
+  steps:
+  - intent: transferencia_para_outra_escola
+  - action: utter_transferencia_para_outra_escola
+  - action: utter_continuar_conversa
+- story: reunioes de representantes #003
+  steps:
+  - intent: representantes_reunioes
+  - action: utter_representantes_reunioes
+  - action: utter_continuar_conversa
+- story: representantes de turma #004
+  steps:
+  - intent: representantes_da_turma
+  - action: utter_representantes_da_turma
+  - action: utter_continuar_conversa
+## Envolve links campus
+- story: Mudar modalidade sem erro #015
+  steps:
+  - intent: mudanca_modalidade_presencial_distancia
+  - action: action_check_modalidade
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_modalidade: null
+  - action: action_listen
 
-## testa acoes
-* testa_acoes
-    - action_teste
+- story: Mudar modalidade com erro
+  steps:
+  - intent: mudanca_modalidade_presencial_distancia
+  - action: action_check_modalidade
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_modalidade: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Mudança de campus geral #006
+  steps:
+    - intent: mudanca_campus
+    - action: utter_mudanca_campus
+    - action: utter_continuar_conversa
+- story: Mudança de turno #007
+  steps:
+    - intent: mudanca_turno
+    - action: utter_mudanca_turno
+    - action: utter_continuar_conversa
+- story: Mudanca de turma #009
+  steps:
+    - intent: mudanca_turma 
+    - action: utter_mudanca_turma
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: Mudar curso sem erro #010
+  steps:
+  - intent: mudanca_curso
+  - action: action_check_mudar_curso
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_mudar_curso: null
+  - action: action_listen
 
-## testa slots
-* informa_cpf
-    - action_cpf
+- story: Mudar curso com erro
+  steps:
+  - intent: mudanca_curso
+  - action: action_check_mudar_curso
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_mudar_curso: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Os prazos de entrega das avaliações #011
+  steps:
+    - intent: prazos_entregas_avaliacoes
+    - action: utter_prazos_entregas_avaliacoes
+    - action: utter_continuar_conversa
+- story: Conteúdos das avaliações escolares #012
+  steps:
+    - intent: conteudos_avaliacoes
+    - action: utter_conteudos_avaliacoes
+    - action: utter_continuar_conversa
+- story: Conteúdos das avaliações escolares para pessoas com necessidades específicas #013
+  steps:
+    - intent: conteudos_avaliacoes_necessidadades_especificas
+    - action: utter_conteudos_avaliacoes_necessidadades_especificas
+    - action: utter_continuar_conversa
+- story: Quantidade mínima e máxima de avaliações #014
+  steps:
+    - intent: quantidade_avaliacoes
+    - action: utter_quantidade_avaliacoes
+    - action: utter_continuar_conversa
+- story: Valor mínimo e máximo das avaliações #015
+  steps: 
+    - intent: pontuacao_avaliacoes
+    - action: utter_pontuacao_avaliacoes
+    - action: utter_continuar_conversa
+- story: Recuperação #016
+  steps:
+    - intent: recuperacao
+    - action: utter_recuperacao
+    - action: utter_continuar_conversa
+- story: Pontuação Semestral #017
+  steps:
+    - intent: pontuacao_semestral
+    - action: utter_pontuacao_semestral
+    - action: utter_continuar_conversa
+- story: Quanto tempo o aluno tem para concluir seu curso #018
+  steps:
+    - intent: periodo_maximo_conclusao 
+    - action: utter_periodo_maximo_conclusao 
+    - action: utter_continuar_conversa
+- story: Quando o aluno fica retido no mesmo ano #019
+  steps:
+    - intent: ficar_retido
+    - action: utter_ficar_retido
+    - action: utter_continuar_conversa
+- story: Promoção parcial #020
+  steps:
+    - intent: promocao_parcial
+    - action: utter_promocao_parcial
+    - action: utter_continuar_conversa
+- story: Dependência #021
+  steps:
+    - intent: dependencia_condicoes
+    - action: utter_dependencia_condicoes
+    - action: utter_continuar_conversa
+- story: Máximo de matérias que pode fazer na dependencia #022
+  steps:
+    - intent: maximo_materias_dependencia
+    - action: utter_maximo_materias_dependencia
+    - action: utter_continuar_conversa
+- story: Revisão das notas das avaliações #023
+  steps:
+    - intent: revisao_notas_parciais
+    - action: utter_revisao_notas_parciais
+    - action: utter_continuar_conversa
+- story: Revisão das Notas finais #024
+  steps: 
+    - intent: revisao_notas_finais
+    - action: utter_revisao_notas_finais
+    - action: utter_continuar_conversa
+- story: Frequência obrigatória às aulas #025
+  steps:
+    - intent: frequencia_minima
+    - action: utter_frequencia_minima
+    - action: utter_continuar_conversa
+- story: Quando o aluno é aprovado #026
+  steps:
+    - intent: condicoes_aprovacao
+    - action: utter_condicoes_aprovacao
+    - action: utter_continuar_conversa
+- story: O que é a dependencia #027
+  steps:
+    - intent: dependencia_geral
+    - action: utter_dependencia_geral
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: Aproveitamento de disciplinas #028
+  steps:
+  - intent: aproveitamento_disciplinas
+  - action: action_check_aproveitamento_disciplinas
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_aproveitamento_disciplinas: null
+  - action: action_listen
 
-## path_religiao 1
-* religiao
-    - utter_religiao
-    - utter_continuar_conversa
-
-## path_religiao 2
-* cumprimentar
-    - utter_cumprimentar
-* religiao
-    - utter_religiao
-    - utter_continuar_conversa
-
-## path_esporte 1
-* esporte
-    - utter_esporte
-    - utter_continuar_conversa
-
-## path_esporte 2
-* cumprimentar
-    - utter_cumprimentar
-* esporte
-    - utter_esporte
-    - utter_continuar_conversa
-
-## path_time 1
-* time
-    - utter_time
-    - utter_continuar_conversa
-
-## path_time 2
-* cumprimentar
-    - utter_cumprimentar
-* time
-    - utter_time
-    - utter_continuar_conversa
-
-## path_linguagens 1
-* linguagens
-    - utter_linguagens
-    - utter_continuar_conversa
-
-## path_linguagens 2
-* cumprimentar
-    - utter_cumprimentar
-* linguagens
-    - utter_linguagens
-    - utter_continuar_conversa
-
-## path_genero 1
-* genero
-    - utter_genero
-    - utter_continuar_conversa
-
-## path_genero 2
-* cumprimentar
-    - utter_cumprimentar
-* genero
-    - utter_genero
-    - utter_continuar_conversa
-
-## path_star_wars 1
-* star_wars
-    - utter_star_wars
-    - utter_continuar_conversa
-
-## path_star_wars 2
-* cumprimentar
-    - utter_cumprimentar
-* star_wars
-    - utter_star_wars
-    - utter_continuar_conversa
-
-## path_piada 1
-* piada
-    - utter_piada
-    - utter_continuar_conversa
-
-## path_piada 2
-* cumprimentar
-    - utter_cumprimentar
-* piada
-    - utter_piada
-    - utter_continuar_conversa
-
-## path_license 1
-* license
-    - utter_license
-    - utter_continuar_conversa
-
-## path_license 2
-* cumprimentar
-    - utter_cumprimentar
-* license
-    - utter_license
-    - utter_continuar_conversa
-
-## path_onde_voce_mora 1
-* onde_voce_mora
-    - utter_onde_voce_mora
-    - utter_continuar_conversa
-
-## path_onde_voce_mora 2
-* cumprimentar
-    - utter_cumprimentar
-* onde_voce_mora
-    - utter_onde_voce_mora
-    - utter_continuar_conversa
-
-## path_como_estou 1
-* como_estou
-    - utter_como_estou
-    - utter_continuar_conversa
-
-## path_como_estou 2
-* cumprimentar
-    - utter_cumprimentar
-* como_estou
-    - utter_como_estou
-    - utter_continuar_conversa
-
-## path_playlist 1
-* playlist
-    - utter_playlist
-    - utter_continuar_conversa
-
-## path_playlist 2
-* cumprimentar
-    - utter_cumprimentar
-* playlist
-    - utter_playlist
-    - utter_continuar_conversa
-
-## path_comida 1
-* comida
-    - utter_comida
-    - utter_continuar_conversa
-
-## path_comida 2
-* cumprimentar
-    - utter_cumprimentar
-* comida
-    - utter_comida
-    - utter_continuar_conversa
-
-## path_cor 1
-* cor
-    - utter_cor
-    - utter_continuar_conversa
-
-## path_cor 2
-* cumprimentar
-    - utter_cumprimentar
-* cor
-    - utter_cor
-    - utter_continuar_conversa
-
-## path_de_onde_voce_eh 1
-* de_onde_voce_eh
-    - utter_de_onde_voce_eh
-    - utter_continuar_conversa
-
-## path_de_onde_voce_eh 2
-* cumprimentar
-    - utter_cumprimentar
-* de_onde_voce_eh
-    - utter_de_onde_voce_eh
-    - utter_continuar_conversa
-
-## path_relationship 1
-* relationship
-    - utter_relationship
-    - utter_continuar_conversa
-
-## path_relationship 2
-* cumprimentar
-    - utter_cumprimentar
-* relationship
-    - utter_relationship
-    - utter_continuar_conversa
-
-## path_me 1
-* me
-    - utter_me
-    - utter_continuar_conversa
-
-## path_me 2
-* cumprimentar
-    - utter_cumprimentar
-* me
-    - utter_me
-    - utter_continuar_conversa
-
-## path_filhos 1
-* filhos
-    - utter_filhos
-    - utter_continuar_conversa
-
-## path_filhos 2
-* cumprimentar
-    - utter_cumprimentar
-* filhos
-    - utter_filhos
-    - utter_continuar_conversa
-
-## path_filme 1
-* filme
-    - utter_filme
-    - utter_continuar_conversa
-
-## path_filme 2
-* cumprimentar
-    - utter_cumprimentar
-* filme
-    - utter_filme
-    - utter_continuar_conversa
-
-## path_signo 1
-* signo
-    - utter_signo
-    - utter_continuar_conversa
-
-## path_signo 2
-* cumprimentar
-    - utter_cumprimentar
-* signo
-    - utter_signo
-    - utter_continuar_conversa
-
-## path_triste 1
-* triste
-    - utter_triste
-    - utter_continuar_conversa
-
-## path_triste 2
-* cumprimentar
-    - utter_cumprimentar
-* triste
-    - utter_triste
-    - utter_continuar_conversa
-
-## path_hobby 1
-* hobby
-    - utter_hobby
-    - utter_continuar_conversa
-
-## path_hobby 2
-* cumprimentar
-    - utter_cumprimentar
-* hobby
-    - utter_hobby
-    - utter_continuar_conversa
-
-## path_bff 1
-* bff
-    - utter_bff
-    - utter_continuar_conversa
-
-## path_bff 2
-* cumprimentar
-    - utter_cumprimentar
-* bff
-    - utter_bff
-    - utter_continuar_conversa
-
-## path_historia 1
-* historia
-    - utter_historia
-    - utter_continuar_conversa
-
-## path_historia 2
-* cumprimentar
-    - utter_cumprimentar
-* historia
-    - utter_historia
-    - utter_continuar_conversa
-
-## path_risada 1
-* risada
-    - utter_risada
-    - utter_continuar_conversa
-
-## path_risada 2
-* cumprimentar
-    - utter_cumprimentar
-* risada
-    - utter_risada
-    - utter_continuar_conversa
-## cumprimentar
-* cumprimentar
-    - utter_cumprimentar
-
-## Despedir
-* despedir
-    - utter_despedir
-
-## Tudo Bem Story
-* tudo_bem
-    - utter_tudo_bem
-
-## Oi Tudo Bem Story 
-* cumprimentar
-    - utter_cumprimentar
-* tudo_bem
-    - utter_tudo_bem
-
-## Nao entendi
-* diga_mais
-    - utter_diga_mais  
-
-## fallback
-* out_of_scope
-    - utter_fallback
-
-## negar sem contexto
-* negar
-    - utter_despedir
-
-## elogios 1
-* elogios
-    - utter_elogios
-    - utter_continuar_conversa
-
-## elogios 2
-* cumprimentar
-    - utter_cumprimentar
-* elogios
-    - utter_elogios
-    - utter_continuar_conversa
-
-## meajuda 1
-* o_que_sei_falar
-    - utter_o_que_sei_falar
-
-## meajuda 2
-* cumprimentar
-    - utter_cumprimentar
-* o_que_sei_falar
-    - utter_o_que_sei_falar
-
-## afirmar_botao
-* botao
-    - utter_botao
-* afirmar
-    - utter_afirmacao_botao
-
-## negar_botao
-* botao
-    - utter_botao
-* negar
-    - utter_negacao_botao
-
-## objetivo
-* objetivo
-    - utter_objetivo
+- story: Aproveitamento de disciplinas com erro
+  steps:
+  - intent: aproveitamento_disciplinas
+  - action: action_check_aproveitamento_disciplinas
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_aproveitamento_disciplinas: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Numero de dias letivos #029
+  steps:
+    - intent: numero_dias_letivos
+    - action: utter_numero_dias_letivos
+    - action: utter_continuar_conversa
+- story: Disciplinas optativas #030
+  steps:
+    - intent: disciplinas_optativas
+    - action: utter_disciplinas_optativas
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: Trancamento de matrícula sem erro #031
+  steps:
+  - intent: trancamento_matricula_sobre
+  - action: action_check_trancamento_matricula_sobre
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_trancamento_matricula_sobre: null
+  - action: action_listen
+- story: Trancamento de matrícula com erro
+  steps:
+  - intent: trancamento_matricula_sobre
+  - action: action_check_trancamento_matricula_sobre
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_trancamento_matricula_sobre: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Quando é proibido trancar matricula #032
+  steps:
+    - intent: quando_proibido_trancamento_matricula
+    - action: utter_quando_proibido_trancamento_matricula
+    - action: utter_continuar_conversa
+- story: Cancelamento de matrícula #033
+  steps:
+    - intent: cancelamento_matricula
+    - action: utter_cancelamento_matricula
+    - action: utter_continuar_conversa
+- story: Desistente #034
+  steps:
+    - intent: desistente
+    - action: utter_desistente
+    - action: utter_continuar_conversa
+- story: documentos necessarios para matricula #035
+  steps:
+    - intent: documentos_matricula
+    - action: utter_documentos_matricula
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: Chamada de suplentes sem erro #036
+  steps:
+  - intent: chamada_suplentes
+  - action: action_check_chamada_suplentes
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_chamada_suplentes: null
+  - action: action_listen
+- story: Chamada de suplentes com erro
+  steps:
+  - intent: chamada_suplentes
+  - action: action_check_chamada_suplentes
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_chamada_suplentes: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Quando vira oficialmente um aluno #037
+  steps:
+    - intent: quando_sou_aluno
+    - action: utter_quando_sou_aluno
+    - action: utter_continuar_conversa
+- story: prazo para a matricula #038
+  steps:
+    - intent: prazo_matricula
+    - action: utter_prazo_matricula
+    - action: utter_continuar_conversa
+- story: Renovação de Matrícula #039
+  steps:
+    - intent: renovacao_matricula
+    - action: utter_renovacao_matricula
+    - action: utter_continuar_conversa
+- story: Quando o regime domiciliar é efetivado #040
+  steps:
+    - intent: regime_domiciliar_efetivacao
+    - action: utter_regime_domiciliar_efetivacao
+    - action: utter_continuar_conversa
+- story: Quando pode solicitar o regime domiciliar #041
+  steps:
+    - intent: regime_domiciliar_condicoes
+    - action: utter_regime_domiciliar_condicoes
+    - action: utter_continuar_conversa
+- story: Sobre o regime domiciliar #042
+  steps:
+    - intent: regime_domiciliar_sobre
+    - action: utter_regime_domiciliar_sobre
+    - action: utter_continuar_conversa
+- story: Prazo laudo médico para o regime domiciliar #043
+  steps:
+    - intent: prazo_regime_domiciliar_laudo_medico
+    - action: utter_prazo_regime_domiciliar_laudo_medico
+    - action: utter_continuar_conversa
+- story: Regime domiciliar para grávidas #044
+  steps:
+    - intent: regime_domiciliar_gravidas
+    - action: utter_regime_domiciliar_gravidas
+    - action: utter_continuar_conversa
+- story: Cumprimentação #045
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - intent: informar_nome
+  - action: utter_cumprimentar_usuario_nome
+  - action: action_listen
+- story: O que é o ROD #046
+  steps:
+    - intent: rod_geral
+    - action: utter_rod_geral
+    - action: utter_continuar_conversa
+- story: O que o Plano de Ensino contém #047
+  steps:
+    - intent: plano_ensino_contem
+    - action: utter_plano_ensino_contem
+    - action: utter_continuar_conversa
+- story: Datas de entrega e de divulgação dos Planos de Ensino #048
+  steps:
+    - intent: plano_ensino_datas
+    - action: utter_plano_ensino_datas
+    - action: utter_continuar_conversa
+- story: Coeficiente de Rendimento #049
+  steps:
+    - intent: coeficiente_rendimento
+    - action: utter_coeficiente_rendimento
+    - action: utter_continuar_conversa
+- story: Como os cursos podem ser ofertados #050
+  steps:
+    - intent: oferta_cursos
+    - action: utter_oferta_cursos
+    - action: utter_continuar_conversa
+- story: Dias e turnos que as aulas podem ser oferecidas #051
+  steps:
+    - intent: tempo_oferta_aulas
+    - action: utter_tempo_oferta_aulas
+    - action: utter_continuar_conversa
+- story: O que o calendário acadêmico precisa conter #052
+  steps:
+    - intent: calendario_academico_conteudo
+    - action: utter_calendario_academico_conteudo
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: Locais para encontrar o calendário acadêmico sem erro #053
+  steps:
+  - intent: calendario_academico_localizacao
+  - action: action_check_calendario_academico_localizacao
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_calendario_academico_localizacao: null
+  - action: action_listen
+- story: Locais para encontrar o calendário acadêmico com erro
+  steps:
+  - intent: calendario_academico_localizacao
+  - action: action_check_calendario_academico_localizacao
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_calendario_academico_localizacao: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Como entrar no IFES #054
+  steps:
+    - intent: ifes_condicoes
+    - action: utter_ifes_condicoes
+    - action: utter_continuar_conversa
+- story: Preenchimento de vagas para discentes do IFES #055
+  steps:
+    - intent: preenchimento_vagas_discentes_ifes
+    - action: utter_preenchimento_vagas_discentes_ifes
+    - action: utter_continuar_conversa
+- story: O que exatamente é a matrícula #056
+  steps:
+    - intent: matricula_sobre
+    - action: utter_matricula_sobre
+    - action: utter_continuar_conversa
+- story: O que é a reintegração da matrícula #057
+  steps:
+    - intent: reintegracao_matricula_sobre
+    - action: utter_reintegracao_matricula_sobre
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: Quando pode fazer a reintegração da matrícula sem erro #058
+  steps:
+  - intent: reintegracao_matricula_condicoes
+  - action: action_check_reintegracao_matricula_condicoes
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_reintegracao_matricula_condicoes: null
+  - action: action_listen
+- story: Quando pode fazer a reintegração da matrícula com erro
+  steps:
+  - intent: reintegracao_matricula_condicoes
+  - action: action_check_reintegracao_matricula_condicoes
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_reintegracao_matricula_condicoes: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: A possibilidade da turma inteira ter uma outra chance de prova #059
+  steps:
+    - intent: segunda_chance_avaliacao_turma
+    - action: utter_segunda_chance_avaliacao_turma
+    - action: utter_continuar_conversa
+- story: Segunda chance de avaliação pelo discente #060
+  steps:
+    - intent: segunda_chance_avaliacao_discente
+    - action: utter_segunda_chance_avaliacao_discente
+    - action: utter_continuar_conversa
+- story: Avaliação do rendimento de alunos estudando a distância #061
+  steps:
+    - intent: estudantes_distancia_avaliacao_rendimento
+    - action: utter_estudantes_distancia_avaliacao_rendimento
+    - action: utter_continuar_conversa
+- story: Pontuação trimestral #062
+  steps:
+    - intent: pontuacao_trimestral
+    - action: utter_pontuacao_trimestral
+    - action: utter_continuar_conversa
+- story: Pontuação Bimestral #063
+  steps:
+    - intent: pontuacao_bimestral
+    - action: utter_pontuacao_bimestral
+    - action: utter_continuar_conversa
+- story: Registros frequências, atividades e notas no acadêmico de quem estuda no presencial
+ #064
+  steps:
+    - intent: registro_informacoes_no_academico
+    - action: utter_registro_informacoes_no_academico
+    - action: utter_continuar_conversa
+- story: Sobre as reuniões pedagógicas #065
+  steps:
+    - intent: reuniao_pedagogica_sobre
+    - action: utter_reuniao_pedagogica_sobre
+    - action: utter_continuar_conversa
+- story: Sobre a Reunião Pedagógica Inicial #066
+  steps:
+    - intent: reuniao_pedagogica_inicial
+    - action: utter_reuniao_pedagogica_inicial
+    - action: utter_continuar_conversa
+- story: Sobre a Reunião Pedagógica Intermediária #067
+  steps:
+    - intent: reuniao_pedagogica_intermediaria
+    - action: utter_reuniao_pedagogica_intermediaria
+    - action: utter_continuar_conversa
+- story: Sobre a Reunião Pedagógica Final #068
+  steps:
+    - intent: reuniao_pedagogica_final
+    - action: utter_reuniao_pedagogica_final
+    - action: utter_continuar_conversa
+- story: Votação final de progressão ou retenção de um aluno #069
+  steps:
+    - intent: reuniao_pedagogica_decisao_final
+    - action: utter_reuniao_pedagogica_decisao_final
+    - action: utter_continuar_conversa
+- story: Membros da reunião pedagógica #070
+  steps:
+    - intent: reuniao_pedagogica_membros
+    - action: utter_reuniao_pedagogica_membros
+    - action: utter_continuar_conversa
+## Envolve links campus
+- story: A quantidade de reuniões pedagógicas que devem ter sem erro #071
+  steps:
+  - intent: reuniao_pedagogica_quantidade
+  - action: action_check_reuniao_pedagogica_quantidade
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_reuniao_pedagogica_quantidade: null
+  - action: action_listen
+- story: A quantidade de reuniões pedagógicas que devem ter com erro
+  steps:
+  - intent: reuniao_pedagogica_quantidade
+  - action: action_check_reuniao_pedagogica_quantidade
+  - action: action_campus_link_calendario_academico
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - slot_was_set:
+    - check_reuniao_pedagogica_quantidade: True
+  - intent: informar_campus
+  - action: action_campus_link_calendario_academico
+  - action: action_listen
+## Fechando
+- story: Sobre a monitoria #072
+  steps:
+    - intent: monitoria
+    - action: utter_monitoria
+    - action: utter_continuar_conversa
+- story: Sobre o estágio #073
+  steps:
+    - intent: estagio
+    - action: utter_estagio
+    - action: utter_continuar_conversa
+- story: Corpo discente #074
+  steps:
+    - intent: corpo_discente
+    - action: utter_corpo_discente
+    - action: utter_continuar_conversa
+- story: Validade do ROD 2020 #075
+  steps:
+    - intent: rod_2020_validade
+    - action: utter_rod_2020_validade
+    - action: utter_continuar_conversa
+- story: Capítulo do ROD #076
+  steps:
+    - intent: tit_cap_rod
+    - action: utter_tit_cap_rod
+    - action: utter_continuar_conversa
+- story: Capítulo dos cursos, currículos e planos de ensino #077
+  steps:
+    - intent: tit_cap_cursos_curriculos_planos_ensino
+    - action: utter_tit_cap_cursos_curriculos_planos_ensino
+    - action: utter_continuar_conversa
+- story: Capítulo do período letivo #078
+  steps:
+    - intent: tit_cap_periodo_letivo
+    - action: utter_tit_cap_periodo_letivo
+    - action: utter_continuar_conversa
+- story: Capítulo da admissão e da matrícula #079
+  steps:
+    - intent: tit_cap_admissao_matricula
+    - action: utter_tit_cap_admissao_matricula
+    - action: utter_continuar_conversa
+- story: Capítulo atendimento domiciliar #080
+  steps:
+    - intent: tit_cap_atendimento_domiciliar
+    - action: utter_tit_cap_atendimento_domiciliar
+    - action: utter_continuar_conversa
+- story: Capítulo das transferências e adaptações #081
+  steps:
+    - intent: tit_cap_transferencias_adaptacoes
+    - action: utter_tit_cap_transferencias_adaptacoes
+    - action: utter_continuar_conversa
+- story: Capítulo das modalidades #082
+  steps:
+    - intent: tit_cap_modalidades
+    - action: utter_tit_cap_modalidades
+    - action: utter_continuar_conversa
+- story: Capítulo das reuniões pedagógicas #083
+  steps:
+    - intent: tit_cap_reunioes_pedagogicas
+    - action: utter_tit_cap_reunioes_pedagogicas
+    - action: utter_continuar_conversa
+- story: Título das outras atividades de ensino #084
+  steps:
+    - intent: tit_outras_atividades_ensino
+    - action: utter_tit_outras_atividades_ensino
+    - action: utter_continuar_conversa
+- story: Capítulo do estágio curricular #085
+  steps:
+    - intent: tit_cap_estagio_curricular
+    - action: utter_tit_cap_estagio_curricular
+    - action: utter_continuar_conversa
+- story: Título das organizações e orientações discentes #086
+  steps:
+    - intent: tit_organizacoes_orientacoes_discentes
+    - action: utter_tit_organizacoes_orientacoes_discentes
+    - action: utter_continuar_conversa
+- story: Título dos certificados e diplomas #087
+  steps:
+    - intent: tit_certificados_diplomas
+    - action: utter_tit_certificados_diplomas
+    - action: utter_continuar_conversa
+- story: Título do intercâmbio acadêmico #088
+  steps:
+    - intent: tit_intercambio_academico
+    - action: utter_tit_intercambio_academico
+    - action: utter_continuar_conversa
+- story: Título das disposições gerais e transitórias #089
+  steps:
+    - intent: tit_disposicoes_gerais_transitorias
+    - action: utter_tit_disposicoes_gerais_transitorias
+    - action: utter_continuar_conversa
+- story: Sumário do ROD 2020 #090
+  steps:
+    - intent: sumario_rod
+    - action: utter_sumario_rod
+    - action: utter_continuar_conversa
+- story: Processos pedagógicos e didáticos #091
+  steps:    
+    - intent: processos_pedagogicos_e_didaticos
+    - action: utter_processos_pedagogicos_e_didaticos
+    - action: utter_continuar_conversa
+- story: educacao_nacional_constituicao_form_integral #092
+  steps:
+    - intent: educacao_nacional_constituicao_form_integral
+    - action: utter_educacao_nacional_constituicao_form_integral
+    - action: utter_continuar_conversa
+- story: gestao_educacional #093
+  steps:
+    - intent: gestao_educacional
+    - action: utter_gestao_educacional
+    - action: utter_continuar_conversa
+- story: educacao_profissional #094
+  steps:
+    - intent: educacao_profissional
+    - action: utter_educacao_profissional
+    - action: utter_continuar_conversa
+- story: responsabilidade_social #095
+  steps:
+    - intent: responsabilidade_social
+    - action: utter_responsabilidade_social
+    - action: utter_continuar_conversa
+- story: educacao_especial #096
+  steps:
+    - intent: educacao_especial
+    - action: utter_educacao_especial
+    - action: utter_continuar_conversa    
+### Assuntos gerais
+- story: Assunto 1
+  steps:
+    - intent: transferencias
+    - action: utter_transferencias
+    - action: action_listen
+- story: Assunto 2
+  steps:
+    - intent: representantes
+    - action: utter_representantes
+    - action: action_listen
+- story: Assunto 3
+  steps:
+    - intent: avaliacoes
+    - action: utter_avaliacoes
+    - action: action_listen
+- story: Assunto 4
+  steps:
+    - intent: pontuacoes
+    - action: utter_pontuacoes
+    - action: action_listen
+- story: Assunto 5
+  steps:
+    - intent: dependencia
+    - action: utter_dependencia
+    - action: action_listen
+- story: Assunto 6
+  steps:
+    - intent: revisao_notas
+    - action: utter_revisao_notas
+    - action: action_listen
+- story: Assunto 7
+  steps:
+    - intent: dias_letivos
+    - action: utter_dias_letivos
+    - action: action_listen
+- story: Assunto 8
+  steps:
+    - intent: matricula
+    - action: utter_matricula
+    - action: action_listen
+- story: Assunto 8.1.5
+  steps:
+    - intent: trancamento_matricula
+    - action: utter_trancamento_matricula
+    - action: action_listen
+- story: Assunto 8.1.7
+  steps:
+    - intent: reintegracao_matricula
+    - action: utter_reintegracao_matricula
+    - action: action_listen
+- story: Assunto 9
+  steps:
+    - intent: regime_domiciliar
+    - action: utter_regime_domiciliar
+    - action: action_listen
+- story: Assunto 10
+  steps:
+    - intent: plano_ensino
+    - action: utter_plano_ensino
+    - action: action_listen
+- story: Assunto 11
+  steps:
+    - intent: calendario_academico
+    - action: utter_calendario_academico
+    - action: action_listen
+- story: Assunto 12
+  steps:
+    - intent: segunda_chance_avaliacao
+    - action: utter_segunda_chance_avaliacao
+    - action: action_listen
+- story: Assunto 13
+  steps:
+    - intent: reuniao_pedagogica
+    - action: utter_reuniao_pedagogica
+    - action: action_listen
+- story: Assunto 14
+  steps:
+    - intent: rod
+    - action: utter_rod
+    - action: action_listen
+  
+# Sistema de Chamados
+- story: Sistema de Chamados Geral
+  steps:
+    - intent: SC_geral
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Matrícula
+  steps:
+    - intent: SC_matricula
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Terceira Etapa Matricula
+  steps:
+    - intent: SC_terceira_etapa_matricula
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Cancelamento Matricula
+  steps:
+    - intent: SC_cancelamento_matricula
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Matricula Intercampi
+  steps:
+    - intent: SC_matricula_intercampi
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Matricula DP
+  steps:
+    - intent: SC_matricula_dependencia
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Ajuste dp
+  steps:
+    - intent: SC_ajuste_dp
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Matricula Eletiva
+  steps:
+    - intent: SC_matricula_eletiva
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Reabertura de matricula
+  steps:
+    - intent: SC_reabertura_matricula
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Trancamento Matr
+  steps:
+    - intent: SC_trancamento_matricula
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Reintegração Matr
+  steps:
+    - intent: SC_reintegracao_matricula
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Atestado Escolaridade
+  steps:
+    - intent: SC_atestado_escolaridade
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Certidao de Conclusão
+  steps:
+    - intent: SC_certidao_conclusao
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Certificado CREA
+  steps:
+    - intent: SC_certificado_conclusao_crea
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Colação de grau especial
+  steps:
+    - intent: SC_colacao_grau_especial
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Colação de grau 
+  steps:
+    - intent: SC_colacao_grau
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Diploma/historico final
+  steps:
+    - intent: SC_diploma_historico_final
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Disciplina intercampi
+  steps:
+    - intent: SC_disciplina_intercampi
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Historico final
+  steps:
+    - intent: SC_historico_final
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Historico parcial
+  steps:
+    - intent: SC_historico_parcial
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Mudança campus turno curso
+  steps:
+    - intent: SC_mudanca_campus_turno_curso
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Mudança matriz
+  steps:
+    - intent: SC_mudanca_matriz
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Nada consta
+  steps:
+    - intent: SC_nada_consta
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Regime domiciliar
+  steps:
+    - intent: SC_regime_domiciliar
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados Revisao result final
+  steps:
+    - intent: SC_revisao_resultado_final
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: Sistema de Chamados aproveitamento
+  steps:
+    - intent: SC_aproveitamento
+    - action: utter_sistema_chamados
+    - action: utter_continuar_conversa
+- story: interactive_story_1
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - intent: informar_nome
+    entities:
+    - nome_usuario: Paulo
+  - slot_was_set:
+    - nome_usuario: Paulo
+  - action: utter_nao_entendi
+  - action: action_uncheck_uncheck_all
